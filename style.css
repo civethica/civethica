@@ -413,3 +413,24 @@ h2 {
         flex-direction: column;
     }
 }
+
+
+/* --- Development Banner Styles --- */
+.dev-banner {
+    background: linear-gradient(45deg, #ffc107, #ff9800); /* Заметный желто-оранжевый фон */
+    color: #000; /* Черный текст для читаемости */
+    text-align: center; /* Текст по центру */
+    padding: 12px 20px; /* Внутренние отступы */
+    position: sticky; /* "Прилипает" к верху при прокрутке */
+    top: 0;
+    width: 100%;
+    z-index: 9999; /* Гарантирует, что баннер будет поверх всех элементов */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Легкая тень для объема */
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dev-banner p {
+    margin: 0;
+    padding: 0;
+}
