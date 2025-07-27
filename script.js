@@ -1,15 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Этот скрипт нужен только для плавного скролла по якорям, если они есть.
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const mainNavList = document.querySelector('#main-nav-list');
 
-            const targetElement = document.querySelector(this.getAttribute('href'));
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+    if (mobileNavToggle && mainNavList) {
+        mobileNavToggle.addEventListener('click', () => {
+            mainNavList.classList.toggle('is-open');
+            mobileNavToggle.setAttribute('aria-expanded', mainNavList.classList.contains('is-open'));
         });
-    });
+    }
 });
