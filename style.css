@@ -88,7 +88,3 @@ body { font-family: var(--body-font); color: var(--text-color); background-color
     .mobile-nav-toggle[aria-expanded="true"]::before { transform: translateY(8px) rotate(45deg); }
     .mobile-nav-toggle[aria-expanded="true"]::after { transform: translateY(-8px) rotate(-45deg); }
 }
-    .mobile-nav-toggle[aria-expanded="true"]::after {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
