@@ -588,3 +588,46 @@ Styles for multi-line CTA buttons
         align-items: center;
     }
 }
+
+/* ===== Мобильное меню: скрыть по умолчанию и показать при активации ===== */
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-nav ul.is-open {
+    display: flex;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('images/menu-icon.svg'); /* или другой иконки */
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .main-nav {
+    position: relative;
+  }
+}
+
+/* Показываем кнопку только на мобильных */
+.mobile-nav-toggle {
+  display: none;
+}
