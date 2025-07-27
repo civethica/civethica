@@ -109,15 +109,17 @@
     <script src="script.js"></script>
 
     <script>
-  const navToggle = document.querySelector('.mobile-nav-toggle');
-  const navMenu = document.querySelector('.main-nav ul');
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.querySelector(".mobile-nav-toggle");
+        const navMenu = document.querySelector(".main-nav ul");
 
-  navToggle.addEventListener('click', () => {
-    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', !isExpanded);
-    navMenu.classList.toggle('is-open');
-  });
-</script>
+        toggleButton.addEventListener("click", function () {
+          const expanded = this.getAttribute("aria-expanded") === "true" || false;
+          this.setAttribute("aria-expanded", !expanded);
+          navMenu.classList.toggle("is-open");
+        });
+      });
+     </script>
 
 </body>
 </html>
