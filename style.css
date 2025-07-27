@@ -400,14 +400,29 @@ h2 {
 /* --- Медиа-запрос для всех экранов меньше 1024px --- */
 @media (max-width: 1024px) {
 
+    /* Уменьшаем боковые отступы на мобильных */
+    .container {
+        padding: 0 15px;
+    }
+
     /* --- Шапка и меню --- */
     .logo-img {
-        height: 80px;
+        height: 60px; /* Уменьшили */
+        margin-right: 10px; /* Уменьшили */
     }
     .logo-text {
-        font-size: 1.2rem;
+        font-size: 1rem; /* Уменьшили */
     }
     
+    .header-actions {
+        gap: 8px; /* Уменьшили */
+        margin-left: auto; /* Прижимает кнопки к гамбургеру */
+    }
+    .cta-button-small, .current-lang {
+        padding: 6px 9px; /* Уменьшили */
+        font-size: 0.8rem; /* Уменьшили */
+    }
+
     .mobile-nav-toggle {
         display: block; /* Показываем кнопку-гамбургер */
     }
@@ -434,7 +449,6 @@ h2 {
         z-index: 9998;
     }
 
-    /* Стили для элементов внутри открытого меню */
     .main-nav ul.is-open li {
         width: 100%;
     }
@@ -457,7 +471,6 @@ h2 {
     .mobile-nav-toggle[aria-expanded="true"]::after {
         transform: translateY(-8px) rotate(-45deg);
     }
-
 
     /* --- Общие размеры и отступы --- */
     h1 {
