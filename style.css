@@ -370,7 +370,7 @@ h2 {
 
 /* --- Стили для кнопки-гамбургера (всегда присутствуют, но кнопка скрыта) --- */
 .mobile-nav-toggle {
-    display: none; /* По умолчанию скрыта на больших экранах */
+    display: none;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -410,17 +410,14 @@ h2 {
     }
     
     .main-nav {
-        order: 3; /* Перемещаем контейнер навигации в конец, чтобы кнопка была между лого и меню */
-    }
-    .header-actions {
-        display: none; /* Скрываем кнопки и языки для простоты */
+        /* Контейнер навигации остается, чтобы кнопка могла им управлять */
     }
     
     .mobile-nav-toggle {
         display: block; /* Показываем кнопку-гамбургер */
     }
 
-    /* Стили для выезжающего меню */
+    /* Стили для выезжающего меню (списка UL) */
     .main-nav ul {
         display: none; /* Скрываем по умолчанию */
         position: fixed;
@@ -485,6 +482,7 @@ h2 {
         flex-direction: column;
         text-align: center;
     }
+}
 }
 .mobile-nav-toggle {
   display: none;
