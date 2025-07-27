@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    // --- Код для мобильного меню ---
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const mainNavList = document.querySelector('#main-nav-list');
 
@@ -10,12 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const submenuToggle = document.querySelector('.nav-toggle-submenu');
-    if (submenuToggle) {
-        submenuToggle.addEventListener('click', function(e) {
-            if (window.innerWidth <= 1024) { // Работает только на мобильных
-                this.parentElement.classList.toggle('submenu-open');
-            }
-        });
-    }
+    // --- Код для плавного скролла (если нужен) ---
+    // (можно оставить или убрать, на меню он не влияет)
 });
