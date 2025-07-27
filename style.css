@@ -307,3 +307,62 @@ h2 {
     color: var(--accent-color);
     text-decoration: none;
 }
+
+/* --- Add prob --- */
+/* 
+==============================================
+=== BASIC RESPONSIVE STYLES (MOBILE) ===
+==============================================
+*/
+
+@media (max-width: 992px) {
+
+    /* --- Шапка --- */
+    /* Уменьшаем логотип и текст, чтобы все поместилось в шапке */
+    .logo-img {
+        height: 60px;
+        margin-right: 10px;
+    }
+    .logo-text {
+        font-size: 1rem;
+    }
+    .main-nav ul li a {
+        padding: 8px 6px; /* Уменьшаем отступы между пунктами меню */
+        font-size: 0.8rem; /* Уменьшаем шрифт в меню */
+    }
+    .header-actions {
+        gap: 8px; /* Уменьшаем расстояние между кнопками */
+    }
+    .cta-button-small, .current-lang {
+        padding: 6px 8px; /* Уменьшаем сами кнопки */
+        font-size: 0.8rem;
+    }
+
+    /* --- Основной контент --- */
+    /* Уменьшаем гигантские заголовки */
+    h1 {
+        font-size: 2.2rem; /* Значительно уменьшаем */
+    }
+    h2 {
+        font-size: 1.8rem; /* Значительно уменьшаем */
+    }
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    /* Уменьшаем отступы между секциями */
+    .content-section, .hero-section, .platforms-preview-section {
+        padding: 40px 0;
+    }
+    
+    /* Делаем карточки платформ вертикальными */
+    .platforms-grid {
+        grid-template-columns: 1fr; /* Ставим карточки друг под другом */
+    }
+
+    /* Делаем кнопки внизу вертикальными */
+    .join-buttons {
+        flex-direction: column; /* Ставим кнопки друг под другом */
+        align-items: center; /* Центрируем их */
+    }
+}
