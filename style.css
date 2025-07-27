@@ -1,80 +1,390 @@
 :root {
-    --primary-color: #005f73;
-    --secondary-color: #0a9396;
-    --accent-color: #94d2bd;
-    --bg-color: #f8f9fa;
-    --text-color: #343a40;
-    --heading-font: 'Montserrat', sans-serif;
-    --body-font: 'Roboto', sans-serif;
+--primary-color: #005f73;
+--secondary-color: #0a9396;
+--accent-color: #94d2bd;
+--bg-color: #f8f9fa;
+--text-color: #343a40;
+--heading-font: 'Montserrat', sans-serif;
+--body-font: 'Roboto', 'Noto Sans SC', sans-serif;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: var(--body-font); color: var(--text-color); line-height: 1.6; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-/* --- Header --- */
-.main-header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-.main-header .container { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
-.logo-link { display: flex; align-items: center; text-decoration: none; color: var(--primary-color); }
-.logo-img { height: 50px; margin-right: 10px; }
-.logo-text { font-family: var(--heading-font); font-weight: 700; font-size: 1.2rem; }
-
-/* --- Desktop Navigation --- */
-.main-nav ul { list-style: none; display: flex; align-items: center; }
-.main-nav ul li a { padding: 10px 15px; text-decoration: none; color: var(--primary-color); font-weight: bold; }
-.header-actions { display: flex; align-items: center; gap: 15px; }
-.cta-button-small { padding: 8px 12px; font-size: 0.9rem; background-color: var(--primary-color); color: #fff; text-decoration: none; border-radius: 5px; }
-
-/* --- Mobile Navigation Elements (Hidden on Desktop) --- */
-.mobile-nav-toggle { display: none; }
-#main-nav-list.is-open { display: none; }
-
-/* 
-==============================================
-=== RESPONSIVE STYLES (for screens < 992px) ===
-==============================================
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+font-family: var(--body-font);
+color: var(--text-color);
+background-color: var(--bg-color);
+line-height: 1.6;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+/* --- Header & Navigation (Final Corrected Version) --- */
+.main-header {
+background-color: #fff;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+.main-header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+.logo-link {
+display: flex;
+align-items: center;
+text-decoration: none;
+color: var(--primary-color);
+flex-shrink: 0; /* Prevents logo from shrinking */
+}
+.logo-img {
+height: 120px;
+margin-right: 15px;
+}
+.logo-text {
+font-family: var(--heading-font);
+font-weight: 700;
+font-size: 1.5rem;
+}
+.main-nav {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.main-nav ul {
+list-style: none;
+display: flex;
+align-items: center;
+}
+.main-nav ul li {
+position: relative;
+}
+.main-nav ul li a {
+padding: 10px 15px;
+text-decoration: none;
+color: var(--primary-color);
+font-weight: bold;
+transition: color 0.3s;
+display: block;
+white-space: nowrap;
+}
+.main-nav ul li a:hover {
+color: var(--secondary-color);
+}
+/* Dropdown Menu (Final Corrected Version) */
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%;
+left: 50%;
+transform: translateX(-50%);
+background-color: white;
+list-style: none;
+box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+border-radius: 8px;
+padding: 10px;
+margin-top: 10px;
+width: max-content;
+max-width: 800px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px 20px;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease, visibility 0.3s ease, margin-top 0.3s ease;
+z-index: 1100;
+}
+.dropdown:hover > .dropdown-menu {
+display: grid;
+opacity: 1;
+visibility: visible;
+margin-top: 5px;
+}
+.dropdown-menu a {
+font-size: 0.9rem;
+padding: 8px 12px;
+border-radius: 5px;
+}
+.header-actions {
+display: flex;
+align-items: center;
+gap: 15px;
+margin-left: 20px;
+}
+/* Language Switcher */
+.language-switcher {
+position: relative;
+}
+.current-lang {
+font-weight: bold;
+color: var(--primary-color);
+padding: 8px 10px;
+border: 1px solid var(--accent-color);
+border-radius: 5px;
+cursor: pointer;
+}
+.lang-dropdown {
+display: none;
+position: absolute;
+top: 100%;
+right: 0;
+background-color: #fff;
+list-style: none;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+border-radius: 5px;
+padding: 5px 0;
+margin-top: 5px;
+min-width: 80px;
+text-align: center;
+z-index: 1100;
+}
+.language-switcher:hover .lang-dropdown {
+display: block;
+}
+.lang-dropdown li a {
+display: block;
+padding: 10px 15px;
+text-decoration: none;
+color: var(--primary-color);
+}
+.lang-dropdown li a:hover {
+background-color: var(--bg-color);
+}
+/* --- Sections --- */
+.content-section, .hero-section, .platforms-preview-section {
+padding: 80px 0;
+text-align: center;
+}
+.hero-section {
+background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('https://images.unsplash.com/photo-14511875804df9-43490279c0fa?q=80&w=2072') no-repeat center center/cover;
+color: #fff;
+display: flex;
+align-items: center;
+min-height: 80vh;
+}
+h1 {
+font-family: var(--heading-font);
+font-size: 3.2rem;
+margin-bottom: 20px;
+}
+.subtitle {
+font-size: 1.2rem;
+font-weight: 300;
+max-width: 700px;
+margin: 0 auto 30px auto;
+}
+h2 {
+font-family: var(--heading-font);
+font-size: 2.5rem;
+color: var(--primary-color);
+margin-bottom: 40px;
+}
+.accent-bg {
+background-color: #e9f5f5;
+}
+/* --- Buttons --- */
+.cta-button, .cta-button-secondary, .cta-button-small {
+display: inline-block;
+padding: 15px 30px;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+transition: transform 0.3s, background-color 0.3s;
+}
+.cta-button {
+background-color: var(--secondary-color);
+color: #fff;
+}
+.cta-button:hover {
+background-color: #087c7e;
+transform: translateY(-3px);
+}
+.cta-button-secondary {
+background-color: transparent;
+color: var(--primary-color);
+border: 2px solid var(--primary-color);
+}
+.cta-button-secondary:hover {
+background-color: var(--primary-color);
+color: #fff;
+transform: translateY(-3px);
+}
+.cta-button-small {
+padding: 8px 15px;
+background-color: var(--primary-color);
+color: #fff;
+font-size: 0.9rem;
+}
+.cta-button-small:hover {
+background-color: var(--secondary-color);
+}
+/* --- Platform Cards on Homepage --- */
+.platforms-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+}
+.platform-card {
+display: block;
+background-color: #fff;
+padding: 30px;
+border-radius: 5px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+text-decoration: none;
+color: var(--text-color);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.platform-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.platform-card h3 {
+color: var(--primary-color);
+margin-bottom: 10px;
+}
+/* --- Join Section --- */
+.join-buttons {
+margin-top: 30px;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+/* --- Footer --- */
+.main-footer {
+background-color: var(--primary-color);
+color: #fff;
+text-align: center;
+padding: 40px 0;
+}
+.main-footer a {
+color: var(--accent-color);
+text-decoration: none;
+}
+/* --- Sub-pages (Manifesto, Platforms etc.) --- */
+.sub-page main {
+padding-top: 60px;
+padding-bottom: 60px;
+}
+.text-left {
+text-align: left;
+}
+.page-intro {
+font-size: 1.2rem;
+font-weight: 300;
+margin-bottom: 40px;
+border-left: 3px solid var(--accent-color);
+padding-left: 20px;
+}
+.text-left h3 {
+font-family: var(--heading-font);
+color: var(--primary-color);
+margin-top: 40px;
+margin-bottom: 15px;
+}
+.is-visible {
+opacity: 1;
+transform: translateY(0);
+}
+.resource-list {
+margin-top: 30px;
+}
+.resource-item {
+border-bottom: 1px solid #ddd;
+padding: 20px 0;
+}
+.resource-item:last-child {
+border-bottom: none;
+}
+.resource-item h4 {
+color: var(--primary-color);
+margin-bottom: 5px;
+}
+.resource-item a {
+font-weight: bold;
+color: var(--secondary-color);
+text-decoration: none;
+}
+.discussion-links {
+background-color: #e9f5f5;
+padding: 30px;
+border-radius: 5px;
+margin-top: 50px;
+text-align: center;
+}
+.social-links-grid {
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+gap: 15px;
+align-items: center;
+}
+.social-link {
+display: inline-block;
+padding: 10px 20px;
+background-color: #fff;
+border-radius: 5px;
+text-decoration: none;
+color: var(--primary-color);
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+}
+.social-link:hover {
+transform: translateY(-3px);
+}
+/* --- Responsive --- /
+@media (max-width: 1024px) {
+.main-nav {
+display: none; / Скрываем навигацию на мобильных для простоты */
+}
+}
+@media (max-width: 768px) {
+.join-buttons {
+flex-direction: column;
+}
+}
+/* --- Development Banner Styles --- /
+.dev-banner {
+background: linear-gradient(45deg, #ffc107, #ff9800); / Заметный желто-оранжевый фон /
+color: #000; / Черный текст для читаемости /
+text-align: center; / Текст по центру /
+padding: 12px 20px; / Внутренние отступы /
+position: sticky; / "Прилипает" к верху при прокрутке /
+top: 0;
+width: 100%;
+z-index: 9999; / Гарантирует, что баннер будет поверх всех элементов /
+box-shadow: 0 2px 5px rgba(0,0,0,0.2); / Легкая тень для объема */
+font-size: 15px;
+font-family: 'Roboto', sans-serif;
+}
+.dev-banner p {
+margin: 0;
+padding: 0;
+}
+/*
+Manifesto List Styles
 */
-@media (max-width: 992px) {
-    /* Hide Desktop Menu and Buttons */
-    .main-nav, .header-actions {
-        display: none;
-    }
-
-    /* Show Hamburger Button */
-    .mobile-nav-toggle {
-        display: block;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 9999;
-    }
-    .mobile-nav-toggle::before, .mobile-nav-toggle::after {
-        content: ''; display: block;
-        width: 25px; height: 3px;
-        background: var(--primary-color);
-        margin: 5px 0;
-        transition: transform 0.3s ease;
-    }
-    .mobile-nav-toggle[aria-expanded="true"]::before { transform: translateY(8px) rotate(45deg); }
-    .mobile-nav-toggle[aria-expanded="true"]::after { transform: translateY(-8px) rotate(-45deg); }
-    
-    /* Styles for the slide-out menu panel */
-    #main-nav-list.is-open {
-        display: flex;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 80%;
-        max-width: 300px;
-        height: 100vh;
-        background: #fff;
-        padding: 80px 30px;
-        flex-direction: column;
-        align-items: flex-start;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-        z-index: 9998;
-    }
-    #main-nav-list.is-open li { width: 100%; margin-bottom: 10px; }
-    #main-nav-list.is-open a { font-size: 1.2rem; }
+/* Стиль для основного нумерованного списка (1, 2, 3...) /
+.manifesto-list {
+list-style-position: outside; / Выносит маркеры за пределы текста /
+padding-left: 20px; / Добавляет небольшой отступ всему списку */
 }
-
-/* Other styles like .hero-section, h1, etc. can be added below */
+/* Стиль для вложенного буквенного списка (a, b, c...) /
+.manifesto-sublist {
+margin-top: 1em; / Добавляет немного воздуха над вложенным списком /
+padding-left: 40px; / <<== ВОТ КЛЮЧЕВОЕ ПРАВИЛО! Создает нужный вам отступ */
+}
+/* Дополнительные стили для лучшей читаемости /
+.manifesto-list li, .manifesto-sublist li {
+margin-bottom: 1em; / Добавляет расстояние между пунктами списка */
+}
