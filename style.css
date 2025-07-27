@@ -1,3 +1,6 @@
+/* ============================================== */
+/* === ОСНОВНЫЕ СТИЛИ (ДЛЯ ДЕСКТОПА) === */
+/* ============================================== */
 :root {
     --primary-color: #005f73;
     --secondary-color: #0a9396;
@@ -8,33 +11,43 @@
     --body-font: 'Roboto', sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: var(--body-font); color: var(--text-color); background-color: var(--bg-color); line-height: 1.6; }
+body { font-family: var(--body-font); color: var(--text-color); line-height: 1.6; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.dev-banner { background: #ffc107; color: #000; text-align: center; padding: 12px 20px; }
 
-/* --- Header & Navigation --- */
+/* --- Шапка --- */
 .main-header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-.main-header .container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+.main-header .container { display: flex; justify-content: space-between; align-items: center; padding-top: 15px; padding-bottom: 15px; }
 .logo-link { display: flex; align-items: center; text-decoration: none; color: var(--primary-color); }
-.logo-img { height: 50px; margin-right: 10px; } /* Уменьшаем логотип для всех */
+.logo-img { height: 50px; margin-right: 15px; }
 .logo-text { font-family: var(--heading-font); font-weight: 700; font-size: 1.2rem; }
 .main-nav ul { list-style: none; display: flex; align-items: center; }
 .main-nav ul li a { padding: 10px 15px; text-decoration: none; color: var(--primary-color); font-weight: bold; }
-.header-actions { display: flex; align-items: center; gap: 15px; } /* Стили для десктопа */
+.header-actions { display: flex; align-items: center; gap: 15px; }
+
+/* --- Основной контент --- */
+.hero-section { text-align: center; padding: 60px 0; background: #005f73; color: #fff; }
+h1 { font-family: var(--heading-font); font-size: 2.8rem; margin-bottom: 20px; }
+.subtitle { font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px auto; }
+.cta-button { display: inline-block; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; background-color: var(--secondary-color); color: #fff; }
 
 /* Скрываем гамбургер на десктопе */
 .mobile-nav-toggle { display: none; }
 
+
 /* 
 ==============================================
-=== RESPONSIVE STYLES (ЭКРАНЫ МЕНЬШЕ 992px) ===
+=== АДАПТИВНЫЕ СТИЛИ (ДЛЯ МОБИЛЬНЫХ) ===
 ==============================================
 */
 @media (max-width: 992px) {
-    /* Скрываем десктопное меню и кнопки */
+
+    /* Прячем десктопное меню и кнопки */
     .main-nav, .header-actions {
         display: none;
     }
-    /* Показываем гамбургер */
+    
+    /* Показываем кнопку-гамбургер */
     .mobile-nav-toggle {
         display: block;
         background: transparent;
@@ -42,18 +55,24 @@ body { font-family: var(--body-font); color: var(--text-color); background-color
         cursor: pointer;
         z-index: 9999;
     }
-    .mobile-nav-toggle::before, .mobile-nav-toggle::after { content: ''; display: block; width: 25px; height: 3px; background: var(--primary-color); margin: 5px 0; transition: transform 0.3s ease; }
-    
-    /* Анимация крестика */
+    .mobile-nav-toggle::before, .mobile-nav-toggle::after {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--primary-color);
+        margin: 5px 0;
+        transition: transform 0.3s ease;
+    }
     .mobile-nav-toggle[aria-expanded="true"]::before { transform: translateY(8px) rotate(45deg); }
     .mobile-nav-toggle[aria-expanded="true"]::after { transform: translateY(-8px) rotate(-45deg); }
 
-    /* Выезжающая панель (управляется JS) */
+    /* Выезжающая панель */
     #main-nav-list {
-        display: none;
+        display: none; /* Изначально скрыта */
         position: fixed;
         top: 0;
-        right: -100%; /* Начинает за экраном */
+        right: 0;
         width: 80%;
         max-width: 300px;
         height: 100vh;
@@ -63,24 +82,10 @@ body { font-family: var(--body-font); color: var(--text-color); background-color
         align-items: flex-start;
         box-shadow: -5px 0 15px rgba(0,0,0,0.1);
         z-index: 9998;
-        transition: right 0.3s ease-in-out;
     }
     #main-nav-list.is-open {
-        display: flex;
-        right: 0; /* Выезжает на экран */
+        display: flex; /* Показывается по клику */
     }
-    #main-nav-list li { width: 100%; }
-    #main-nav-list a { font-size: 1.2rem; padding: 10px 0; }
-
-    /* Переносим кнопки внутрь выезжающего меню */
-    .header-actions-mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        margin-top: 30px;
-        padding-top: 30px;
-        border-top: 1px solid #eee;
-        width: 100%;
-    }
+    #main-nav-list li { width: 100%; margin-bottom: 10px; }
+    #main-nav-list a { font-size: 1.2rem; }
 }
