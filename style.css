@@ -117,7 +117,6 @@ body {
     margin-top: 10px;
     width: max-content;
     max-width: 800px;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px 20px;
     opacity: 0;
@@ -364,11 +363,11 @@ h2 {
 
 /* 
 ==============================================
-=== АДАПТИВНАЯ ВЕРСТКА (MOBILE STYLES) ===
+=== RESPONSIVE STYLES (MOBILE & TABLET) ===
 ==============================================
 */
 
-/* --- Стили для кнопки-гамбургера (всегда присутствуют, но кнопка скрыта) --- */
+/* --- Гамбургер-кнопка (всегда в коде, но видна только на мобильных) --- */
 .mobile-nav-toggle {
     display: none;
     background: transparent;
@@ -398,7 +397,7 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-/* --- Медиа-запрос для планшетов и телефонов (экраны меньше 1024px) --- */
+/* --- Медиа-запрос для всех экранов меньше 1024px --- */
 @media (max-width: 1024px) {
 
     /* --- Шапка и меню --- */
@@ -409,17 +408,18 @@ h2 {
         font-size: 1.2rem;
     }
     
-    .main-nav {
-        /* Контейнер навигации остается, чтобы кнопка могла им управлять */
-    }
-    
     .mobile-nav-toggle {
         display: block; /* Показываем кнопку-гамбургер */
     }
-
-    /* Стили для выезжающего меню (списка UL) */
+    
+    /* Скрываем десктопное меню */
     .main-nav ul {
-        display: none; /* Скрываем по умолчанию */
+        display: none;
+    }
+    
+    /* Стили для выезжающего меню, КОГДА оно открыто */
+    .main-nav ul.is-open {
+        display: flex;
         position: fixed;
         top: 0;
         right: 0;
@@ -433,24 +433,21 @@ h2 {
         box-shadow: -5px 0 15px rgba(0,0,0,0.1);
         z-index: 9998;
     }
-    
-    .main-nav ul.is-open {
-        display: flex; /* Показываем меню, когда оно открыто */
-    }
 
-    .main-nav ul li {
+    /* Стили для элементов внутри открытого меню */
+    .main-nav ul.is-open li {
         width: 100%;
     }
-
-    .main-nav ul li a {
+    .main-nav ul.is-open li a {
         font-size: 1.2rem;
         padding: 15px 0;
         width: 100%;
     }
     
+    /* Полностью отключаем выпадающее меню на мобильных */
     .dropdown-menu,
     .dropdown:hover > .dropdown-menu {
-        display: none !important; /* Полностью отключаем выпадающее меню на мобильных */
+        display: none !important;
     }
     
     /* Анимация гамбургера в крестик */
@@ -482,8 +479,4 @@ h2 {
         flex-direction: column;
         text-align: center;
     }
-}
-}
-.mobile-nav-toggle {
-  display: none;
 }
