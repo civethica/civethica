@@ -349,7 +349,7 @@ Manifesto Page Specific Styles
 .cta-line {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     margin-bottom: 20px;
 }
 .cta-line:last-child {
