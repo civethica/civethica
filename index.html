@@ -113,5 +113,17 @@
     </footer>
 
     <script src="script.js"></script>
+        <script>
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNavList = document.querySelector('#main-nav-list');
+
+        if (mobileNavToggle && mainNavList) {
+            mobileNavToggle.addEventListener('click', () => {
+                const isOpen = mainNavList.classList.toggle('is-open');
+                mobileNavToggle.setAttribute('aria-expanded', isOpen);
+            });
+        }
+    </script>
+    
 </body>
 </html>
