@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civethica TEST PAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    
+    <style>
+        /* ВЕСЬ ВАШ CSS КОД ТЕПЕРЬ НАХОДИТСЯ ЗДЕСЬ */
+        :root {
+            --primary-color: #005f73;
+            --secondary-color: #0a9396;
+            --accent-color: #94d2bd;
+            --bg-color: #f8f9fa;
+            --text-color: #343a40;
+            --heading-font: 'Montserrat', sans-serif;
+            --body-font: 'Roboto', 'Noto Sans SC', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--body-font); color: var(--text-color); background-color: var(--bg-color); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        .main-header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .main-header .container { display: flex; justify-content: space-between; align-items: center; padding-top: 15px; padding-bottom: 15px; }
+        .logo-link { display: flex; align-items: center; text-decoration: none; color: var(--primary-color); flex-shrink: 0; }
+        .logo-img { height: 120px; margin-right: 15px; }
+        .logo-text { font-family: var(--heading-font); font-weight: 700; font-size: 1.5rem; }
+        .main-nav { display: flex; align-items: center; gap: 10px; }
+        .main-nav ul { list-style: none; display: flex; align-items: center; }
+        .main-nav ul li { position: relative; }
+        .main-nav ul li a { padding: 10px 15px; text-decoration: none; color: var(--primary-color); font-weight: bold; transition: color 0.3s; display: block; white-space: nowrap; }
+        .main-nav ul li a:hover { color: var(--secondary-color); }
+
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background-color: white; list-style: none; box-shadow: 0 8px 16px rgba(0,0,0,0.15); border-radius: 8px; padding: 10px; margin-top: 10px; width: max-content; max-width: 800px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 20px; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease, margin-top 0.3s ease; z-index: 1100; }
+        .dropdown:hover > .dropdown-menu { display: grid; opacity: 1; visibility: visible; margin-top: 5px; }
+        .dropdown-menu a { font-size: 0.9rem; padding: 8px 12px; border-radius: 5px; }
+        
+        .header-actions { display: flex; align-items: center; gap: 15px; margin-left: 20px; }
+        .language-switcher { position: relative; }
+        .current-lang { font-weight: bold; color: var(--primary-color); padding: 8px 10px; border: 1px solid var(--accent-color); border-radius: 5px; cursor: pointer; }
+        .lang-dropdown { display: none; position: absolute; top: 100%; right: 0; background-color: #fff; list-style: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 5px; padding: 5px 0; margin-top: 5px; min-width: 80px; text-align: center; z-index: 1100; }
+        .language-switcher:hover .lang-dropdown { display: block; }
+        .lang-dropdown li a { display: block; padding: 10px 15px; text-decoration: none; color: var(--primary-color); }
+        .lang-dropdown li a:hover { background-color: var(--bg-color); }
+        
+        h1 { font-family: var(--heading-font); font-size: 3.2rem; margin-bottom: 20px; }
+        h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-color); margin-bottom: 40px; }
+        
+        .hero-section { text-align: center; padding: 80px 0; background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('images/hero-bg.jpg') no-repeat center center/cover; color: #fff; display: flex; align-items: center; min-height: 80vh; }
+        .subtitle { font-size: 1.2rem; font-weight: 300; max-width: 700px; margin: 0 auto 30px auto; }
+        
+        .cta-button, .cta-button-secondary, .cta-button-small { display: inline-block; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: transform 0.3s, background-color 0.3s; }
+        .cta-button { background-color: var(--secondary-color); color: #fff; }
+        .cta-button:hover { background-color: #087c7e; transform: translateY(-3px); }
+        .cta-button-secondary { background-color: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); }
+        .cta-button-secondary:hover { background-color: var(--primary-color); color: #fff; transform: translateY(-3px); }
+        .cta-button-small { padding: 8px 15px; background-color: var(--primary-color); color: #fff; font-size: 0.9rem; }
+        
+        .join-buttons { margin-top: 30px; display: flex; justify-content: center; gap: 20px; }
+        
+        .dev-banner { background: linear-gradient(45deg, #ffc107, #ff9800); color: #000; text-align: center; padding: 12px 20px; position: sticky; top: 0; width: 100%; z-index: 9999; box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 15px; font-family: 'Roboto', sans-serif; }
+        .dev-banner p { margin: 0; padding: 0; }
+
+        /* ==============================================
+        === АДАПТИВНАЯ ВЕРСТКА (MOBILE STYLES) ===
+        ============================================== */
+
+        .mobile-nav-toggle { display: none; background: transparent; border: none; cursor: pointer; padding: 10px; z-index: 9999; }
+        .mobile-nav-toggle .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+        .mobile-nav-toggle::before, .mobile-nav-toggle::after { content: ''; display: block; width: 25px; height: 3px; background: var(--primary-color); margin: 5px 0; transition: transform 0.3s; }
+
+        @media (max-width: 1024px) {
+            .logo-img { height: 80px; }
+            .logo-text { font-size: 1.2rem; }
+            
+            .mobile-nav-toggle { display: block; }
+            .main-nav ul {
+                display: none;
+                position: fixed;
+                top: 0; right: 0;
+                width: 70%; height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                padding-top: 80px;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                z-index: 9998; /* Важный z-index */
+            }
+            .main-nav ul.is-open { display: flex; }
+            .main-nav ul li a { font-size: 1.2rem; padding: 15px; }
+            .dropdown-menu { display: none !important; }
+            .main-nav .dropdown:hover > .dropdown-menu { display: none !important; }
+            
+            .mobile-nav-toggle[aria-expanded="true"]::before { transform: translateY(8px) rotate(45deg); }
+            .mobile-nav-toggle[aria-expanded="true"]::after { transform: translateY(-8px) rotate(-45deg); }
+
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero-section, .platforms-preview-section { padding: 60px 0; }
+            .join-buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dev-banner">
+        <p><strong>Under Development:</strong> This website is currently being built. Some sections may be incomplete. Thank you for your understanding.</p>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Civethica Logo" class="logo-img">
+                <span class="logo-text">Civethica Foundation</span>
+            </a>
+            
+            <button class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul id="main-nav-list">
+                    <li><a href="manifesto.html">The Manifesto</a></li>
+                    <li class="dropdown">
+                        <a href="#">Platforms</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Politics & Governance</a></li>
+                            <li><a href="#">Economy & Resources</a></li>
+                            <li><a href="#">Culture & Education</a></li>
+                            <li><a href="#">Health & Bioethics</a></li>
+                            <li><a href="#">Information & Consciousness</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.facebook.com/groups/CivethicaCommunityEN" target="_blank" rel="noopener noreferrer">Community</a></li>
+                    <li><a href="#">Library</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Support Us</a>
+                 <div class="language-switcher">
+                    <span class="current-lang">EN</span>
+                    <ul class="lang-dropdown">
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">RU</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1>Changing the Operating System of Human Consciousness</h1>
+                <p class="subtitle">We are a global movement initiating a cultural shift from an outdated anthropocentrism to a new, holistic worldview based on the unity of Life, Planet, and Cosmos.</p>
+                <a href="manifesto.html" class="cta-button">Read The Manifesto</a>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNavList = document.querySelector('#main-nav-list');
+
+        if (mobileNavToggle && mainNavList) {
+            mobileNavToggle.addEventListener('click', () => {
+                const isOpen = mainNavList.classList.toggle('is-open');
+                mobileNavToggle.setAttribute('aria-expanded', isOpen);
+            });
+        }
+    </script>
+
+</body>
+</html>
