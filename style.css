@@ -35,13 +35,17 @@ body {
 .dev-banner {
     background: linear-gradient(45deg, #ffc107, #ff9800);
     color: #000;
-    text-align: center;
-    padding: 12px 20px;
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
+    padding: 12px 0; /* Убираем боковые отступы, добавляем только верх/низ */
 }
+
+/* Это правило уже есть в вашем коде, оно будет центрировать текст */
+.dev-banner .container {
+    /* Никаких специальных стилей не нужно, он унаследует все от .container */
+}
+
 .dev-banner p {
     margin: 0;
+    text-align: center; /* Убеждаемся, что текст внутри контейнера по центру */
 }
 
 /* --- Header & Navigation --- */
