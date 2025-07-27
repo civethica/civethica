@@ -67,9 +67,6 @@ body {
     text-decoration: none;
     color: var(--primary-color);
     flex-shrink: 0;
-    /* <<== ИСПРАВЛЕНИЕ 1: Добавляем z-index, чтобы логотип был выше выпадающего меню ==>> */
-    position: relative;
-    z-index: 10000;
 }
 
 .logo-img {
@@ -148,68 +145,93 @@ body {
     margin-left: 20px;
 }
 
-/* --- General Content Styles --- */
-h1 {
-    font-family: var(--heading-font);
-    font-size: 3.2rem;
-    margin-bottom: 20px;
-}
-h2 {
-    font-family: var(--heading-font);
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 40px;
+/* ... все остальные ваши стили до блока RESPONSIVE ... */
+
+.main-footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
 }
 
-/* И другие ваши стили... */
+.main-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
 
 /* 
 ==============================================
 === RESPONSIVE STYLES (MOBILE & TABLET) ===
 ==============================================
 */
-
 .mobile-nav-toggle {
     display: none;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 10000; /* Самый высокий z-index, чтобы всегда быть наверху */
+    z-index: 9999;
 }
 
-/* ... стили для иконки гамбургера ... */
+.mobile-nav-toggle .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.mobile-nav-toggle::before,
+.mobile-nav-toggle::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
 
 @media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
 
-    /* <<== ИСПРАВЛЕНИЕ 2: Новая логика для шапки ==>> */
-    .main-header .container {
-        justify-content: space-between;
+    .logo-img {
+        height: 60px;
+        margin-right: 10px;
     }
-    .logo-link {
-        flex-grow: 1; /* Позволяем логотипу занять доступное место */
+    .logo-text {
+        font-size: 1rem;
     }
+    
     .header-actions {
-        margin-left: 10px; /* Убираем авто-отступ */
+        gap: 8px;
+    }
+    .cta-button-small, .current-lang {
+        padding: 6px 9px;
+        font-size: 0.8rem;
     }
 
-    /* --- Шапка и меню --- */
-    .logo-img { height: 60px; margin-right: 10px; }
-    .logo-text { font-size: 1rem; }
+    .mobile-nav-toggle {
+        display: block;
+    }
     
-    .cta-button-small, .current-lang { padding: 6px 9px; font-size: 0.8rem; }
-
-    .mobile-nav-toggle { display: block; }
-    
-    .main-nav ul {
+    /* Прячем десктопное меню */
+    .main-nav > ul {
         display: none;
     }
     
+    /* Стили для выезжающего меню, КОГДА оно открыто */
     .main-nav ul.is-open {
         display: flex;
         position: fixed;
-        top: 0; right: 0;
-        width: 70%; max-width: 320px; height: 100vh;
+        top: 0;
+        right: 0;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
         background: #fff;
         flex-direction: column;
         align-items: flex-start;
@@ -218,28 +240,40 @@ h2 {
         z-index: 9998;
     }
 
-    .main-nav ul.is-open li a { font-size: 1.3rem; padding: 15px 0; }
+    .main-nav ul.is-open li a {
+        font-size: 1.3rem;
+        padding: 15px 0;
+    }
     
-    /* <<== ИСПРАВЛЕНИЕ 3: Логика для мобильного подменю ==>> */
+    /* <<== НОВЫЙ БЛОК ДЛЯ МОБИЛЬНОГО ПОДМЕНЮ ==>> */
     .main-nav ul.is-open .dropdown-menu {
         display: none; /* Прячем по умолчанию */
-        position: static; /* Убираем абсолютное позиционирование */
+        position: static;
         transform: none;
         box-shadow: none;
         padding: 10px 0 10px 20px;
         opacity: 1;
         visibility: visible;
-        grid-template-columns: 1fr; /* Делаем подпункты в одну колонку */
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .main-nav ul.is-open .dropdown-menu a {
         font-size: 1rem;
         font-weight: normal;
+        padding: 8px 0;
         color: var(--secondary-color);
     }
-
-    /* Показываем подменю, если родительский пункт активен */
+    
     .main-nav ul.is-open .dropdown.submenu-open > .dropdown-menu {
         display: grid;
+    }
+
+    /* Анимация гамбургера в крестик */
+    .mobile-nav-toggle[aria-expanded="true"]::before {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .mobile-nav-toggle[aria-expanded="true"]::after {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
