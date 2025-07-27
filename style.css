@@ -8,230 +8,67 @@
     --body-font: 'Roboto', 'Noto Sans SC', sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body-font); color: var(--text-color); background-color: var(--bg-color); line-height: 1.6; }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: var(--body-font);
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* --- Development Banner --- */
-.dev-banner {
-    background: linear-gradient(45deg, #ffc107, #ff9800);
-    color: #000;
-    text-align: center;
-    padding: 12px 20px;
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
-}
-.dev-banner p {
-    margin: 0;
-}
+.dev-banner { background: linear-gradient(45deg, #ffc107, #ff9800); color: #000; text-align: center; padding: 12px 20px; font-size: 15px; font-family: 'Roboto', sans-serif; }
+.dev-banner p { margin: 0; }
 
 /* --- Header & Navigation --- */
-.main-header {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+.main-header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.main-header .container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+.logo-link { display: flex; align-items: center; text-decoration: none; color: var(--primary-color); flex-shrink: 0; padding-left: 20px; }
+.logo-img { height: 120px; margin-right: 15px; }
+.logo-text { font-family: var(--heading-font); font-weight: 700; font-size: 1.5rem; }
 
-.main-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
+.main-nav ul { list-style: none; display: flex; align-items: center; }
+.main-nav ul li { position: relative; }
+.main-nav ul li a { padding: 10px 15px; text-decoration: none; color: var(--primary-color); font-weight: bold; transition: color 0.3s; display: block; white-space: nowrap; }
+.main-nav ul li a:hover { color: var(--secondary-color); }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--primary-color);
-    flex-shrink: 0;
-}
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background-color: white; box-shadow: 0 8px 16px rgba(0,0,0,0.15); border-radius: 8px; padding: 10px; margin-top: 10px; width: max-content; max-width: 800px; grid-template-columns: repeat(3, 1fr); gap: 10px 20px; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease, margin-top 0.3s ease; z-index: 1100; }
+.dropdown:hover > .dropdown-menu { display: grid; opacity: 1; visibility: visible; margin-top: 5px; }
+.dropdown-menu a { font-size: 0.9rem; padding: 8px 12px; border-radius: 5px; }
 
-.logo-img {
-    height: 120px;
-    margin-right: 15px;
-}
+.header-actions { display: flex; align-items: center; gap: 15px; padding-right: 20px; }
 
-.logo-text {
-    font-family: var(--heading-font);
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-.main-nav ul li {
-    position: relative;
-}
-
-.main-nav ul li a {
-    padding: 10px 15px;
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: bold;
-    transition: color 0.3s;
-    display: block;
-    white-space: nowrap;
-}
-
-.main-nav ul li a:hover {
-    color: var(--secondary-color);
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    padding: 10px;
-    margin-top: 10px;
-    width: max-content;
-    max-width: 800px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease, margin-top 0.3s ease;
-    z-index: 1100;
-}
-
-.dropdown:hover > .dropdown-menu {
-    display: grid;
-    opacity: 1;
-    visibility: visible;
-    margin-top: 5px;
-}
-
-.dropdown-menu a {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-    border-radius: 5px;
-}
-
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-left: 20px;
-}
-
-/* ... все остальные ваши стили до блока RESPONSIVE ... */
-
-.main-footer {
-    background-color: var(--primary-color);
-    color: #fff;
-    text-align: center;
-    padding: 40px 0;
-}
-
-.main-footer a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
+/* ... все остальные стили ... */
 
 /* 
 ==============================================
 === RESPONSIVE STYLES (MOBILE & TABLET) ===
 ==============================================
 */
-.mobile-nav-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 9999;
-}
-
-.mobile-nav-toggle .sr-only {
-    position: absolute;
-    width: 1px; height: 1px;
-    padding: 0; margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-.mobile-nav-toggle::before,
-.mobile-nav-toggle::after {
-    content: '';
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--primary-color);
-    margin: 5px 0;
-    transition: transform 0.3s ease;
-}
+.mobile-nav-toggle { display: none; background: transparent; border: none; cursor: pointer; padding: 10px; z-index: 9999; }
+.mobile-nav-toggle .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+.mobile-nav-toggle::before, .mobile-nav-toggle::after { content: ''; display: block; width: 25px; height: 3px; background: var(--primary-color); margin: 5px 0; transition: transform 0.3s ease; }
 
 @media (max-width: 1024px) {
-    .container {
-        padding: 0 15px;
-    }
+    .main-header .container { padding: 10px 15px; }
+    .logo-link { padding-left: 0; }
+    .header-actions { padding-right: 0; }
 
-    .logo-img {
-        height: 60px;
-        margin-right: 10px;
-    }
-    .logo-text {
-        font-size: 1rem;
-    }
-    
-    .header-actions {
-        gap: 8px;
-    }
-    .cta-button-small, .current-lang {
-        padding: 6px 9px;
-        font-size: 0.8rem;
-    }
+    .logo-img { height: 60px; margin-right: 10px; }
+    .logo-text { font-size: 1rem; }
+    .cta-button-small, .current-lang { padding: 6px 9px; font-size: 0.8rem; }
 
-    .mobile-nav-toggle {
-        display: block;
-    }
-    
+    .mobile-nav-toggle { display: block; }
+    .main-nav { order: 3; } /* Ставим гамбургер в конец */
+    .header-actions { order: 2; }
+    .logo-link { order: 1; }
+
     /* Прячем десктопное меню */
-    .main-nav > ul {
-        display: none;
-    }
+    .main-nav > ul { display: none; }
     
-    /* Стили для выезжающего меню, КОГДА оно открыто */
+    /* Стили для выезжающего меню */
     .main-nav ul.is-open {
-        display: flex;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 80%;
-        max-width: 320px;
-        height: 100vh;
+        display: flex; position: fixed;
+        top: 0; right: 0;
+        width: 80%; max-width: 320px; height: 100vh;
         background: #fff;
         flex-direction: column;
         align-items: flex-start;
@@ -239,40 +76,18 @@ body {
         box-shadow: -5px 0 15px rgba(0,0,0,0.1);
         z-index: 9998;
     }
+    .main-nav ul.is-open li a { font-size: 1.3rem; padding: 15px 0; }
 
-    .main-nav ul.is-open li a {
-        font-size: 1.3rem;
-        padding: 15px 0;
-    }
-    
-    /* <<== НОВЫЙ БЛОК ДЛЯ МОБИЛЬНОГО ПОДМЕНЮ ==>> */
+    /* Полностью отключаем выпадающее меню на мобильных */
+    .dropdown:hover > .dropdown-menu,
     .main-nav ul.is-open .dropdown-menu {
-        display: none; /* Прячем по умолчанию */
-        position: static;
-        transform: none;
-        box-shadow: none;
-        padding: 10px 0 10px 20px;
-        opacity: 1;
-        visibility: visible;
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .main-nav ul.is-open .dropdown-menu a {
-        font-size: 1rem;
-        font-weight: normal;
-        padding: 8px 0;
-        color: var(--secondary-color);
+        display: none !important;
     }
     
-    .main-nav ul.is-open .dropdown.submenu-open > .dropdown-menu {
-        display: grid;
-    }
-
     /* Анимация гамбургера в крестик */
-    .mobile-nav-toggle[aria-expanded="true"]::before {
-        transform: translateY(8px) rotate(45deg);
-    }
+    .mobile-nav-toggle[aria-expanded="true"]::before { transform: translateY(8px) rotate(45deg); }
+    .mobile-nav-toggle[aria-expanded="true"]::after { transform: translateY(-8px) rotate(-45deg); }
+}
     .mobile-nav-toggle[aria-expanded="true"]::after {
         transform: translateY(-8px) rotate(-45deg);
     }
