@@ -1,6 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Этот скрипт нужен только для плавного скролла по якорям, если они есть.
-    // На многостраничном сайте он не будет мешать переходам на другие страницы.
+document.addEventListener('DOMContentLoaded', function () {
+    // Скрипт для плавного скролла по якорям
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -13,4 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Скрипт для открытия/закрытия мобильного меню
+    const toggle = document.querySelector('.mobile-nav-toggle');
+    const nav = document.querySelector('.main-nav ul');
+
+    if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+            const isOpen = nav.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+    }
 });
