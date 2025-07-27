@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Код для плавного скролла (если нужен) ---
-    // (можно оставить или убрать, на меню он не влияет)
-});
+    // --- Код для плавного скролла (без изменений) ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            if (this.getAttribute('href').length > 1) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
