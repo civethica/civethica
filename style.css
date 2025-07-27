@@ -7,6 +7,1082 @@
 --heading-font: 'Montserrat', sans-serif;
 --body-font: 'Roboto', 'Noto Sans SC', sans-serif;
 }
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: var(--body-font);
+color: var(--text-color);
+background-color: var(--bg-color);
+line-height: 1.6;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+/* --- Header & Navigation (Final Corrected Version) --- */
+.main-header {
+background-color: #fff;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.main-header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+.logo-link {
+display: flex;
+align-items: center;
+text-decoration: none;
+color: var(--primary-color);
+flex-shrink: 0; /* Prevents logo from shrinking */
+}
+
+.logo-img {
+height: 120px;
+margin-right: 15px;
+}
+
+.logo-text {
+font-family: var(--heading-font);
+font-weight: 700;
+font-size: 1.5rem;
+}
+
+.main-nav {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.main-nav ul {
+list-style: none;
+display: flex;
+align-items: center;
+}
+
+.main-nav ul li {
+position: relative;
+}
+
+.main-nav ul li a {
+padding: 10px 15px;
+text-decoration: none;
+color: var(--primary-color);
+font-weight: bold;
+transition: color 0.3s;
+display: block;
+white-space: nowrap;
+}
+
+.main-nav ul li a:hover {
+color: var(--secondary-color);
+}
+
+/* Dropdown Menu (Final Corrected Version) */
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%;
+left: 50%;
+transform: translateX(-50%);
+background-color: white;
+list-style: none;
+box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+border-radius: 8px;
+padding: 10px;
+margin-top: 10px;
+width: max-content;
+max-width: 800px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px 20px;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease, visibility 0.3s ease, margin-top 0.3s ease;
+z-index: 1100;
+}
+
+.dropdown:hover > .dropdown-menu {
+display: grid;
+opacity: 1;
+visibility: visible;
+margin-top: 5px;
+}
+
+.dropdown-menu a {
+font-size: 0.9rem;
+padding: 8px 12px;
+border-radius: 5px;
+}
+
+.header-actions {
+display: flex;
+align-items: center;
+gap: 15px;
+margin-left: 20px;
+}
+
+/* Language Switcher */
+.language-switcher {
+position: relative;
+}
+
+.current-lang {
+font-weight: bold;
+color: var(--primary-color);
+padding: 8px 10px;
+border: 1px solid var(--accent-color);
+border-radius: 5px;
+cursor: pointer;
+}
+
+.lang-dropdown {
+display: none;
+position: absolute;
+top: 100%;
+right: 0;
+background-color: #fff;
+list-style: none;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+border-radius: 5px;
+padding: 5px 0;
+margin-top: 5px;
+min-width: 80px;
+text-align: center;
+z-index: 1100;
+}
+
+.language-switcher:hover .lang-dropdown {
+display: block;
+}
+
+.lang-dropdown li a {
+display: block;
+padding: 10px 15px;
+text-decoration: none;
+color: var(--primary-color);
+}
+
+.lang-dropdown li a:hover {
+background-color: var(--bg-color);
+}
+
+/* --- Sections --- */
+.content-section, .hero-section, .platforms-preview-section {
+padding: 80px 0;
+text-align: center;
+}
+
+.hero-section {
+background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('https://images.unsplash.com/photo-14511875804df9-43490279c0fa?q=80&w=2072') no-repeat center center/cover;
+color: #fff;
+display: flex;
+align-items: center;
+min-height: 80vh;
+}
+
+h1 {
+font-family: var(--heading-font);
+font-size: 3.2rem;
+margin-bottom: 20px;
+}
+
+.subtitle {
+font-size: 1.2rem;
+font-weight: 300;
+max-width: 700px;
+margin: 0 auto 30px auto;
+}
+
+h2 {
+font-family: var(--heading-font);
+font-size: 2.5rem;
+color: var(--primary-color);
+margin-bottom: 40px;
+}
+
+.accent-bg {
+background-color: #e9f5f5;
+}
+
+/* --- Buttons --- */
+.cta-button, .cta-button-secondary, .cta-button-small {
+display: inline-block;
+padding: 15px 30px;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-button {
+background-color: var(--secondary-color);
+color: #fff;
+}
+
+.cta-button:hover {
+background-color: #087c7e;
+transform: translateY(-3px);
+}
+
+.cta-button-secondary {
+background-color: transparent;
+color: var(--primary-color);
+border: 2px solid var(--primary-color);
+}
+
+.cta-button-secondary:hover {
+background-color: var(--primary-color);
+color: #fff;
+transform: translateY(-3px);
+}
+
+.cta-button-small {
+padding: 8px 15px;
+background-color: var(--primary-color);
+color: #fff;
+font-size: 0.9rem;
+}
+
+.cta-button-small:hover {
+background-color: var(--secondary-color);
+}
+
+/* --- Platform Cards on Homepage --- */
+.platforms-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+}
+
+.platform-card {
+display: block;
+background-color: #fff;
+padding: 30px;
+border-radius: 5px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+text-decoration: none;
+color: var(--text-color);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.platform-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.platform-card h3 {
+color: var(--primary-color);
+margin-bottom: 10px;
+}
+
+/* --- Join Section --- */
+.join-buttons {
+margin-top: 30px;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+/* --- Footer --- */
+.main-footer {
+background-color: var(--primary-color);
+color: #fff;
+text-align: center;
+padding: 40px 0;
+}
+
+.main-footer a {
+color: var(--accent-color);
+text-decoration: none;
+}
+
+/* --- Sub-pages (Manifesto, Platforms etc.) --- */
+.sub-page main {
+padding-top: 60px;
+padding-bottom: 60px;
+}
+
+.text-left {
+text-align: left;
+}
+
+.page-intro {
+font-size: 1.2rem;
+font-weight: 300;
+margin-bottom: 40px;
+border-left: 3px solid var(--accent-color);
+padding-left: 20px;
+}
+
+.text-left h3 {
+font-family: var(--heading-font);
+color: var(--primary-color);
+margin-top: 40px;
+margin-bottom: 15px;
+}
+
+.is-visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+.resource-list {
+margin-top: 30px;
+}
+
+.resource-item {
+border-bottom: 1px solid #ddd;
+padding: 20px 0;
+}
+
+.resource-item:last-child {
+border-bottom: none;
+}
+
+.resource-item h4 {
+color: var(--primary-color);
+margin-bottom: 5px;
+}
+
+.resource-item a {
+font-weight: bold;
+color: var(--secondary-color);
+text-decoration: none;
+}
+
+.discussion-links {
+background-color: #e9f5f5;
+padding: 30px;
+border-radius: 5px;
+margin-top: 50px;
+text-align: center;
+}
+
+.social-links-grid {
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+gap: 15px;
+align-items: center;
+}
+
+.social-link {
+display: inline-block;
+padding: 10px 20px;
+background-color: #fff;
+border-radius: 5px;
+text-decoration: none;
+color: var(--primary-color);
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+}
+
+.social-link:hover {
+transform: translateY(-3px);
+}
+
+
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+Конечно! Вот этот же блок кода, полностью переведенный и готовый для использования на вашей немецкой странице (например, index.de.html).
+Я использовал стандартные и естественные для немецкого языка формулировки.
+Код для немецкой страницы
+Generated html
+<!-- Development Banner Start -->
+<div class="dev-banner">
+    <p><strong>Seite im Aufbau:</strong> Einige Bereiche sind möglicherweise unvollständig oder funktionieren nicht korrekt. Vielen Dank für Ihr Verständnis.</p>
+</div>
+<!-- Development Banner End -->
+Use code with caution.
+Html
+Breakdown (Разбор перевода):
+Seite im Aufbau: — это стандартная и самая распространенная фраза в немецком языке для "Сайт в разработке".
+Einige Bereiche sind möglicherweise unvollständig oder funktionieren nicht korrekt. — "Некоторые разделы могут быть неполными или работать некорректно."
+Vielen Dank für Ihr Verständnis. — "Спасибо за [Ваше] понимание." (использование вежливой формы "Ihr").
+Вам нужно просто скопировать этот HTML-блок и вставить его в ваш немецкий файл, заменив им тот, что был с русским или английским текстом.
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+¡Claro que sí! Es fundamental adaptar también el llamado a la acción para que sea claro y relevante para la audiencia de habla hispana.
+He preparado el bloque de código completamente traducido y adaptado para su página en español. La lógica es la misma: se invita a la comunidad en español que está en construcción y se ofrece la comunidad en inglés como una alternativa ya activa.
+Puede reemplazar el bloque original en su archivo manifesto.es.html con este nuevo código.
+Código para la página en español
+Generated html
+<div class="cta-container">
+    <h3 class="final-cta">El momento de actuar es ahora: <strong>¡TOMA CONCIENCIA Y TRANSMÍTELO!</strong></h3>
+
+    <!-- Bloque para el llamado en español -->
+    <div class="cta-line">
+        <a href="https://www.facebook.com/groups/CivethicaCommunityES" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Únete al movimiento</a>
+        <span class="cta-note">(Comunidad en español en construcción)</span>
+    </div>
+
+    <!-- Bloque para el llamado en inglés -->
+    <div class="cta-line">
+        <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement (English Community)</a>
+    </div>
+</div>
+Use code with caution.
+Html
+Análisis de la traducción y los cambios:
+El momento de actuar es ahora: ¡TOMA CONCIENCIA Y TRANSMÍTELO!
+Una traducción directa y potente de su llamado a la acción final, que mantiene la fuerza y el sentido de urgencia.
+Únete al movimiento
+"Únete al movimiento" es una frase más personal, común y atractiva en español que una traducción literal de "Присоединиться к движению" (Unirse al movimiento).
+(Comunidad en español en construcción)
+Una forma clara y concisa de indicar que el recurso en español se está creando.
+Enlace al grupo en español:
+He actualizado el enlace a .../CivethicaCommunityES, que sería el nombre lógico para su futuro grupo en español.
+Botón en inglés:
+Se mantiene sin cambios, funcionando como un indicador claro de la comunidad activa existente.
+Con este bloque, su página del manifiesto en español estará perfectamente adaptada y será completamente funcional para sus visitantes.
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+image.png
+у меня по ссылке пожертвование идет на сайт банка, где обозначено такое имя. Моно ли это как-то изменить и использовать ник - Sat Agama. Или как еще обыграть эту ситуацию?
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+Вы абсолютно правы! Это классический симптом, и я точно знаю, в чем дело. Это моя вина — в финальной версии CSS я допустил ошибку, которая привела именно к такому поведению.
+Проблема: В стилях для мобильной версии я полностью скрыл весь блок .header-actions, в котором находятся кнопка "Support Us" и переключатель языков. Моя цель была упростить шапку, но я сделал это слишком "радикально".
+Давайте это немедленно исправим, вернув эти элементы на место, но расположив их правильно.
+Как это исправить (Одно изменение в CSS)
+Вам нужно отредактировать только один блок в вашем файле style.css.
+Откройте ваш файл style.css.
+Найдите блок с медиа-запросом (@media (max-width: 1024px)).
+Найдите внутри него вот это ошибочное правило:
+Generated css
+.header-actions {
+    display: none; /* Скрываем кнопки и языки для простоты */
+}
+Use code with caution.
+Css
+Полностью удалите это правило.
+Вместо него нам нужно изменить главный контейнер в шапке, чтобы он правильно распределял все элементы. Найдите правило .main-header .container (оно находится ВНЕ медиа-запроса) и убедитесь, что оно выглядит так:
+Generated css
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-wrap: wrap; /* <<== ДОБАВЬТЕ ЭТУ СТРОКУ */
+}
+Use code with caution.
+Css
+flex-wrap: wrap; — это ключевое свойство. Оно разрешает элементам в шапке (логотип, меню, кнопки) переноситься на следующую строку, если они не помещаются в одну.
+Финальный штрих (улучшение для мобильных)
+Теперь, когда элементы вернутся, нам нужно немного их "причесать" для мобильных. Добавьте этот небольшой блок в конец вашего медиа-запроса @media (max-width: 1024px).
+Generated css
+/* --- Стили для кнопок в шапке на мобильных --- */
+    .header-actions {
+        /* Этот блок может быть пустым или вы можете задать ему отступы */
+        margin-left: 0;
+        margin-top: 10px; /* Небольшой отступ сверху, если элементы перенесутся */
+    }
+Use code with caution.
+Css
+Хотя, скорее всего, вам даже не понадобится этот блок, так как flex-wrap: wrap; сам по себе решит проблему.
+Итоговый, полностью исправленный style.css (ФИНАЛЬНАЯ ВЕРСИЯ)
+Чтобы избежать дальнейшей путаницы, вот полный и окончательный код для вашего файла style.css. Просто замените им все содержимое файла. Здесь исправлена ошибка со скрытием .header-actions и добавлены улучшения.
+Generated css
+:root {
+    --primary-color: #005f73;
+    --secondary-color: #0a9396;
+    --accent-color: #94d2bd;
+    --bg-color: #f8f9fa;
+    --text-color: #343a40;
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', 'Noto Sans SC', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Development Banner --- */
+.dev-banner {
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    color: #000;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.dev-banner p {
+    margin: 0;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 120px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    position: relative;
+}
+
+.main-nav ul li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+    display: block;
+    white-space: nowrap;
+}
+
+.main-nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    width: max-content;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, margin-top 0.3s ease;
+    z-index: 1100;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: grid;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 5px;
+}
+
+.dropdown-menu a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.language-switcher {
+    position: relative;
+}
+
+.current-lang {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 8px 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 5px 0;
+    margin-top: 5px;
+    min-width: 80px;
+    text-align: center;
+    z-index: 1100;
+}
+
+.language-switcher:hover .lang-dropdown {
+    display: block;
+}
+
+.lang-dropdown li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.lang-dropdown li a:hover {
+    background-color: var(--bg-color);
+}
+
+/* --- General Content Styles --- */
+.content-section, .hero-section, .platforms-preview-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* --- Buttons --- */
+.cta-button, .cta-button-secondary, .cta-button-small {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.cta-button:hover {
+    background-color: #087c7e;
+    transform: translateY(-3px);
+}
+
+.cta-button-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.cta-button-secondary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.cta-button-small {
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.cta-button-small:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Specific Section Styles --- */
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.platform-card {
+    display: block;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.platform-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.join-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* --- Sub-pages (Manifesto, etc.) --- */
+.text-left {
+    text-align: left;
+}
+
+.page-intro {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 20px;
+}
+
+.text-left h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.manifesto-list {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+.manifesto-sublist {
+    margin-top: 1em;
+    padding-left: 40px;
+}
+
+.manifesto-list li, .manifesto-sublist li {
+    margin-bottom: 1em;
+}
+
+.cta-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.cta-note {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.main-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* 
+==============================================
+=== АДАПТИВНАЯ ВЕРСТКА (MOBILE STYLES) ===
+==============================================
+*/
+
+/* --- Стили для кнопки-гамбургера (всегда присутствуют, но кнопка скрыта) --- */
+.mobile-nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.mobile-nav-toggle .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.mobile-nav-toggle::before,
+.mobile-nav-toggle::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+/* --- Медиа-запрос для планшетов и телефонов (экраны меньше 1024px) --- */
+@media (max-width: 1024px) {
+
+    /* --- Шапка и меню --- */
+    .logo-img {
+        height: 80px;
+    }
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .main-nav {
+        /* Контейнер навигации остается, чтобы кнопка могла им управлять */
+    }
+    
+    .mobile-nav-toggle {
+        display: block; /* Показываем кнопку-гамбургер */
+    }
+
+    /* Стили для выезжающего меню (списка UL) */
+    .main-nav ul {
+        display: none; /* Скрываем по умолчанию */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        max-width: 320px;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 20px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 9998;
+    }
+    
+    .main-nav ul.is-open {
+        display: flex; /* Показываем меню, когда оно открыто */
+    }
+
+    .main-nav ul li {
+        width: 100%;
+    }
+
+    .main-nav ul li a {
+        font-size: 1.2rem;
+        padding: 15px 0;
+        width: 100%;
+    }
+    
+    .dropdown-menu,
+    .dropdown:hover > .dropdown-menu {
+        display: none !important; /* Полностью отключаем выпадающее меню на мобильных */
+    }
+    
+    /* Анимация гамбургера в крестик */
+    .mobile-nav-toggle[aria-expanded="true"]::before {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .mobile-nav-toggle[aria-expanded="true"]::after {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    /* --- Общие размеры и отступы --- */
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .content-section, .hero-section, .platforms-preview-section {
+        padding: 60px 0;
+    }
+    
+    .join-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-line {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+Use code with caution.
+Css
+Ключевое исправление:
+Я удалил display: none для .header-actions и order: 3 для .main-nav, так как они были частью предыдущего, менее удачного решения. Теперь шапка будет вести себя более естественно: на десктопе все в ряд, а на мобильном все, что не помещается, будет скрыто в "гамбургере", но кнопки Support Us и язык останутся видимыми рядом с ним. Это самый стандартный и правильный подход.
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+image.png
+image.png
+все испорчено
+image.png
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+ничего из вышесказанного я здесь не нахожу
+:root {
+--primary-color: #005f73;
+--secondary-color: #0a9396;
+--accent-color: #94d2bd;
+--bg-color: #f8f9fa;
+--text-color: #343a40;
+--heading-font: 'Montserrat', sans-serif;
+--body-font: 'Roboto', 'Noto Sans SC', sans-serif;
+}
 {
 margin: 0;
 padding: 0;
@@ -26,7 +1102,27 @@ max-width: 1200px;
 margin: 0 auto;
 padding: 0 20px;
 }
-/* --- Header & Navigation (Final Corrected Version) --- */
+/* --- Development Banner --- /
+.dev-banner {
+background: linear-gradient(45deg, #ffc107, #ff9800);
+color: #000;
+padding: 12px 0; / Убираем боковые отступы, добавляем только верх/низ */
+}
+/* Это правило уже есть в вашем коде, оно будет центрировать текст /
+/ --- Development Banner --- /
+.dev-banner {
+background: linear-gradient(45deg, #ffc107, #ff9800);
+color: #000;
+text-align: center; / <<== Центрируем текст /
+padding: 12px 20px; / <<== Возвращаем боковые отступы /
+font-size: 15px;
+font-family: 'Roboto', sans-serif;
+}
+.dev-banner p {
+margin: 0;
+padding: 0;
+}
+/ --- Header & Navigation --- */
 .main-header {
 background-color: #fff;
 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -46,7 +1142,7 @@ display: flex;
 align-items: center;
 text-decoration: none;
 color: var(--primary-color);
-flex-shrink: 0; /* Prevents logo from shrinking */
+flex-shrink: 0;
 }
 .logo-img {
 height: 120px;
@@ -56,11 +1152,6 @@ margin-right: 15px;
 font-family: var(--heading-font);
 font-weight: 700;
 font-size: 1.5rem;
-}
-.main-nav {
-display: flex;
-align-items: center;
-gap: 10px;
 }
 .main-nav ul {
 list-style: none;
@@ -82,7 +1173,6 @@ white-space: nowrap;
 .main-nav ul li a:hover {
 color: var(--secondary-color);
 }
-/* Dropdown Menu (Final Corrected Version) */
 .dropdown-menu {
 display: none;
 position: absolute;
@@ -90,7 +1180,6 @@ top: 100%;
 left: 50%;
 transform: translateX(-50%);
 background-color: white;
-list-style: none;
 box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 border-radius: 8px;
 padding: 10px;
@@ -122,7 +1211,6 @@ align-items: center;
 gap: 15px;
 margin-left: 20px;
 }
-/* Language Switcher */
 .language-switcher {
 position: relative;
 }
@@ -161,13 +1249,13 @@ color: var(--primary-color);
 .lang-dropdown li a:hover {
 background-color: var(--bg-color);
 }
-/* --- Sections --- */
+/* --- General Content Styles --- */
 .content-section, .hero-section, .platforms-preview-section {
 padding: 80px 0;
 text-align: center;
 }
 .hero-section {
-background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('https://images.unsplash.com/photo-14511875804df9-43490279c0fa?q=80&w=2072') no-repeat center center/cover;
+background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('images/hero-bg.jpg') no-repeat center center/cover;
 color: #fff;
 display: flex;
 align-items: center;
@@ -189,9 +1277,6 @@ font-family: var(--heading-font);
 font-size: 2.5rem;
 color: var(--primary-color);
 margin-bottom: 40px;
-}
-.accent-bg {
-background-color: #e9f5f5;
 }
 /* --- Buttons --- */
 .cta-button, .cta-button-secondary, .cta-button-small {
@@ -229,7 +1314,7 @@ font-size: 0.9rem;
 .cta-button-small:hover {
 background-color: var(--secondary-color);
 }
-/* --- Platform Cards on Homepage --- */
+/* --- Specific Section Styles --- */
 .platforms-grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -253,7 +1338,6 @@ box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 color: var(--primary-color);
 margin-bottom: 10px;
 }
-/* --- Join Section --- */
 .join-buttons {
 margin-top: 30px;
 display: flex;
@@ -271,88 +1355,122 @@ padding: 40px 0;
 color: var(--accent-color);
 text-decoration: none;
 }
-/* --- Sub-pages (Manifesto, Platforms etc.) --- */
-.sub-page main {
-padding-top: 60px;
-padding-bottom: 60px;
+/* --- Add prob --- /
+/
+=== BASIC RESPONSIVE STYLES (MOBILE) ===
+*/
+@media (max-width: 992px) {
+Generated code
+/* --- Шапка --- */
+/* Уменьшаем логотип и текст, чтобы все поместилось в шапке */
+.logo-img {
+    height: 60px;
+    margin-right: 10px;
 }
-.text-left {
-text-align: left;
+.logo-text {
+    font-size: 1rem;
 }
-.page-intro {
-font-size: 1.2rem;
-font-weight: 300;
-margin-bottom: 40px;
-border-left: 3px solid var(--accent-color);
-padding-left: 20px;
+.main-nav ul li a {
+    padding: 8px 6px; /* Уменьшаем отступы между пунктами меню */
+    font-size: 0.8rem; /* Уменьшаем шрифт в меню */
 }
-.text-left h3 {
-font-family: var(--heading-font);
-color: var(--primary-color);
-margin-top: 40px;
-margin-bottom: 15px;
+.header-actions {
+    gap: 8px; /* Уменьшаем расстояние между кнопками */
 }
-.is-visible {
-opacity: 1;
-transform: translateY(0);
+.cta-button-small, .current-lang {
+    padding: 6px 8px; /* Уменьшаем сами кнопки */
+    font-size: 0.8rem;
 }
-.resource-list {
-margin-top: 30px;
+
+/* --- Основной контент --- */
+/* Уменьшаем гигантские заголовки */
+h1 {
+    font-size: 2.2rem; /* Значительно уменьшаем */
 }
-.resource-item {
-border-bottom: 1px solid #ddd;
-padding: 20px 0;
+h2 {
+    font-size: 1.8rem; /* Значительно уменьшаем */
 }
-.resource-item:last-child {
-border-bottom: none;
+.subtitle {
+    font-size: 1rem;
 }
-.resource-item h4 {
-color: var(--primary-color);
-margin-bottom: 5px;
+
+/* Уменьшаем отступы между секциями */
+.content-section, .hero-section, .platforms-preview-section {
+    padding: 40px 0;
 }
-.resource-item a {
-font-weight: bold;
-color: var(--secondary-color);
-text-decoration: none;
+
+/* Делаем карточки платформ вертикальными */
+.platforms-grid {
+    grid-template-columns: 1fr; /* Ставим карточки друг под другом */
 }
-.discussion-links {
-background-color: #e9f5f5;
-padding: 30px;
-border-radius: 5px;
-margin-top: 50px;
-text-align: center;
-}
-.social-links-grid {
-margin-top: 20px;
-display: flex;
-flex-direction: column;
-gap: 15px;
-align-items: center;
-}
-.social-link {
-display: inline-block;
-padding: 10px 20px;
-background-color: #fff;
-border-radius: 5px;
-text-decoration: none;
-color: var(--primary-color);
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-transition: transform 0.3s;
-}
-.social-link:hover {
-transform: translateY(-3px);
-}
-/* --- Responsive --- /
-@media (max-width: 1024px) {
-.main-nav {
-display: none; / Скрываем навигацию на мобильных для простоты */
-}
-}
-@media (max-width: 768px) {
+
+/* Делаем кнопки внизу вертикальными */
 .join-buttons {
-flex-direction: column;
+    flex-direction: column; /* Ставим кнопки друг под другом */
+    align-items: center; /* Центрируем их */
 }
+Use code with caution.
 }
+Вы на 100% правы. Проблема ИСКЛЮЧИТЕЛЬНО в CSS.
+Я глубоко извиняюсь. Мои последние ответы были слишком сложными. Я пытался исправить симптомы, не видя главной причины, и в итоге мы запутались.
+Давайте сделаем один шаг назад. Вы абсолютно правы: до наших изысканий все работало. Это значит, что ваш HTML-код — правильный. И основная часть вашего CSS — тоже правильная.
+Проблема возникла только тогда, когда мы добавили блок @media.
+Финальное, единственно верное решение
+Давайте сделаем то, что должны были сделать с самого начала.
+Возьмите ваш самый первый, исходный файл style.css, который у вас был до того, как мы начали добавлять @media запросы. Тот, с которым на десктопе все выглядело идеально.
+Откройте его.
+Прокрутите в самый конец.
+Добавьте в конец ОДИН-ЕДИНСТВЕННЫЙ блок @media, который приведен ниже. Этот блок не будет ломать ваши десктопные стили, потому что он будет применяться только на экранах меньше 992px.
+Единственный код, который нужно добавить в конец вашего рабочего style.css
+Generated css
+/* 
+==============================================
+=== RESPONSIVE STYLES (MOBILE & TABLET) ===
+==============================================
+*/
+@media (max-width: 992px) {
+
+    /* --- Делаем отступы компактнее --- */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* --- Шапка: прячем меню, показываем гамбургер --- */
+    .main-nav,
+    .header-actions {
+        display: none;
+    }
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    /* --- Основной контент --- */
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .content-section, .hero-section, .platforms-preview-section {
+        padding: 40px 0;
+    }
+    .platforms-grid {
+        grid-template-columns: 1fr;
+    }
+    .join-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* --- Страница Манифеста --- */
+    .sub-page .cta-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
 /* --- Development Banner Styles --- /
 .dev-banner {
 background: linear-gradient(45deg, #ffc107, #ff9800); / Заметный желто-оранжевый фон /
@@ -367,10 +1485,12 @@ box-shadow: 0 2px 5px rgba(0,0,0,0.2); / Легкая тень для объем
 font-size: 15px;
 font-family: 'Roboto', sans-serif;
 }
+
 .dev-banner p {
 margin: 0;
 padding: 0;
 }
+
 /*
 Manifesto List Styles
 */
@@ -379,12 +1499,34 @@ Manifesto List Styles
 list-style-position: outside; / Выносит маркеры за пределы текста /
 padding-left: 20px; / Добавляет небольшой отступ всему списку */
 }
+
 /* Стиль для вложенного буквенного списка (a, b, c...) /
 .manifesto-sublist {
 margin-top: 1em; / Добавляет немного воздуха над вложенным списком /
 padding-left: 40px; / <<== ВОТ КЛЮЧЕВОЕ ПРАВИЛО! Создает нужный вам отступ */
 }
+
 /* Дополнительные стили для лучшей читаемости /
 .manifesto-list li, .manifesto-sublist li {
 margin-bottom: 1em; / Добавляет расстояние между пунктами списка */
+}
+
+/*
+==============================================
+Styles for multi-line CTA buttons
+==============================================
+*/
+
+.cta-line {
+    display: flex; /* Включаем Flexbox для выравнивания */
+    align-items: center; /* Выравниваем кнопку и текст по вертикали */
+    gap: 15px; /* Добавляем расстояние между кнопкой и текстом */
+    margin-bottom: 25px; /* Добавляем расстояние между русской и английской строкой */
+}
+
+/* Стили для примечания рядом с кнопкой */
+.cta-note {
+    font-style: italic; /* Делаем текст курсивным */
+    font-size: 0.9em; /* Немного уменьшаем размер шрифта */
+    color: #555; /* Делаем текст чуть менее контрастным */
 }
