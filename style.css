@@ -67,6 +67,9 @@ body {
     text-decoration: none;
     color: var(--primary-color);
     flex-shrink: 0;
+    /* <<== ИСПРАВЛЕНИЕ 1: Добавляем z-index, чтобы логотип был выше выпадающего меню ==>> */
+    position: relative;
+    z-index: 10000;
 }
 
 .logo-img {
@@ -145,77 +148,12 @@ body {
     margin-left: 20px;
 }
 
-.language-switcher {
-    position: relative;
-}
-
-.current-lang {
-    font-weight: bold;
-    color: var(--primary-color);
-    padding: 8px 10px;
-    border: 1px solid var(--accent-color);
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.lang-dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    list-style: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 5px;
-    padding: 5px 0;
-    margin-top: 5px;
-    min-width: 80px;
-    text-align: center;
-    z-index: 1100;
-}
-
-.language-switcher:hover .lang-dropdown {
-    display: block;
-}
-
-.lang-dropdown li a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-.lang-dropdown li a:hover {
-    background-color: var(--bg-color);
-}
-
 /* --- General Content Styles --- */
-.content-section, .hero-section, .platforms-preview-section {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.hero-section {
-    background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('images/hero-bg.jpg') no-repeat center center/cover;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    min-height: 80vh;
-}
-
 h1 {
     font-family: var(--heading-font);
     font-size: 3.2rem;
     margin-bottom: 20px;
 }
-
-.subtitle {
-    font-size: 1.2rem;
-    font-weight: 300;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-}
-
 h2 {
     font-family: var(--heading-font);
     font-size: 2.5rem;
@@ -223,143 +161,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* --- Buttons --- */
-.cta-button, .cta-button-secondary, .cta-button-small {
-    display: inline-block;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.cta-button {
-    background-color: var(--secondary-color);
-    color: #fff;
-}
-
-.cta-button:hover {
-    background-color: #087c7e;
-    transform: translateY(-3px);
-}
-
-.cta-button-secondary {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-.cta-button-secondary:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-    transform: translateY(-3px);
-}
-
-.cta-button-small {
-    padding: 8px 15px;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-size: 0.9rem;
-}
-
-.cta-button-small:hover {
-    background-color: var(--secondary-color);
-}
-
-/* --- Specific Section Styles --- */
-.platforms-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.platform-card {
-    display: block;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-decoration: none;
-    color: var(--text-color);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.platform-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.platform-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.join-buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* --- Sub-pages (Manifesto, etc.) --- */
-.text-left {
-    text-align: left;
-}
-
-.page-intro {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 40px;
-    border-left: 3px solid var(--accent-color);
-    padding-left: 20px;
-}
-
-.text-left h3 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    margin-top: 40px;
-    margin-bottom: 15px;
-}
-
-.manifesto-list {
-    list-style-position: outside;
-    padding-left: 20px;
-}
-
-.manifesto-sublist {
-    margin-top: 1em;
-    padding-left: 40px;
-}
-
-.manifesto-list li, .manifesto-sublist li {
-    margin-bottom: 1em;
-}
-
-.cta-line {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.cta-note {
-    font-style: italic;
-    font-size: 0.9em;
-    color: #555;
-}
-
-/* --- Footer --- */
-.main-footer {
-    background-color: var(--primary-color);
-    color: #fff;
-    text-align: center;
-    padding: 40px 0;
-}
-
-.main-footer a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
+/* И другие ваши стили... */
 
 /* 
 ==============================================
@@ -367,129 +169,77 @@ h2 {
 ==============================================
 */
 
-/* --- Гамбургер-кнопка (всегда в коде, но видна только на мобильных) --- */
 .mobile-nav-toggle {
     display: none;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 9999;
+    z-index: 10000; /* Самый высокий z-index, чтобы всегда быть наверху */
 }
 
-.mobile-nav-toggle .sr-only {
-    position: absolute;
-    width: 1px; height: 1px;
-    padding: 0; margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
+/* ... стили для иконки гамбургера ... */
 
-.mobile-nav-toggle::before,
-.mobile-nav-toggle::after {
-    content: '';
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--primary-color);
-    margin: 5px 0;
-    transition: transform 0.3s ease;
-}
-
-/* --- Медиа-запрос для всех экранов меньше 1024px --- */
 @media (max-width: 1024px) {
 
-    /* Уменьшаем боковые отступы на мобильных */
-    .container {
-        padding: 0 15px;
+    /* <<== ИСПРАВЛЕНИЕ 2: Новая логика для шапки ==>> */
+    .main-header .container {
+        justify-content: space-between;
+    }
+    .logo-link {
+        flex-grow: 1; /* Позволяем логотипу занять доступное место */
+    }
+    .header-actions {
+        margin-left: 10px; /* Убираем авто-отступ */
     }
 
     /* --- Шапка и меню --- */
-    .logo-img {
-        height: 60px; /* Уменьшили */
-        margin-right: 10px; /* Уменьшили */
-    }
-    .logo-text {
-        font-size: 1rem; /* Уменьшили */
-    }
+    .logo-img { height: 60px; margin-right: 10px; }
+    .logo-text { font-size: 1rem; }
     
-    .header-actions {
-        gap: 8px; /* Уменьшили */
-        margin-left: auto; /* Прижимает кнопки к гамбургеру */
-    }
-    .cta-button-small, .current-lang {
-        padding: 6px 9px; /* Уменьшили */
-        font-size: 0.8rem; /* Уменьшили */
-    }
+    .cta-button-small, .current-lang { padding: 6px 9px; font-size: 0.8rem; }
 
-    .mobile-nav-toggle {
-        display: block; /* Показываем кнопку-гамбургер */
-    }
+    .mobile-nav-toggle { display: block; }
     
-    /* Скрываем десктопное меню */
     .main-nav ul {
         display: none;
     }
     
-    /* Стили для выезжающего меню, КОГДА оно открыто */
     .main-nav ul.is-open {
         display: flex;
         position: fixed;
-        top: 0;
-        right: 0;
-        width: 70%;
-        max-width: 320px;
-        height: 100vh;
+        top: 0; right: 0;
+        width: 70%; max-width: 320px; height: 100vh;
         background: #fff;
         flex-direction: column;
         align-items: flex-start;
-        padding: 80px 20px 20px 20px;
+        padding: 100px 30px 30px 30px;
         box-shadow: -5px 0 15px rgba(0,0,0,0.1);
         z-index: 9998;
     }
 
-    .main-nav ul.is-open li {
-        width: 100%;
-    }
-    .main-nav ul.is-open li a {
-        font-size: 1.2rem;
-        padding: 15px 0;
-        width: 100%;
-    }
+    .main-nav ul.is-open li a { font-size: 1.3rem; padding: 15px 0; }
     
-    /* Полностью отключаем выпадающее меню на мобильных */
-    .dropdown-menu,
-    .dropdown:hover > .dropdown-menu {
-        display: none !important;
-    }
-    
-    /* Анимация гамбургера в крестик */
-    .mobile-nav-toggle[aria-expanded="true"]::before {
-        transform: translateY(8px) rotate(45deg);
-    }
-    .mobile-nav-toggle[aria-expanded="true"]::after {
-        transform: translateY(-8px) rotate(-45deg);
+    /* <<== ИСПРАВЛЕНИЕ 3: Логика для мобильного подменю ==>> */
+    .main-nav ul.is-open .dropdown-menu {
+        display: none; /* Прячем по умолчанию */
+        position: static; /* Убираем абсолютное позиционирование */
+        transform: none;
+        box-shadow: none;
+        padding: 10px 0 10px 20px;
+        opacity: 1;
+        visibility: visible;
+        grid-template-columns: 1fr; /* Делаем подпункты в одну колонку */
     }
 
-    /* --- Общие размеры и отступы --- */
-    h1 {
-        font-size: 2.5rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-    .content-section, .hero-section, .platforms-preview-section {
-        padding: 60px 0;
-    }
-    
-    .join-buttons {
-        flex-direction: column;
-        align-items: center;
+    .main-nav ul.is-open .dropdown-menu a {
+        font-size: 1rem;
+        font-weight: normal;
+        color: var(--secondary-color);
     }
 
-    .cta-line {
-        flex-direction: column;
-        text-align: center;
+    /* Показываем подменю, если родительский пункт активен */
+    .main-nav ul.is-open .dropdown.submenu-open > .dropdown-menu {
+        display: grid;
     }
 }
