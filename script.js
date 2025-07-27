@@ -11,13 +11,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Код для плавного скролла по якорям (если есть на странице) ---
+    // --- Код для открытия подменю по клику на мобильных ---
+    const dropdownToggle = document.querySelector('.main-nav .dropdown > a');
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function(e) {
+            // Проверяем, открыто ли мобильное меню
+            if (mainNavList.classList.contains('is-open')) {
+                e.preventDefault(); // Предотвращаем переход по ссылке '#'
+                this.parentElement.classList.toggle('submenu-open');
+            }
+        });
+    }
+
+    // --- Код для плавного скролла (без изменений) ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            // Проверяем, действительно ли это ссылка на якорь, а не просто "#"
             if (this.getAttribute('href').length > 1) {
                 e.preventDefault();
-
                 const targetElement = document.querySelector(this.getAttribute('href'));
                 if (targetElement) {
                     targetElement.scrollIntoView({
