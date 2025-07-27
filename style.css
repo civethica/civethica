@@ -477,3 +477,114 @@ Styles for multi-line CTA buttons
     font-size: 0.9em; /* Немного уменьшаем размер шрифта */
     color: #555; /* Делаем текст чуть менее контрастным */
 }
+
+/*
+==============================================
+=== АДАПТИВНАЯ ВЕРСТКА (MOBILE STYLES) ===
+==============================================
+*/
+
+/* Сначала общие стили для кнопки-гамбургера */
+.mobile-nav-toggle {
+    display: none; /* По умолчанию скрыта на больших экранах */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.mobile-nav-toggle .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Рисуем саму иконку "гамбургер" */
+.mobile-nav-toggle::before,
+.mobile-nav-toggle::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 5px 0;
+    transition: transform 0.3s;
+}
+
+
+/* Медиа-запрос для планшетов и телефонов (экраны меньше 1024px) */
+@media (max-width: 1024px) {
+
+    /* --- ШАПКА И МЕНЮ --- */
+    .logo-img {
+        height: 80px; /* Уменьшаем логотип */
+    }
+    .logo-text {
+        font-size: 1.2rem; /* Уменьшаем текст логотипа */
+    }
+
+    /* Показываем кнопку-гамбургер */
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    /* Скрываем старое меню и делаем из него мобильное */
+    .main-nav ul {
+        display: none; /* Скрываем по умолчанию */
+        position: fixed; /* Фиксируем поверх всего */
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column; /* Делаем пункты вертикальными */
+        padding-top: 80px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+    
+    .main-nav ul.is-open {
+        display: flex; /* Показываем меню, когда оно открыто */
+    }
+
+    .main-nav ul li a {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+    
+    /* Убираем выпадающее меню на мобильных */
+    .dropdown-menu {
+        display: none !important;
+    }
+    
+    /* Анимация гамбургера в крестик */
+    .mobile-nav-toggle[aria-expanded="true"]::before {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .mobile-nav-toggle[aria-expanded="true"]::after {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    /* --- РАЗМЕРЫ ТЕКСТА И ОТСТУПЫ --- */
+    h1 {
+        font-size: 2.5rem; /* Уменьшаем главный заголовок */
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .content-section, .hero-section, .platforms-preview-section {
+        padding: 60px 0; /* Уменьшаем вертикальные отступы */
+    }
+    
+    /* --- МЕНЯЕМ СТРУКТУРУ КНОПОК --- */
+    .join-buttons {
+        flex-direction: column; /* Ставим кнопки друг под другом */
+        align-items: center;
+    }
+}
