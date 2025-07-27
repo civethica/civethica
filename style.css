@@ -78,19 +78,3 @@ body { font-family: var(--body-font); color: var(--text-color); line-height: 1.6
 }
 
 /* Other styles like .hero-section, h1, etc. can be added below */
-Use code with caution.
-Css
-Шаг 3: Финальный, сверх-надежный JavaScript
-ПОЛНОСТЬЮ ЗАМЕНИТЕ script.js ЭТИМ КОДОМ:
-Generated javascript
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-    const mainNavList = document.querySelector('#main-nav-list');
-
-    if (mobileNavToggle && mainNavList) {
-        mobileNavToggle.addEventListener('click', () => {
-            mainNavList.classList.toggle('is-open');
-            mobileNavToggle.setAttribute('aria-expanded', mainNavList.classList.contains('is-open'));
-        });
-    }
-});
