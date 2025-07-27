@@ -112,7 +112,19 @@
             <p><a href="#">Privacy Policy</a></p>
         </div>
     </footer>
+    <!-- ====================================================== -->
+    <!-- ===== JAVASCRIPT ДЛЯ МОБИЛЬНОГО МЕНЮ (ДОБАВИТЬ) ====== -->
+    <!-- ====================================================== -->
+    <script>
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNavList = document.querySelector('#main-nav-list');
 
+        mobileNavToggle.addEventListener('click', () => {
+            const isOpen = mainNavList.classList.toggle('is-open');
+            mobileNavToggle.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
+    <!-- ====================================================== -->
     <script src="script.js"></script>
 </body>
 </html>
