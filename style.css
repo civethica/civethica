@@ -251,6 +251,7 @@ h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-c
     font-size: 0.9em;
     color: #555;
 }
+
 /* --- Footer --- */
 .main-footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 40px 0; }
 .main-footer a { color: var(--accent-color); text-decoration: none; }
@@ -356,4 +357,16 @@ h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-c
     .mobile-nav-toggle.is-active .icon-close {
         display: block;
     }
+}
+
+/*
+==============================================
+======= ВРЕМЕННЫЙ ВЫКЛЮЧАТЕЛЬ HOVER'А ========
+==============================================
+*/
+/* Это правило говорит: "Если у элемента .dropdown есть класс .hover-off, 
+   то даже при наведении курсора его подменю должно быть скрыто!" */
+   
+.dropdown.hover-off:hover > .dropdown-menu {
+    display: none !important;
 }
