@@ -18,18 +18,18 @@
     </div>
     <!-- Development Banner End -->
 
-
-
-    
+    <!-- ====================================================== -->
+    <!-- ======== ПОЛНОСТЬЮ РАБОЧАЯ ШАПКА (HEADER) ======== -->
+    <!-- ====================================================== -->
     <header class="main-header">
-        <!-- Скопируйте сюда всю секцию <header> из файла index.ru.html -->
         <div class="container">
             <a href="index.ru.html" class="logo-link">
                 <img src="images/logo.png" alt="Логотип Civethica" class="logo-img">
                 <span class="logo-text">Фонд Civethica</span>
             </a>
             <nav class="main-nav">
-                <ul>
+                <!-- ID добавлен на <ul> для работы мобильного меню -->
+                <ul id="main-nav-list">
                     <li><a href="manifesto.ru.html">Манифест</a></li>
                     <li class="dropdown">
                         <a href="#">Платформы</a>
@@ -41,10 +41,16 @@
                             <li><a href="platform-information.ru.html">Информация и Сознание</a></li>
                         </ul>
                     </li>
-                    <li><a href="https://www.facebook.com/groups/CivethicaCommunityEN" target="_blank" rel="noopener noreferrer">Сообщество</a></li>
+                    <li><a href="https://www.facebook.com/groups/CivethicaCommunityRU" target="_blank" rel="noopener noreferrer">Сообщество</a></li>
                     <li><a href="#">Библиотека</a></li>
                 </ul>
             </nav>
+            <!-- Добавлена кнопка мобильного меню (гамбургер/крестик) -->
+            <button class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+                <span class="sr-only">Меню</span>
+                <span class="icon-open">☰</span>
+                <span class="icon-close">×</span>
+            </button>
             <div class="header-actions">
                 <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Поддержать</a>
                  <div class="language-switcher">
@@ -61,13 +67,14 @@
             </div>
         </div>
     </header>
-    <main>
-        <section class="content-section is-visible">
-            <div class="container text-left">
-                <!-- ====================================================== -->
-                <!-- ==== НАЧАЛО НОВОГО ТЕКСТА МАНИФЕСТА (РУССКИЙ) ====== -->
-                <!-- ====================================================== -->
+    <!-- ====================================================== -->
+    <!-- ================ КОНЕЦ ШАПКИ ======================= -->
+    <!-- ====================================================== -->
 
+    <main>
+        <section class="content-section">
+            <div class="container text-left">
+                
                 <h2>Манифест нового сознания Civethica</h2>
                 
                 <h3>Время изменить курс.</h3>
@@ -105,31 +112,27 @@
                 <div class="cta-container">
                     <h3 class="final-cta">Время действовать — сейчас: <strong>ОСОЗНАЙ И ПЕРЕДАЙ ДРУГОМУ!</strong></h3>
 
-                    <!-- Блок для русскоязычного призыва -->
                     <div class="cta-line">
                         <a href="https://www.facebook.com/groups/CivethicaCommunityRU" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Присоединиться к движению</a>
                         <span class="cta-note">(в процессе создания русскоязычного ресурса)</span>
                     </div>
 
-                   <!-- Блок для англоязычного призыва -->
                    <div class="cta-line">
                    <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement (English Community)</a>
                    </div>
                 </div>
-
-                <!-- ====================================================== -->
-                <!-- ===== КОНЕЦ НОВОГО ТЕКСТА МАНИФЕСТА (РУССКИЙ) ======= -->
-                <!-- ====================================================== -->
             </div>
         </section>
     </main>
+    
     <footer class="main-footer">
-        <!-- Скопируйте сюда всю секцию <footer> из файла index.ru.html -->
         <div class="container">
-            <p>&copy; 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
+            <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
             <p><a href="#">Политика конфиденциальности</a></p>
         </div>
     </footer>
+    
     <script src="script.js"></script>
+
 </body>
 </html>
