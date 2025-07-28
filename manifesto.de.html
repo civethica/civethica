@@ -18,7 +18,9 @@
     </div>
     <!-- Development Banner End -->
 
-    
+    <!-- ====================================================== -->
+    <!-- ======== ПОЛНОСТЬЮ РАБОЧАЯ ШАПКА (HEADER) ======== -->
+    <!-- ====================================================== -->
     <header class="main-header">
         <div class="container">
             <a href="index.de.html" class="logo-link">
@@ -26,7 +28,8 @@
                 <span class="logo-text">Stiftung Civethica</span>
             </a>
             <nav class="main-nav">
-                <ul>
+                <!-- ID добавлен на <ul> для работы мобильного меню -->
+                <ul id="main-nav-list">
                     <li><a href="manifesto.de.html">Das Manifest</a></li>
                     <li class="dropdown">
                         <a href="#">Plattformen</a>
@@ -38,10 +41,16 @@
                             <li><a href="platform-information.de.html">Information & Bewusstsein</a></li>
                         </ul>
                     </li>
-                    <li><a href="https://www.facebook.com/groups/CivethicaCommunityEN" target="_blank" rel="noopener noreferrer">Gemeinschaft</a></li>
+                    <li><a href="https://www.facebook.com/groups/CivethicaCommunityDE" target="_blank" rel="noopener noreferrer">Gemeinschaft</a></li>
                     <li><a href="#">Bibliothek</a></li>
                 </ul>
             </nav>
+            <!-- Добавлена кнопка мобильного меню (гамбургер/крестик) -->
+            <button class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+                <span class="sr-only">Menü</span>
+                <span class="icon-open">☰</span>
+                <span class="icon-close">×</span>
+            </button>
             <div class="header-actions">
                 <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Unterstützen</a>
                  <div class="language-switcher">
@@ -58,13 +67,14 @@
             </div>
         </div>
     </header>
+    <!-- ====================================================== -->
+    <!-- ================ КОНЕЦ ШАПКИ ======================= -->
+    <!-- ====================================================== -->
+    
     <main>
-        <section class="content-section is-visible">
+        <section class="content-section">
             <div class="container text-left">
-                <!-- ====================================================== -->
-                <!-- ==== START OF THE NEW MANIFESTO TEXT (GERMAN) ====== -->
-                <!-- ====================================================== -->
-
+                
                 <h2>Civethica: Ein Manifest für ein neues Bewusstsein</h2>
 
                 <h3>Zeit für einen Kurswechsel.</h3>
@@ -101,38 +111,27 @@
                 
                 <div class="cta-container">
                     <h3 class="final-cta">Die Zeit zu handeln ist jetzt: <strong>ERKENNE UND GIB ES WEITER!</strong></h3>
-                </div>
-                
-                <!-- ====================================================== -->
-                <!-- ====== END OF THE NEW MANIFESTO TEXT (GERMAN) ====== -->
-                <!-- ====================================================== -->
-                
-                
-                <div class="cta-container">
-                    <h3 class="final-cta">Die Zeit zu handeln ist jetzt: <strong>ERKENNE UND GIB ES WEITER!</strong></h3>
-
-                    <!-- Block für den deutschen Aufruf -->
                     <div class="cta-line">
                         <a href="https://www.facebook.com/groups/CivethicaCommunityDE" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Werde Teil der Bewegung</a>
                         <span class="cta-note">(Deutsche Community im Aufbau)</span>
                     </div>
-
-                    <!-- Block für den englischen Aufruf -->
                     <div class="cta-line">
                         <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement (English Community)</a>
                     </div>
                 </div>
-
                 
             </div>
         </section>
     </main>
+
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2025 Stiftung Civethica. Eine informelle bürgerliche Initiative.</p>
+            <p>© 2025 Stiftung Civethica. Eine informelle bürgerliche Initiative.</p>
             <p><a href="#">Datenschutzrichtlinie</a></p>
         </div>
     </footer>
+    
     <script src="script.js"></script>
+
 </body>
 </html>
