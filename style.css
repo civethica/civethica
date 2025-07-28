@@ -117,7 +117,6 @@ body {
     margin-top: 10px;
     width: max-content;
     max-width: 800px;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px 20px;
     opacity: 0;
@@ -360,38 +359,148 @@ Manifesto Page Specific Styles
     font-size: 0.9em;
     color: #555;
 }
-/* --- Development Banner Styles --- /
-.dev-banner {
-background: linear-gradient(45deg, #ffc107, #ff9800); / Заметный желто-оранжевый фон /
-color: #000; / Черный текст для читаемости /
-text-align: center; / Текст по центру /
-padding: 12px 20px; / Внутренние отступы /
-position: sticky; / "Прилипает" к верху при прокрутке /
-top: 0;
-width: 100%;
-z-index: 9999; / Гарантирует, что баннер будет поверх всех элементов /
-box-shadow: 0 2px 5px rgba(0,0,0,0.2); / Легкая тень для объема */
-font-size: 15px;
-font-family: 'Roboto', sans-serif;
-}
-.dev-banner p {
-margin: 0;
-padding: 0;
-}
+
+
 /*
-Manifesto List Styles
+==============================================
+Mobile Navigation & Responsive Styles
+==============================================
 */
-/* Стиль для основного нумерованного списка (1, 2, 3...) /
-.manifesto-list {
-list-style-position: outside; / Выносит маркеры за пределы текста /
-padding-left: 20px; / Добавляет небольшой отступ всему списку */
+
+/* Скрываем гамбургер-кнопку по умолчанию (для десктопной версии) */
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
 }
-/* Стиль для вложенного буквенного списка (a, b, c...) /
-.manifesto-sublist {
-margin-top: 1em; / Добавляет немного воздуха над вложенным списком /
-padding-left: 40px; / <<== ВОТ КЛЮЧЕВОЕ ПРАВИЛО! Создает нужный вам отступ */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
-/* Дополнительные стили для лучшей читаемости /
-.manifesto-list li, .manifesto-sublist li {
-margin-bottom: 1em; / Добавляет расстояние между пунктами списка */
+
+.icon-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Медиа-запрос для планшетов и мобильных телефонов (ширина до 992px) */
+@media (max-width: 992px) {
+    .main-header .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo-img {
+        height: 80px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    /* Показываем гамбургер-кнопку */
+    .mobile-nav-toggle {
+        display: block;
+        order: 3;
+    }
+
+    .main-nav {
+        order: 4;
+        width: 100%;
+    }
+    
+    /* Скрываем навигацию по умолчанию */
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        position: absolute;
+        top: 100%; /* Располагаем под шапкой */
+        left: 0;
+    }
+
+    /* Показываем навигацию, когда она открыта */
+    .main-nav ul.is-open {
+        display: flex;
+    }
+
+    .main-nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .main-nav ul li a {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    /* Выпадающее меню на мобильных */
+    .dropdown:hover > .dropdown-menu {
+        display: none; /* Отключаем ховер на мобильных */
+    }
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        display: none;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-left: 20px;
+        margin-top: 10px;
+        opacity: 1;
+        visibility: visible;
+        background-color: #f7f7f7;
+    }
+
+    .dropdown.is-open > .dropdown-menu {
+        display: grid;
+    }
+
+    .header-actions {
+        order: 2;
+        margin-left: auto;
+    }
+    
+    .join-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .platforms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Анимация гамбургера в крестик */
+    .mobile-nav-toggle.is-active .icon-bar:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-nav-toggle.is-active .icon-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .mobile-nav-toggle.is-active .icon-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
