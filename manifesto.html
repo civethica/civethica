@@ -10,20 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logo.png" type="image/png">
 </head>
-<body>
 
-    
+<body class="sub-page">
+
     <!-- Development Banner Start -->
     <div class="dev-banner">
         <p><strong>Under Development:</strong> This website is currently being built. Some sections may be incomplete. Thank you for your understanding.</p>
     </div>
     <!-- Development Banner End -->
-
     
-<body class="sub-page">
-
     <!-- ====================================================== -->
-    <!-- ==== ВОТ ИСПРАВЛЕНИЕ: ДОБАВЛЕНА ПОЛНАЯ ШАПКА ====== -->
+    <!-- ============= ИСПРАВЛЕННАЯ ШАПКА ================== -->
     <!-- ====================================================== -->
     <header class="main-header">
         <div class="container">
@@ -32,7 +29,8 @@
                 <span class="logo-text">Civethica Foundation</span>
             </a>
             <nav class="main-nav">
-                <ul>
+                <!-- ВОТ КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ: ID ВОЗВРАЩЕН НА UL -->
+                <ul id="main-nav-list">
                     <li><a href="manifesto.html">The Manifesto</a></li>
                     <li class="dropdown">
                         <a href="#">Platforms</a>
@@ -48,6 +46,12 @@
                     <li><a href="#">Library</a></li>
                 </ul>
             </nav>
+            <!-- Кнопка мобильного меню -->
+            <button class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="icon-open">☰</span>
+                <span class="icon-close">×</span>
+            </button>
             <div class="header-actions">
                 <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Support Us</a>
                  <div class="language-switcher">
@@ -65,16 +69,13 @@
         </div>
     </header>
     <!-- ====================================================== -->
-    <!-- ================ КОНЕЦ ИСПРАВЛЕНИЯ ================== -->
+    <!-- ================ КОНЕЦ ШАПКИ ======================= -->
     <!-- ====================================================== -->
 
     <main>
-        <section class="content-section is-visible">
+        <section class="content-section">
             <div class="container text-left">
-                <!-- ====================================================== -->
-                <!-- ==== START OF THE NEW MANIFESTO TEXT (ENGLISH) ======= -->
-                <!-- ====================================================== -->
-
+                
                 <h2>Civethica: A Manifesto for a New Consciousness</h2>
 
                 <h3>Time to Change Course.</h3>
@@ -111,30 +112,23 @@
                 
                 <div class="cta-container">
                     <h3 class="final-cta">The time to act is now: <strong>REALIZE AND PASS IT ON!</strong></h3>
-                    <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement</a>
+                    <div class="cta-line">
+                         <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement</a>
+                    </div>
                 </div>
-
-                <!-- ====================================================== -->
-                <!-- ====== END OF THE NEW MANIFESTO TEXT (ENGLISH) ======= -->
-                <!-- ====================================================== -->
-
+                
             </div>
         </section>
     </main>
 
-    <!-- ====================================================== -->
-    <!-- ===== ВОТ ИСПРАВЛЕНИЕ: ДОБАВЛЕН ПОЛНЫЙ ФУТЕР ====== -->
-    <!-- ====================================================== -->
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2025 The Civethica Foundation. A non-formal civil initiative.</p>
+            <p>© 2025 The Civethica Foundation. A non-formal civil initiative.</p>
             <p><a href="#">Privacy Policy</a></p>
         </div>
     </footer>
-    <!-- ====================================================== -->
-    <!-- ================ КОНЕЦ ИСПРАВЛЕНИЯ ================== -->
-    <!-- ====================================================== -->
     
     <script src="script.js"></script>
+
 </body>
 </html>
