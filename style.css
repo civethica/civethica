@@ -229,7 +229,28 @@ h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-c
 .manifesto-list, .manifesto-sublist { list-style-position: outside; padding-left: 20px; }
 .manifesto-sublist { margin-top: 1em; padding-left: 40px; }
 .manifesto-list li, .manifesto-sublist li { margin-bottom: 1em; }
+/* --- Стили для кнопок-призывов внизу страниц (CTA) --- */
+.cta-container {
+    margin-top: 50px;
+    text-align: left;
+}
 
+.cta-line {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px; /* <== Вот то самое расстояние между строками кнопок */
+}
+
+.cta-line:last-child {
+    margin-bottom: 0;
+}
+
+.cta-note {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
+}
 /* --- Footer --- */
 .main-footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 40px 0; }
 .main-footer a { color: var(--accent-color); text-decoration: none; }
