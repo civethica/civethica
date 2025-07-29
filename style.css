@@ -191,6 +191,7 @@ body {
 }
 
 /* --- General Content Styles --- */
+/* --- General Content Styles --- */
 .content-section, .hero-section, .platforms-preview-section { padding: 80px 0; text-align: center; scroll-margin-top: 150px; }
 .hero-section {
     background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('images/hero-bg.jpg') no-repeat center center/cover;
@@ -239,7 +240,7 @@ h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-c
     display: flex;
     align-items: center;
     gap: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* <== Вот то самое расстояние между строками кнопок */
 }
 
 .cta-line:last-child {
@@ -268,13 +269,13 @@ h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-c
 
 /* Стили самой кнопки */
 .mobile-nav-toggle {
-    padding: 10px;
+    padding: 10px; /* Добавим немного воздуха вокруг иконки */
 }
 
 /* Общие стили для обеих иконок */
 .mobile-nav-toggle .icon-open,
 .mobile-nav-toggle .icon-close {
-    font-size: 2rem;
+    font-size: 2rem; /* Размер иконки */
     line-height: 1;
     color: var(--primary-color);
     transition: transform 0.3s ease;
@@ -308,31 +309,34 @@ h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-c
 
     /* Используем более конкретный селектор, чтобы повысить приоритет */
     .main-nav .dropdown .dropdown-menu {
+        /* Сбрасываем стили десктопа с силой */
         position: static !important;
         transform: none !important;
         box-shadow: none !important;
         opacity: 1 !important;
         visibility: visible !important;
-        background-color: transparent !important;
+        background-color: transparent !important; /* Убираем белый фон */
         
-        display: none;
+        /* Новые стили для мобильного подменю */
+        display: none; /* Изначально скрыто */
         width: 100%;
-        list-style: none;
-        padding: 10px 0 10px 20px;
+        list-style: none; /* Убираем маркеры-точки */
+        padding: 10px 0 10px 20px; /* Отступы с акцентом на левый */
         margin-top: 0;
         border-radius: 0;
     }
     
     .main-nav .dropdown.is-open > .dropdown-menu {
-        display: block;
+        display: block; /* Показываем как блочный элемент */
     }
 
+    /* Стилизуем ссылки внутри, чтобы они выглядели как вложенные */
     .main-nav .dropdown-menu a {
         font-size: 1rem;
         font-weight: 400;
-        text-align: center;
+        text-align: center; /* Выравниваем по центру как и родительские */
         padding: 10px 15px;
-        color: var(--secondary-color);
+        color: var(--secondary-color); /* Делаем цвет другим для наглядности */
     }
 
     /* --- Адаптация основного контента --- */
@@ -342,27 +346,20 @@ h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-c
     .platforms-grid { grid-template-columns: 1fr; }
 
     /* --- Показ/скрытие иконок при активном меню --- */
+
+    /* Когда меню ОТКРЫТО (кнопка имеет класс .is-active) */
+
+    /* Скрываем гамбургер */
     .mobile-nav-toggle.is-active .icon-open {
         display: none;
     }
 
+    /* Показываем крестик */
     .mobile-nav-toggle.is-active .icon-close {
         display: block;
     }
 }
 
-/*
-==============================================
-======= ИСПРАВЛЕНИЕ ДЛЯ iOS SAFARI ===========
-==============================================
-*/
-/* Это специальное правило говорит мобильному Safari, 
-   что элементы внутри .language-switcher должны быть кликабельны,
-   чтобы решить проблему "залипания" hover-эффекта. */
-   
-.language-switcher * {
-    cursor: pointer;
-}
 /*
 ==============================================
 ======= ВРЕМЕННЫЙ ВЫКЛЮЧАТЕЛЬ HOVER'А ========
