@@ -7,8 +7,29 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileNavToggle && mainNavList) {
         mobileNavToggle.addEventListener('click', (event) => {
             event.stopPropagation();
+            
+            // Открываем или закрываем основное мобильное меню
             mainNavList.classList.toggle('is-open');
             mobileNavToggle.classList.toggle('is-active');
+
+            // =========================================================================
+            // === НОВЫЙ БЛОК: АВТОМАТИЧЕСКОЕ РАСКРЫТИЕ МЕНЮ ПЛАТФОРМ ===
+            // =========================================================================
+            const platformsDropdown = document.querySelector('.main-nav .dropdown');
+            
+            // Проверяем, есть ли у body класс .sub-page (который есть на всех страницах платформ)
+            if (platformsDropdown && document.body.classList.contains('sub-page')) {
+                
+                // Если мы только что ОТКРЫЛИ мобильное меню...
+                if (mainNavList.classList.contains('is-open')) {
+                    // ...то автоматически открываем и подменю платформ.
+                    platformsDropdown.classList.add('is-open');
+                } else {
+                    // ...иначе (если мы закрыли мобильное меню), убеждаемся, что подменю тоже закрыто.
+                    platformsDropdown.classList.remove('is-open');
+                }
+            }
+            // === КОНЕЦ НОВОГО БЛОКА ===
         });
     }
 
@@ -46,9 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const path = window.location.pathname;
     const filename = path.split('/').pop();
     const parts = filename.split('.');
-    let langCode = 'en'; // Язык по умолчанию
+    let langCode = 'en';
 
-    // Более надежное определение языка из имени файла (например, "index.ru.html")
     if (parts.length > 2 && parts[parts.length - 2].length === 2) {
         langCode = parts[parts.length - 2];
     }
@@ -57,21 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
         languageSwitcherText.textContent = langCode.toUpperCase();
     }
 
-
-    // =========================================================================
-    // === НОВЫЙ БЛОК: ИСПРАВЛЕНИЕ ССЫЛКИ НА ЛОГОТИПЕ ===
-    // =========================================================================
+    // --- Логика исправления ссылки на логотипе ---
     const logoLink = document.querySelector('.logo-link');
-
     if (logoLink) {
-        // Определяем, какой должна быть ссылка на главную страницу для текущего языка
-        const homeUrl = (langCode === 'en') 
-            ? 'index.html' // Для английского языка
-            : `index.${langCode}.html`; // Для всех остальных языков (например, index.ru.html)
-
-        // Присваиваем правильную ссылку нашему логотипу
+        const homeUrl = (langCode === 'en') ? 'index.html' : `index.${langCode}.html`;
         logoLink.href = homeUrl;
     }
-    // === КОНЕЦ НОВОГО БЛОКА ===
-
 });
