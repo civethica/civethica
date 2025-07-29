@@ -5,55 +5,63 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainNavList = document.querySelector('#main-nav-list');
 
     if (mobileNavToggle && mainNavList) {
-        mobileNavToggle.addEventListener('click', () => {
+        mobileNavToggle.addEventListener('click', (event) => {
+            event.stopPropagation();
             mainNavList.classList.toggle('is-open');
             mobileNavToggle.classList.toggle('is-active');
         });
     }
 
     // =========================================================================
-    // === НОВАЯ УНИВЕРСАЛЬНАЯ ЛОГИКА "ТОЛЬКО ПО КЛИКУ" ДЛЯ ВСЕХ МЕНЮ ===
+    // === ФИНАЛЬНАЯ ЛОГИКА "ТОЛЬКО ПО КЛИКУ", КОТОРАЯ НЕ БЛОКИРУЕТ ССЫЛКИ ===
     // =========================================================================
 
-    const allDropdowns = document.querySelectorAll('.dropdown, .language-switcher');
+    const allClickDropdowns = document.querySelectorAll('.main-nav .dropdown, .language-switcher');
 
-    allDropdowns.forEach(dropdown => {
-        // Находим элемент, который будет открывать меню
-        const trigger = dropdown.classList.contains('language-switcher') 
-            ? dropdown.querySelector('.current-lang') // Для языка - это .current-lang
-            : dropdown.querySelector('a:first-child'); // Для навигации - это первая ссылка
+    allClickDropdowns.forEach(dropdownContainer => {
+        dropdownContainer.addEventListener('click', function(event) {
+            
+            // --- КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ ---
+            // Если пользователь кликнул на ссылку ВНУТРИ выпадающего списка языков...
+            if (event.target.closest('.lang-dropdown')) {
+                // ...то мы НИЧЕГО не делаем и позволяем браузеру перейти по ссылке.
+                // Функция просто завершает свою работу здесь.
+                return;
+            }
 
-        if (trigger) {
-            trigger.addEventListener('click', function(event) {
-                // Предотвращаем переход по ссылке для меню "Platforms"
-                if (dropdown.classList.contains('dropdown')) {
-                    event.preventDefault();
-                }
+            // --- Стандартная логика открытия/закрытия меню ---
 
-                const wasOpen = dropdown.classList.contains('is-open');
+            // Останавливаем "всплытие", чтобы клик не закрыл меню сразу же
+            event.stopPropagation();
+            
+            // Предотвращаем переход по ссылке ТОЛЬКО для главных пунктов меню (например, "Platforms")
+            if (event.target.matches('.main-nav .dropdown > a')) {
+                event.preventDefault();
+            }
 
-                // 1. Сначала закрываем ВСЕ открытые выпадающие меню
-                document.querySelectorAll('.dropdown.is-open, .language-switcher.is-open').forEach(openMenu => {
-                    openMenu.classList.remove('is-open');
-                });
+            const wasOpen = this.classList.contains('is-open');
 
-                // 2. Если то меню, по которому кликнули, было закрыто, то открываем его.
-                // Это позволяет закрывать меню повторным кликом и не дает ему тут же открыться снова.
-                if (!wasOpen) {
-                    dropdown.classList.add('is-open');
-                }
+            // Сначала закрываем ВСЕ открытые выпадающие меню
+            allClickDropdowns.forEach(d => {
+                d.classList.remove('is-open');
             });
-        }
+            
+            // Если текущее меню было закрыто, открываем его.
+            if (!wasOpen) {
+                this.classList.add('is-open');
+            }
+        });
     });
 
-    // --- Логика закрытия меню при клике ВНЕ его области ---
+    // --- Логика закрытия всех меню при клике ВНЕ их области ---
     document.addEventListener('click', function(event) {
-        // Если клик был не внутри какого-либо из наших выпадающих меню
-        if (!event.target.closest('.dropdown, .language-switcher')) {
-            // Закрываем все открытые меню
-            document.querySelectorAll('.dropdown.is-open, .language-switcher.is-open').forEach(openMenu => {
-                openMenu.classList.remove('is-open');
-            });
+        allClickDropdowns.forEach(d => {
+            d.classList.remove('is-open');
+        });
+        // Также закрываем мобильное меню, если оно открыто
+        if (mainNavList && mainNavList.classList.contains('is-open')) {
+            mainNavList.classList.remove('is-open');
+            mobileNavToggle.classList.remove('is-active');
         }
     });
 
