@@ -15,15 +15,12 @@
 
     <header class="main-header">
     <div class="container">
-        <!-- 1. Логотип (без изменений) -->
-        <a href="index.html" class="logo-link">
+        <a href="index.ru.html" class="logo-link">
             <img src="images/logo.png" alt="Логотип Civethica" class="logo-img">
             <span class="logo-text">Фонд Civethica</span>
         </a>
         
-        <!-- 2. Основная навигация -->
         <nav class="main-nav">
-            <!-- ИЗМЕНЕНИЕ 1: Добавлен id="main-nav-list", чтобы JavaScript мог найти это меню -->
             <ul id="main-nav-list">
                 <li><a href="manifesto.ru.html">Манифест</a></li>
                 <li class="dropdown">
@@ -41,20 +38,17 @@
             </ul>
         </nav>
 
-        <!-- ИЗМЕНЕНИЕ 2: Вставлена сама кнопка-гамбургер, которой не было -->
         <button class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
             <span class="sr-only">Menu</span>
             <span class="icon-open">☰</span>
             <span class="icon-close">×</span>
         </button>
 
-        <!-- 3. Кнопки действий (Support Us, EN) -->
         <div class="header-actions">
             <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Поддержать</a>
              <div class="language-switcher">
-                <span class="current-lang">EN</span>
+                <span class="current-lang">RU</span>
                 <ul class="lang-dropdown">
-                    <!-- ВАЖНО: Эти ссылки должны вести на нужную языковую версию ЭТОЙ ЖЕ страницы -->
                     <li><a href="platform-politics.html">EN</a></li>
                     <li><a href="platform-politics.de.html">DE</a></li>
                     <li><a href="platform-politics.fr.html">FR</a></li>
@@ -67,15 +61,12 @@
     </div>
     </header>
 
-
-
-
     <main>
         <section class="content-section is-visible">
             <div class="container text-left">
                 <!-- БЛОК 1: МАНИФЕСТ ПЛАТФОРМЫ -->
                 <h2>Манифест Планетарного Управления</h2>
-                <p class="page-intro">Политика — это не борьба за власть. Это коллективная ответственность за здоровье нашего общего дома. Мы отвергаем устаревшую модель геополитики, где нации-крепости конкурируют за ресурсы. Мы предлагаем новую парадигму: **гео-управление** — совместный, научно-обоснованный и этически выверенный процесс заботы о системе «Человечество + Биосфера».</p>
+                <p class="page-intro">Политика — это не борьба за власть. Это коллективная ответственность за здоровье нашего общего дома. Мы отвергаем устаревшую модель геополитики, где нации-крепости конкурируют за ресурсы. Мы предлагаем новую парадигму: <strong>гео-управление</strong> — совместный, научно-обоснованный и этически выверенный процесс заботы о системе «Человечество + Биосфера».</p>
                 
                 <!-- БЛОК 2: ИССЛЕДОВАНИЯ И МАТЕРИАЛЫ -->
                 <h3>Ключевые материалы и исследования</h3>
@@ -95,23 +86,31 @@
                 <!-- БЛОК 3: ПРИСОЕДИНИТЬСЯ К ДИСКУССИИ -->
                 <div class="discussion-links">
                     <h3>Станьте частью Планетарного Диалога</h3>
-                    <p>Ваши идеи необходимы для формирования новой политики. Присоединяйтесь к нашим глобальным дискуссиям на удобной для вас платформе.</p>
-                    <div class="social-links-grid">
-                        <a href="#" class="social-link"><strong>Форум в LinkedIn:</strong> Для глубоких, экспертных дискуссий.</a>
-                        <a href="#" class="social-link"><strong>Канал в Discord:</strong> Для живых чатов и мозговых штурмов.</a>
-                        <a href="#" class="social-link"><strong>Обсуждения в X (Twitter):</strong> Следите за опросами и дебатами по хештегу #CivethicaPolitics.</a>
+                    <p>Ваши идеи необходимы для формирования новой политики. Присоединяйтесь к нашим глобальным дискуссиям, чтобы обсудить эти принципы и предложить свои решения.</p>
+                    
+                    <!-- ИЗМЕНЕНИЕ: Добавлен контейнер с отступом сверху -->
+                    <div class="button-container">
+                        <div class="cta-line">
+                            <a href="https://www.facebook.com/groups/CivethicaCommunityRU" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Присоединиться к движению</a>
+                            <span class="cta-note">(в процессе создания русскоязычного ресурса)</span>
+                        </div>
+
+                       <div class="cta-line">
+                           <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement (English Community)</a>
+                       </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
     <footer class="main-footer">
-        <!-- Скопируйте сюда всю секцию <footer> из файла index.ru.html -->
         <div class="container">
-            <p>&copy; 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
+            <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
             <p><a href="#">Политика конфиденциальности</a></p>
         </div>
     </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
