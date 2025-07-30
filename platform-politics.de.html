@@ -11,14 +11,16 @@
     <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body class="sub-page">
+
     <header class="main-header">
         <div class="container">
             <a href="index.de.html" class="logo-link">
-                <img src="images/logo.png" alt="Civethica Logo" class="logo-img">
+                <img src="images/logo.png" alt="Civethica-Logo" class="logo-img">
                 <span class="logo-text">Stiftung Civethica</span>
             </a>
             <nav class="main-nav">
-                <ul>
+                <!-- ID добавлен на <ul> для работы мобильного меню -->
+                <ul id="main-nav-list">
                     <li><a href="manifesto.de.html">Das Manifest</a></li>
                     <li class="dropdown">
                         <a href="#">Plattformen</a>
@@ -30,26 +32,36 @@
                             <li><a href="platform-information.de.html">Information & Bewusstsein</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Gemeinschaft</a></li>
+                    <li><a href="https://www.facebook.com/groups/CivethicaCommunityDE" target="_blank" rel="noopener noreferrer">Gemeinschaft</a></li>
                     <li><a href="#">Bibliothek</a></li>
                 </ul>
             </nav>
+            <!-- Добавлена кнопка мобильного меню (гамбургер/крестик) -->
+            <button class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+                <span class="sr-only">Menü</span>
+                <span class="icon-open">☰</span>
+                <span class="icon-close">×</span>
+            </button>
             <div class="header-actions">
-                <a href="#" class="cta-button-small">Unterstützen</a>
+                <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Unterstützen</a>
                  <div class="language-switcher">
                     <span class="current-lang">DE</span>
                     <ul class="lang-dropdown">
-                        <li><a href="index.html">EN</a></li>
-                        <li><a href="index.de.html">DE</a></li>
-                        <li><a href="index.fr.html">FR</a></li>
-                        <li><a href="index.es.html">ES</a></li>
-                        <li><a href="index.zh.html">ZH</a></li>
-                        <li><a href="index.ru.html">RU</a></li>
+                        <li><a href="platform-politics.html">EN</a></li>
+                        <li><a href="platform-politics.de.html">DE</a></li>
+                        <li><a href="platform-politics.fr.html">FR</a></li>
+                        <li><a href="platform-politics.es.html">ES</a></li>
+                        <li><a href="platform-politics.zh.html">ZH</a></li>
+                        <li><a href="platform-politics.ru.html">RU</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+
+
+
+
     <main>
         <section class="content-section is-visible">
             <div class="container text-left">
@@ -73,11 +85,20 @@
                 <div class="discussion-links">
                     <h3>Nehmen Sie am Dialog teil</h3>
                     <p>Ihre Ideen sind entscheidend für die Gestaltung einer neuen Art von Politik. Beteiligen Sie sich an unseren globalen Diskussionen auf der Plattform, die Ihnen am besten passt.</p>
-                    <div class="social-links-grid">
-                        <a href="#" class="social-link"><strong>LinkedIn-Forum:</strong> Für tiefgehende Expertendiskussionen.</a>
-                        <a href="#" class="social-link"><strong>Discord-Kanal:</strong> Für Live-Chats und Community-Brainstorming.</a>
-                        <a href="#" class="social-link"><strong>Folgen Sie uns auf X (Twitter):</strong> Für schnelle Umfragen und Debatten über #CivethicaPolitik.</a>
+
+
+                <div class="button-container">
+
+                    <div class="cta-line">
+                        <a href="https://www.facebook.com/groups/CivethicaCommunityDE" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Werde Teil der Bewegung</a>
+                        <span class="cta-note">(Deutsche Community im Aufbau)</span>
                     </div>
+                    <div class="cta-line">
+                        <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement (English Community)</a>
+                    </div>
+                </div>
+
+
                 </div>
             </div>
         </section>
