@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform: Culture & Education - Civethica Foundation</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+</head>
+<body class="sub-page">
+
+
+    <header class="main-header">
+    <div class="container">
+        <!-- 1. Логотип (без изменений) -->
+        <a href="/index.html" class="logo-link">
+            <img src="/images/logo.png" alt="Civethica Logo" class="logo-img">
+            <span class="logo-text">Civethica Foundation</span>
+        </a>
+        
+        <!-- 2. Основная навигация -->
+        <nav class="main-nav">
+            <!-- ИЗМЕНЕНИЕ 1: Добавлен id="main-nav-list", чтобы JavaScript мог найти это меню -->
+            <ul id="main-nav-list">
+                <li><a href="/en/manifesto.html">The Manifesto</a></li>
+                <li class="dropdown">
+                    <a href="#">Platforms</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/en/platform-politics.html">Politics & Governance</a></li>
+                        <li><a href="/en/platform-economy.html">Economy & Resources</a></li>
+                        <li><a href="/en/platform-culture.html">Culture & Education</a></li>
+                        <li><a href="/en/platform-health.html">Health & Bioethics</a></li>
+                        <li><a href="/en/platform-information.html">Information & Consciousness</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.facebook.com/groups/CivethicaCommunityEN" target="_blank" rel="noopener noreferrer">Community</a></li>
+                <li><a href="#">Library</a></li>
+            </ul>
+        </nav>
+
+        <!-- ИЗМЕНЕНИЕ 2: Вставлена сама кнопка-гамбургер, которой не было -->
+        <button class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+            <span class="icon-open">☰</span>
+            <span class="icon-close">×</span>
+        </button>
+
+        <!-- 3. Кнопки действий (Support Us, EN) -->
+        <div class="header-actions">
+            <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Support Us</a>
+             <div class="language-switcher">
+                <span class="current-lang">EN</span>
+                <ul class="lang-dropdown">
+                    <!-- ВАЖНО: Эти ссылки должны вести на нужную языковую версию ЭТОЙ ЖЕ страницы -->
+                    <li><a href="/en/platform-culture.html">EN</a></li>
+                    <li><a href="/de/platform-culture.de.html">DE</a></li>
+                    <li><a href="/fr/platform-culture.fr.html">FR</a></li>
+                    <li><a href="/es/platform-culture.es.html">ES</a></li>
+                    <li><a href="/zh/platform-culture.zh.html">ZH</a></li>
+                    <li><a href="/ru/platform-culture.ru.html">RU</a></li>
+                </ul>
+             </div>
+        </div>
+    </div>
+    </header>
+
+
+    <main>
+        <section class="content-section is-visible">
+            <div class="container text-left">
+                <h2>Manifesto for a New Renaissance</h2>
+                <p class="page-intro">Culture and education are the tools for upgrading our collective consciousness. If politics and economics are the hardware of civilization, then culture is its operating system. We advocate for a shift from a culture that celebrates the individual ego to one that finds beauty in interconnection and systemic harmony.</p>
+                
+                <h3>Key Principles:</h3>
+                <ul>
+                    <li><strong>Education for Wisdom, Not Just Information:</strong> We must move beyond teaching fragmented facts. The new education fosters systemic, procedural thinking, teaching students to see the world as a web of dynamic processes. Emotional and empathetic intelligence becomes as important as mathematics.</li>
+                    <li><strong>A New Aesthetic:</strong> We promote an art that finds heroism not in conquest, but in restoration; beauty not in luxury, but in elegant simplicity and sustainability. We need a new generation of stories, films, and music that reflect a planetary consciousness.</li>
+                    <li><strong>Rethinking History:</strong> We must shift from a history of nations and wars to a history of our species in the context of the planet. Understanding our shared journey is the foundation for our shared future.</li>
+                </ul>
+
+                <h3>Key Materials & Research</h3>
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <h4>Online Course: "Introduction to Process Thinking"</h4>
+                        <p>An interactive course designed to shift perception from static facts to dynamic processes, analyzing the past to forecast the future.</p>
+                        <a href="#">Start Learning...</a>
+                    </div>
+                    <div class="resource-item">
+                        <h4>Initiative: "Civethica Art Grants"</h4>
+                        <p>A program to support artists, filmmakers, and writers who are creating works that explore and promote a planetary worldview.</p>
+                        <a href="#">Learn more & Apply...</a>
+                    </div>
+                </div>
+
+                <div class="discussion-links">
+                    <h3>Join the Dialogue</h3>
+                    <p>Help us create the culture of tomorrow. Join educators, artists, and thinkers on our dedicated platforms.</p>
+
+                <div class="button-container">
+                    <div class="cta-line">
+                         <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement</a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 The Civethica Foundation. A non-formal civil initiative.</p>
+            <p><a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>
