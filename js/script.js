@@ -78,9 +78,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Логика исправления ссылки на логотипе ---
-    const logoLink = document.querySelector('.logo-link');
+const logoLink = document.querySelector('.logo-link');
     if (logoLink) {
-        const homeUrl = (langCode === 'en') ? 'index.html' : `index.${langCode}.html`;
+        let homeUrl; // Объявляем переменную
+
+        if (langCode === 'en') {
+            // Для английского языка ссылка ведет в корень
+            homeUrl = '/index.html';
+        } else {
+            // Для всех остальных языков добавляем папку языка
+            homeUrl = `/${langCode}/index.${langCode}.html`;
+        }
+
         logoLink.href = homeUrl;
     }
 });
