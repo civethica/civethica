@@ -553,3 +553,7 @@ main ol.styled-list {
     border-top: 1px solid #eee; /* Тонкая линия сверху */
     padding-top: 1.5rem;
 }
+.conclusion ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
