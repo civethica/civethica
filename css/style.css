@@ -229,7 +229,7 @@ h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-c
 
 /* --- Sub-pages & Manifesto --- */
 .text-left { text-align: left; }
-.text-left h3 { font-family: var(--heading-font); color: var(--primary-color); margin-top: 40px; margin-bottom: 15px; }
+.text-left h3 { font-family: var(--heading-font); color: var(--primary-color); margin-top: 30px; margin-bottom: 15px; }
 .manifesto-list, .manifesto-sublist { list-style-position: outside; padding-left: 20px; }
 .manifesto-sublist { margin-top: 1em; padding-left: 40px; }
 .manifesto-list li, .manifesto-sublist li { margin-bottom: 1em; }
@@ -398,8 +398,8 @@ h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-c
 
 .discussion-cta-section {
     text-align: center;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
     border-top: 1px solid #e9ecef;
 }
 
@@ -547,7 +547,13 @@ main ol.styled-list {
 }
 
 .conclusion {
-    margin-top: 1.5rem;
+    margin-top: 0rem;
+    font-style: normal;
+    border-top: 1px solid #eee; /* Тонкая линия сверху */
+    padding-top: rem;
+}
+.conclusion-it {
+    margin-top: 2.5rem;
     font-style: italic;
     border-top: 1px solid #eee; /* Тонкая линия сверху */
     padding-top: 1rem;
