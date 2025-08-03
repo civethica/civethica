@@ -1,134 +1,229 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Платформа: Информация и Сознание - Фонд Civethica</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/logo.png" type="image/png">
-</head>
-<body class="sub-page">
-
-
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+  </head>
+  <body class="sub-page">
     <header class="main-header">
-    <div class="container">
+      <div class="container">
         <!-- 1. Логотип (без изменений) -->
         <a href="/ru/index.ru.html" class="logo-link">
-            <img src="/images/logo.png" alt="Логотип Civethica" class="logo-img">
-            <span class="logo-text">Фонд Civethica</span>
+          <img
+            src="/images/logo.png"
+            alt="Логотип Civethica"
+            class="logo-img"
+          />
+          <span class="logo-text">Фонд Civethica</span>
         </a>
-        
+
         <!-- 2. Основная навигация -->
         <nav class="main-nav">
-            <!-- ИЗМЕНЕНИЕ 1: Добавлен id="main-nav-list", чтобы JavaScript мог найти это меню -->
-            <ul id="main-nav-list">
-                <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
-                <li class="dropdown">
-                    <a href="#">Платформы</a>
-                    <ul class="dropdown-menu">
-                            <li><a href="/ru/platform-politics.ru.html">Политика и Управление</a></li>
-                            <li><a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a></li>
-                            <li><a href="/ru/platform-culture.ru.html">Культура и Образование</a></li>
-                            <li><a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a></li>
-                            <li><a href="/ru/platform-information.ru.html">Информация и Сознание</a></li>
-                    </ul>
+          <!-- ИЗМЕНЕНИЕ 1: Добавлен id="main-nav-list", чтобы JavaScript мог найти это меню -->
+          <ul id="main-nav-list">
+            <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
+            <li class="dropdown">
+              <a href="#">Платформы</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/ru/platform-politics.ru.html"
+                    >Политика и Управление</a
+                  >
                 </li>
-                <li><a href="https://www.facebook.com/groups/CivethicaCommunityRU" target="_blank" rel="noopener noreferrer">Сообщество</a></li>
-                <li><a href="#">Библиотека</a></li>
-            </ul>
+                <li>
+                  <a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-culture.ru.html"
+                    >Культура и Образование</a
+                  >
+                </li>
+                <li>
+                  <a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-information.ru.html"
+                    >Информация и Сознание</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/groups/CivethicaCommunityRU"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Сообщество</a
+              >
+            </li>
+            <li><a href="#">Библиотека</a></li>
+          </ul>
         </nav>
 
         <!-- ИЗМЕНЕНИЕ 2: Вставлена сама кнопка-гамбургер, которой не было -->
-        <button class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-            <span class="icon-open">☰</span>
-            <span class="icon-close">×</span>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="main-nav-list"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+          <span class="icon-open">☰</span>
+          <span class="icon-close">×</span>
         </button>
 
         <!-- 3. Кнопки действий (Support Us, EN) -->
         <div class="header-actions">
-            <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Поддержать</a>
-             <div class="language-switcher">
-                <span class="current-lang">RU</span>
-                <ul class="lang-dropdown">
-                    <!-- ВАЖНО: Эти ссылки должны вести на нужную языковую версию ЭТОЙ ЖЕ страницы -->
-                    <li><a href="/en/platform-information.html">EN</a></li>
-                    <li><a href="/de/platform-information.de.html">DE</a></li>
-                    <li><a href="/fr/platform-information.fr.html">FR</a></li>
-                    <li><a href="/es/platform-information.es.html">ES</a></li>
-                    <li><a href="/zh/platform-information.zh.html">ZH</a></li>
-                    <li><a href="/ru/platform-information.ru.html">RU</a></li>
-                </ul>
-             </div>
+          <!--             <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Поддержать</a>
+ -->
+          <a
+            href="https://www.patreon.com/c/Civethica/membership"
+            class="cta-button-small desktop-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Поддержать</a
+          >
+
+          <!-- Кнопка для мобильных -->
+          <a
+            href="https://www.facebook.com/groups/CivethicaCommunityRU"
+            class="cta-button-small mobile-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Сообщество</a
+          >
+          <div class="language-switcher">
+            <span class="current-lang">RU</span>
+            <ul class="lang-dropdown">
+              <!-- ВАЖНО: Эти ссылки должны вести на нужную языковую версию ЭТОЙ ЖЕ страницы -->
+              <li><a href="/en/platform-information.html">EN</a></li>
+              <li><a href="/de/platform-information.de.html">DE</a></li>
+              <li><a href="/fr/platform-information.fr.html">FR</a></li>
+              <li><a href="/es/platform-information.es.html">ES</a></li>
+              <li><a href="/zh/platform-information.zh.html">ZH</a></li>
+              <li><a href="/ru/platform-information.ru.html">RU</a></li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
     </header>
 
-
-
     <main>
-        <section class="content-section is-visible">
-            <div class="container text-left">
-                <h2>Манифест Цифровой Биосферы</h2>
-                <p class="page-intro">Цифровое пространство стало новой средой обитания для человеческого сознания. Эта новая среда может либо способствовать мудрости, единению и коллективному интеллекту, либо стать токсичной экосистемой дезинформации, зависимости и поляризации. Мы выступаем за то, чтобы относиться к информационному пространству с той же заботой, что и к биосфере нашей планеты.</p>
-                
-                <h3>Ключевые принципы:</h3>
-                <ul class="manifesto-sublist">
-                    <li><strong>Экология Сознания:</strong> Мы должны разрабатывать и продвигать принципы «цифровой гигиены» и экологии сознания. Цель — создать информационную среду, которая питает разум, а не эксплуатирует его слабости.</li>
-                    <li><strong>Алгоритмическая прозрачность и ответственность:</strong> Социальные сети — это общественные блага, а не просто частный бизнес. Их алгоритмы должны быть прозрачными и оптимизированы не для максимизации вовлеченности любой ценой, а для повышения качества общественного диалога и снижения раскола.</li>
-                    <li><strong>ИИ как симбиотический партнер:</strong> Мы должны направить развитие Искусственного Интеллекта так, чтобы он стал партнером в управлении планетарной сложностью, а не просто инструментом для получения прибыли или контроля. Его основной целью должна стать помощь человечеству в понимании и исцелении системных кризисов, с которыми мы сталкиваемся.</li>
-                </ul>
+      <section class="content-section is-visible">
+        <div class="container text-left">
+          <h2>Манифест Цифровой Биосферы</h2>
+          <p class="page-intro">
+            Цифровое пространство стало новой средой обитания для человеческого
+            сознания. Эта новая среда может либо способствовать мудрости,
+            единению и коллективному интеллекту, либо стать токсичной
+            экосистемой дезинформации, зависимости и поляризации. Мы выступаем
+            за то, чтобы относиться к информационному пространству с той же
+            заботой, что и к биосфере нашей планеты.
+          </p>
 
-                <h3>Ключевые материалы и исследования</h3>
-                <div class="resource-list">
-                    <div class="article-preview">
-                    <div class="article-preview">
-                        <h4>Здесь пока ничего нет</h4>
-                    </div>
-                    </div>
-                    <h3>Ожидаемые публикации</h3>
-                    <div class="article-preview">
-                        <h4>Анализ: «Двигатель поляризации»</h4>
-                        <p>Исследование о том, как алгоритмы социальных сетей усиливают раскол, и предложение альтернативных, «наводящих мосты» алгоритмических моделей.</p>
-                        <a href="#">...</a>
-                    </div>
-                    <div class="article-preview">
-                        <h4>Проект: «Цифровой Компас»</h4>
-                        <p>Концепция браузерного расширения, которое помогает пользователям оценивать надежность источников информации и понимать собственные когнитивные искажения.</p>
-                        <a href="#">...</a>
-                    </div>
-                </div>
+          <h3>Ключевые принципы:</h3>
+          <ul class="manifesto-sublist">
+            <li>
+              <strong>Экология Сознания:</strong> Мы должны разрабатывать и
+              продвигать принципы «цифровой гигиены» и экологии сознания. Цель —
+              создать информационную среду, которая питает разум, а не
+              эксплуатирует его слабости.
+            </li>
+            <li>
+              <strong>Алгоритмическая прозрачность и ответственность:</strong>
+              Социальные сети — это общественные блага, а не просто частный
+              бизнес. Их алгоритмы должны быть прозрачными и оптимизированы не
+              для максимизации вовлеченности любой ценой, а для повышения
+              качества общественного диалога и снижения раскола.
+            </li>
+            <li>
+              <strong>ИИ как симбиотический партнер:</strong> Мы должны
+              направить развитие Искусственного Интеллекта так, чтобы он стал
+              партнером в управлении планетарной сложностью, а не просто
+              инструментом для получения прибыли или контроля. Его основной
+              целью должна стать помощь человечеству в понимании и исцелении
+              системных кризисов, с которыми мы сталкиваемся.
+            </li>
+          </ul>
 
-                <div class="discussion-links">
-                    <h3>Присоединяйтесь к Диалогу</h3>
-                    <p>Помогите нам построить более здоровый цифровой мир. Присоединяйтесь к разработчикам, социологам и активистам по цифровым правам.</p>
-
-                    <!-- ИЗМЕНЕНИЕ: Добавлен контейнер с отступом сверху -->
-                    <div class="button-container">
-                        <div class="cta-line">
-                            <a href="https://www.facebook.com/groups/CivethicaCommunityRU" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Присоединиться к движению</a>
-                            
-                        </div>
-
-                       <div class="cta-line">
-                           <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement (English Community)</a>
-                       </div>
-                    </div>
-                </div>
+          <h3>Ключевые материалы и исследования</h3>
+          <div class="resource-list">
+            <div class="article-preview">
+              <div class="article-preview">
+                <h4>Здесь пока ничего нет</h4>
+              </div>
             </div>
-        </section>
+            <h3>Ожидаемые публикации</h3>
+            <div class="article-preview">
+              <h4>Анализ: «Двигатель поляризации»</h4>
+              <p>
+                Исследование о том, как алгоритмы социальных сетей усиливают
+                раскол, и предложение альтернативных, «наводящих мосты»
+                алгоритмических моделей.
+              </p>
+              <a href="#">...</a>
+            </div>
+            <div class="article-preview">
+              <h4>Проект: «Цифровой Компас»</h4>
+              <p>
+                Концепция браузерного расширения, которое помогает пользователям
+                оценивать надежность источников информации и понимать
+                собственные когнитивные искажения.
+              </p>
+              <a href="#">...</a>
+            </div>
+          </div>
+
+          <div class="discussion-links">
+            <h3>Присоединяйтесь к Диалогу</h3>
+            <p>
+              Помогите нам построить более здоровый цифровой мир.
+              Присоединяйтесь к разработчикам, социологам и активистам по
+              цифровым правам.
+            </p>
+
+            <!-- ИЗМЕНЕНИЕ: Добавлен контейнер с отступом сверху -->
+            <div class="button-container">
+              <div class="cta-line">
+                <a
+                  href="https://www.facebook.com/groups/CivethicaCommunityRU"
+                  class="cta-button-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Присоединиться к движению</a
+                >
+              </div>
+
+              <div class="cta-line">
+                <a
+                  href="https://www.facebook.com/groups/CivethicaCommunityEN"
+                  class="cta-button-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Join the Movement (English Community)</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
-            <p><a href="#">Политика конфиденциальности</a></p>
-        </div>
+      <div class="container">
+        <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
+        <p><a href="#">Политика конфиденциальности</a></p>
+      </div>
     </footer>
-    
+
     <script src="/js/script.js"></script>
-</body>
+  </body>
 </html>

@@ -42,7 +42,7 @@
         </nav>
 
         <!-- ИЗМЕНЕНИЕ 2: Вставлена сама кнопка-гамбургер, которой не было -->
-        <button class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
             <span class="sr-only">Menu</span>
             <span class="icon-open">☰</span>
             <span class="icon-close">×</span>
@@ -50,7 +50,11 @@
 
         <!-- 3. Кнопки действий (Support Us, EN) -->
         <div class="header-actions">
-            <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Поддержать</a>
+
+    <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small desktop-only-button" target="_blank" rel="noopener noreferrer">Поддержать</a>
+    
+    <!-- Кнопка для мобильных -->
+    <a href="https://www.facebook.com/groups/CivethicaCommunityRU" class="cta-button-small mobile-only-button" target="_blank" rel="noopener noreferrer">Сообщество</a>
              <div class="language-switcher">
                 <span class="current-lang">RU</span>
                 <ul class="lang-dropdown">

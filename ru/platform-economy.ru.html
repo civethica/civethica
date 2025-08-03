@@ -1,136 +1,234 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Платформа: Экономика и Ресурсы - Фонд Civethica</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/logo.png" type="image/png">
-</head>
-<body class="sub-page">
-
-
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+  </head>
+  <body class="sub-page">
     <header class="main-header">
-    <div class="container">
+      <div class="container">
         <!-- 1. Логотип (без изменений) -->
         <a href="/ru/index.ru.html" class="logo-link">
-            <img src="/images/logo.png" alt="Логотип Civethica" class="logo-img">
-            <span class="logo-text">Фонд Civethica</span>
+          <img
+            src="/images/logo.png"
+            alt="Логотип Civethica"
+            class="logo-img"
+          />
+          <span class="logo-text">Фонд Civethica</span>
         </a>
-        
+
         <!-- 2. Основная навигация -->
         <nav class="main-nav">
-            <!-- ИЗМЕНЕНИЕ 1: Добавлен id="main-nav-list", чтобы JavaScript мог найти это меню -->
-            <ul id="main-nav-list">
-                <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
-                <li class="dropdown">
-                    <a href="#">Платформы</a>
-                    <ul class="dropdown-menu">
-                            <li><a href="/ru/platform-politics.ru.html">Политика и Управление</a></li>
-                            <li><a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a></li>
-                            <li><a href="/ru/platform-culture.ru.html">Культура и Образование</a></li>
-                            <li><a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a></li>
-                            <li><a href="/ru/platform-information.ru.html">Информация и Сознание</a></li>
-                    </ul>
+          <!-- ИЗМЕНЕНИЕ 1: Добавлен id="main-nav-list", чтобы JavaScript мог найти это меню -->
+          <ul id="main-nav-list">
+            <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
+            <li class="dropdown">
+              <a href="#">Платформы</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/ru/platform-politics.ru.html"
+                    >Политика и Управление</a
+                  >
                 </li>
-                <li><a href="https://www.facebook.com/groups/CivethicaCommunityRU" target="_blank" rel="noopener noreferrer">Сообщество</a></li>
-                <li><a href="#">Библиотека</a></li>
-            </ul>
+                <li>
+                  <a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-culture.ru.html"
+                    >Культура и Образование</a
+                  >
+                </li>
+                <li>
+                  <a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-information.ru.html"
+                    >Информация и Сознание</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/groups/CivethicaCommunityRU"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Сообщество</a
+              >
+            </li>
+            <li><a href="#">Библиотека</a></li>
+          </ul>
         </nav>
 
         <!-- ИЗМЕНЕНИЕ 2: Вставлена сама кнопка-гамбургер, которой не было -->
-        <button class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-            <span class="icon-open">☰</span>
-            <span class="icon-close">×</span>
+        <button
+          type="button"
+          class="mobile-nav-toggle"
+          aria-controls="main-nav-list"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+          <span class="icon-open">☰</span>
+          <span class="icon-close">×</span>
         </button>
 
         <!-- 3. Кнопки действий (Support Us, EN) -->
         <div class="header-actions">
-            <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Поддержать</a>
-             <div class="language-switcher">
-                <span class="current-lang">RU</span>
-                <ul class="lang-dropdown">
-                    <!-- ВАЖНО: Эти ссылки должны вести на нужную языковую версию ЭТОЙ ЖЕ страницы -->
-                    <li><a href="/en/platform-economy.html">EN</a></li>
-                    <li><a href="/de/platform-economy.de.html">DE</a></li>
-                    <li><a href="/fr/platform-economy.fr.html">FR</a></li>
-                    <li><a href="/es/platform-economy.es.html">ES</a></li>
-                    <li><a href="/zh/platform-economy.zh.html">ZH</a></li>
-                    <li><a href="/ru/platform-economy.ru.html">RU</a></li>
-                </ul>
-             </div>
+          <!--             <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Поддержать</a>
+ -->
+          <a
+            href="https://www.patreon.com/c/Civethica/membership"
+            class="cta-button-small desktop-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Поддержать</a
+          >
+
+          <!-- Кнопка для мобильных -->
+          <a
+            href="https://www.facebook.com/groups/CivethicaCommunityRU"
+            class="cta-button-small mobile-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Сообщество</a
+          >
+          <div class="language-switcher">
+            <span class="current-lang">RU</span>
+            <ul class="lang-dropdown">
+              <!-- ВАЖНО: Эти ссылки должны вести на нужную языковую версию ЭТОЙ ЖЕ страницы -->
+              <li><a href="/en/platform-economy.html">EN</a></li>
+              <li><a href="/de/platform-economy.de.html">DE</a></li>
+              <li><a href="/fr/platform-economy.fr.html">FR</a></li>
+              <li><a href="/es/platform-economy.es.html">ES</a></li>
+              <li><a href="/zh/platform-economy.zh.html">ZH</a></li>
+              <li><a href="/ru/platform-economy.ru.html">RU</a></li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
     </header>
 
-
-
     <main>
-        <section class="content-section is-visible">
-            <div class="container text-left">
-                <h2>Манифест Регенеративной Экономики</h2>
-                <p class="page-intro">Экономика — это не машина для генерации богатства; это метаболическая система нашей цивилизации. Текущая модель, одержимая бесконечным ростом, пожирает своего носителя — планету. Мы предлагаем новую парадигму: экономику, которая функционирует как природная экосистема — циркулярную, регенеративную и симбиотическую.</p>
-                
-                <h3>Ключевые принципы:</h3>
-                <ul class="manifesto-sublist">
-                    <li><strong>От Роста к Здоровью:</strong> Мы заменяем ВВП на Индекс Здоровья Системы. Цель не в том, чтобы стать больше, а в том, чтобы стать здоровее, устойчивее и эффективнее в использовании энергии и ресурсов.</li>
-                    <li><strong>От Извлечения к Циркуляции:</strong> Мы переносим налоговое бремя с созидательного труда на разрушительное извлечение ресурсов и загрязнение. Понятие «отходы» устраняется на уровне дизайна, так как все материалы циркулируют либо в техническом, либо в биологическом цикле.</li>
-                    <li><strong>От Конкуренции к Симбиозу:</strong> Мы развиваем экономические модели, которые вознаграждают сотрудничество и системный вклад. Успех бизнеса измеряется его положительным влиянием на окружающую среду и общество, а прибыль является средством для поддержания миссии, а не конечной целью.</li>
-                </ul>
+      <section class="content-section is-visible">
+        <div class="container text-left">
+          <h2>Манифест Регенеративной Экономики</h2>
+          <p class="page-intro">
+            Экономика — это не машина для генерации богатства; это
+            метаболическая система нашей цивилизации. Текущая модель, одержимая
+            бесконечным ростом, пожирает своего носителя — планету. Мы
+            предлагаем новую парадигму: экономику, которая функционирует как
+            природная экосистема — циркулярную, регенеративную и симбиотическую.
+          </p>
 
-                <h3>Ключевые материалы и исследования</h3>
-                <div class="resource-list">
-                    <div class="article-preview">
-                        <h4>Статья: «От ВВП к Индексу Здоровья Системы»</h4>
-                        <p>Детальный разбор недостатков ВВП как индикатора и предложение новой, многомерной модели «приборной панели» для оценки благополучия нации.</p>
-                        <a href="/ru/articles/economy/from-gdp-to-shs.ru.html">Читать далее...</a>
-                    </div>
-                    <div class="article-preview">
-                        <h4>Концепция: «Рейтинг Civethica для бизнеса»</h4>
-                        <p>Основы для рейтинговой системы с открытым исходным кодом, которая оценивает компании на основе их истинного системного вклада, выходя за рамки финансовых отчетов.</p>
-                        <a href="/ru/articles/economy/rating-civethica.ru.html">Читать далее...</a>
-                    </div>
-                    <h3>Ожидаемые публикации</h3>
-                    <div class="article-preview">
-                        <h4>Отчет: «Циркулярная экономика: Практическое руководство»</h4>
-                        <p>Обзор принципов циркулярного дизайна и бизнес-моделей, которые устраняют отходы и создают регенеративные системы.</p>
-                        <a href="#">...</a>
-                    </div>
-                
-                </div>
+          <h3>Ключевые принципы:</h3>
+          <ul class="manifesto-sublist">
+            <li>
+              <strong>От Роста к Здоровью:</strong> Мы заменяем ВВП на Индекс
+              Здоровья Системы. Цель не в том, чтобы стать больше, а в том,
+              чтобы стать здоровее, устойчивее и эффективнее в использовании
+              энергии и ресурсов.
+            </li>
+            <li>
+              <strong>От Извлечения к Циркуляции:</strong> Мы переносим
+              налоговое бремя с созидательного труда на разрушительное
+              извлечение ресурсов и загрязнение. Понятие «отходы» устраняется на
+              уровне дизайна, так как все материалы циркулируют либо в
+              техническом, либо в биологическом цикле.
+            </li>
+            <li>
+              <strong>От Конкуренции к Симбиозу:</strong> Мы развиваем
+              экономические модели, которые вознаграждают сотрудничество и
+              системный вклад. Успех бизнеса измеряется его положительным
+              влиянием на окружающую среду и общество, а прибыль является
+              средством для поддержания миссии, а не конечной целью.
+            </li>
+          </ul>
 
-                <div class="discussion-links">
-                    <h3>Присоединяйтесь к Диалогу</h3>
-                    <p>Помогите нам построить новую экономическую модель. Делитесь своим опытом и идеями на наших специализированных платформах.</p>
-
-
-                    <!-- ИЗМЕНЕНИЕ: Добавлен контейнер с отступом сверху -->
-                    <div class="button-container">
-                        <div class="cta-line">
-                            <a href="https://www.facebook.com/groups/CivethicaCommunityRU" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Присоединиться к движению</a>
-                            
-                        </div>
-
-                       <div class="cta-line">
-                           <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement (English Community)</a>
-                       </div>
-                    </div>
-                </div>
+          <h3>Ключевые материалы и исследования</h3>
+          <div class="resource-list">
+            <div class="article-preview">
+              <h4>Статья: «От ВВП к Индексу Здоровья Системы»</h4>
+              <p>
+                Детальный разбор недостатков ВВП как индикатора и предложение
+                новой, многомерной модели «приборной панели» для оценки
+                благополучия нации.
+              </p>
+              <a href="/ru/articles/economy/from-gdp-to-shs.ru.html"
+                >Читать далее...</a
+              >
             </div>
-        </section>
+            <div class="article-preview">
+              <h4>Концепция: «Рейтинг Civethica для бизнеса»</h4>
+              <p>
+                Основы для рейтинговой системы с открытым исходным кодом,
+                которая оценивает компании на основе их истинного системного
+                вклада, выходя за рамки финансовых отчетов.
+              </p>
+              <a href="/ru/articles/economy/rating-civethica.ru.html"
+                >Читать далее...</a
+              >
+            </div>
+            <h3>Ожидаемые публикации</h3>
+            <div class="article-preview">
+              <h4>Отчет: «Циркулярная экономика: Практическое руководство»</h4>
+              <p>
+                Обзор принципов циркулярного дизайна и бизнес-моделей, которые
+                устраняют отходы и создают регенеративные системы.
+              </p>
+              <a href="#">...</a>
+            </div>
+          </div>
+
+          <div class="discussion-links">
+            <h3>Присоединяйтесь к Диалогу</h3>
+            <p>
+              Помогите нам построить новую экономическую модель. Делитесь своим
+              опытом и идеями на наших специализированных платформах.
+            </p>
+
+            <!-- ИЗМЕНЕНИЕ: Добавлен контейнер с отступом сверху -->
+            <div class="button-container">
+              <div class="cta-line">
+                <a
+                  href="https://www.facebook.com/groups/CivethicaCommunityRU"
+                  class="cta-button-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Присоединиться к движению</a
+                >
+              </div>
+
+              <div class="cta-line">
+                <a
+                  href="https://www.facebook.com/groups/CivethicaCommunityEN"
+                  class="cta-button-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Join the Movement (English Community)</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
-            <p><a href="#">Политика конфиденциальности</a></p>
-        </div>
+      <div class="container">
+        <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
+        <p><a href="#">Политика конфиденциальности</a></p>
+      </div>
     </footer>
-    
+
     <script src="/js/script.js"></script>
-</body>
+  </body>
 </html>
