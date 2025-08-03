@@ -1,137 +1,187 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Платформа: Здоровье и Биоэтика - Фонд Civethica</title>
-    <<link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/logo.png" type="image/png">
-</head>
-<body class="sub-page">
-
-
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+  </head>
+  <body class="sub-page">
     <header class="main-header">
-    <div class="container">
+      <div class="container">
         <!-- 1. Логотип (без изменений) -->
         <a href="/ru/index.ru.html" class="logo-link">
-            <img src="/images/logo.png" alt="Логотип Civethica" class="logo-img">
-            <span class="logo-text">Фонд Civethica</span>
+          <img src="/images/logo.png" alt="Логотип Civethica" class="logo-img" />
+          <span class="logo-text">Фонд Civethica</span>
         </a>
-        
+
         <!-- 2. Основная навигация -->
         <nav class="main-nav">
-            <!-- ИЗМЕНЕНИЕ 1: Добавлен id="main-nav-list", чтобы JavaScript мог найти это меню -->
-            <ul id="main-nav-list">
-                <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
-                <li class="dropdown">
-                    <a href="#">Платформы</a>
-                    <ul class="dropdown-menu">
-                            <li><a href="/ru/platform-politics.ru.html">Политика и Управление</a></li>
-                            <li><a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a></li>
-                            <li><a href="/ru/platform-culture.ru.html">Культура и Образование</a></li>
-                            <li><a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a></li>
-                            <li><a href="/ru/platform-information.ru.html">Информация и Сознание</a></li>
-                    </ul>
-                </li>
-                <li><a href="https://www.facebook.com/groups/CivethicaCommunityRU" target="_blank" rel="noopener noreferrer">Сообщество</a></li>
-                <li><a href="#">Библиотека</a></li>
-            </ul>
+          <!-- ИЗМЕНЕНИЕ 1: Добавлен id="main-nav-list", чтобы JavaScript мог найти это меню -->
+          <ul id="main-nav-list">
+            <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
+            <li class="dropdown">
+              <a href="#">Платформы</a>
+              <ul class="dropdown-menu">
+                <li><a href="/ru/platform-politics.ru.html">Политика и Управление</a></li>
+                <li><a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a></li>
+                <li><a href="/ru/platform-culture.ru.html">Культура и Образование</a></li>
+                <li><a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a></li>
+                <li><a href="/ru/platform-information.ru.html">Информация и Сознание</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/groups/CivethicaCommunityRU" target="_blank" rel="noopener noreferrer"
+                >Сообщество</a
+              >
+            </li>
+            <li><a href="#">Библиотека</a></li>
+          </ul>
         </nav>
 
         <!-- ИЗМЕНЕНИЕ 2: Вставлена сама кнопка-гамбургер, которой не было -->
         <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-            <span class="icon-open">☰</span>
-            <span class="icon-close">×</span>
+          <span class="sr-only">Menu</span>
+          <span class="icon-open">☰</span>
+          <span class="icon-close">×</span>
         </button>
 
         <!-- 3. Кнопки действий (Support Us, EN) -->
         <div class="header-actions">
+          <a
+            href="https://www.patreon.com/c/Civethica/membership"
+            class="cta-button-small desktop-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Поддержать</a
+          >
 
-    <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small desktop-only-button" target="_blank" rel="noopener noreferrer">Поддержать</a>
-    
-    <!-- Кнопка для мобильных -->
-    <a href="https://www.facebook.com/groups/CivethicaCommunityRU" class="cta-button-small mobile-only-button" target="_blank" rel="noopener noreferrer">Сообщество</a>
-             <div class="language-switcher">
-                <span class="current-lang">RU</span>
-                <ul class="lang-dropdown">
-                    <!-- ВАЖНО: Эти ссылки должны вести на нужную языковую версию ЭТОЙ ЖЕ страницы -->
-                    <li><a href="/en/platform-health.html">EN</a></li>
-                    <li><a href="/de/platform-health.de.html">DE</a></li>
-                    <li><a href="/fr/platform-health.fr.html">FR</a></li>
-                    <li><a href="/es/platform-health.es.html">ES</a></li>
-                    <li><a href="/zh/platform-health.zh.html">ZH</a></li>
-                    <li><a href="/ru/platform-health.ru.html">RU</a></li>
-                </ul>
-             </div>
+          <!-- Кнопка для мобильных -->
+          <a
+            href="https://www.facebook.com/groups/CivethicaCommunityRU"
+            class="cta-button-small mobile-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Сообщество</a
+          >
+          <div class="language-switcher">
+            <span class="current-lang">RU</span>
+            <ul class="lang-dropdown">
+              <!-- ВАЖНО: Эти ссылки должны вести на нужную языковую версию ЭТОЙ ЖЕ страницы -->
+              <li><a href="/en/platform-health.html">EN</a></li>
+              <li><a href="/de/platform-health.de.html">DE</a></li>
+              <li><a href="/fr/platform-health.fr.html">FR</a></li>
+              <li><a href="/es/platform-health.es.html">ES</a></li>
+              <li><a href="/zh/platform-health.zh.html">ZH</a></li>
+              <li><a href="/ru/platform-health.ru.html">RU</a></li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
     </header>
 
-
-
     <main>
-        <section class="content-section is-visible">
-            <div class="container text-left">
-                <h2>Манифест Планетарного Здоровья</h2>
-                <p class="page-intro">Здоровье человека не может существовать в отрыве от здоровья планеты. Мы предлагаем переход от реактивной, сфокусированной на болезнях медицины к проактивному, целостному подходу, где благополучие рассматривается как состояние динамической гармонии между индивидом, обществом и биосферой.</p>
-                
-                <h3>Ключевые принципы:</h3>
-                <ul class="manifesto-sublist">
-                    <li><strong>Единое Здоровье:</strong> Здоровье людей, животных и экосистем неразрывно связано. Наша цель — салютогенная медицина, которая фокусируется не на борьбе с болезнями, а на создании условий для здоровья на всех уровнях.</li>
-                    <li><strong>Проактивная Биоэтика:</strong> Технологии, такие как генная инженерия и ИИ, развиваются быстрее нашего этического осмысления. Мы должны проактивно разработать глобальные этические рамки, чтобы направлять эти технологии, гарантируя, что они служат развитию сознания и системной гармонии, а не разделению и деградации.</li>
-                    <li><strong>Ментальное здоровье как приоритет:</strong> Здоровое общество невозможно без психологически здоровых людей. Мы выступаем за приоритизацию ментального здоровья, снижение общественного стресса и создание среды, способствующей осознанности и эмоциональной устойчивости.</li>
-                </ul>
+      <section class="content-section is-visible">
+        <div class="container text-left">
+          <h2>Манифест Планетарного Здоровья</h2>
+          <p class="page-intro">
+            Здоровье человека не может существовать в отрыве от здоровья планеты. Мы предлагаем переход от реактивной,
+            сфокусированной на болезнях медицины к проактивному, целостному подходу, где благополучие рассматривается
+            как состояние динамической гармонии между индивидом, обществом и биосферой.
+          </p>
 
-                <h3>Ключевые материалы и исследования</h3>
-                <div class="resource-list">
-                    <div class="article-preview">
-                    <div class="article-preview">
-                        <h4>Здесь пока ничего нет</h4>
-                    </div>
-                    <h3>Ожидаемые публикации</h3>
-                    <div class="article-preview">
-                        <h4>Документ: «От патогенеза к салютогенезу»</h4>
-                        <p>Обзор принципов салютогенной медицины и дорожная карта для ее интеграции в национальные системы здравоохранения.</p>
-                        <a href="#">Читать далее...</a>
-                    </div>
-                    <div class="article-preview">
-                        <h4>Проект: «Этические рамки для ИИ в медицине»</h4>
-                        <p>Рабочий документ, излагающий основные принципы разработки и внедрения искусственного интеллекта в здравоохранении, открытый для общественного обсуждения.</p>
-                        <a href="#">Читать и комментировать...</a>
-                    </div>
-                </div>
+          <h3>Ключевые принципы:</h3>
+          <ul class="manifesto-sublist">
+            <li>
+              <strong>Единое Здоровье:</strong> Здоровье людей, животных и экосистем неразрывно связано. Наша цель —
+              салютогенная медицина, которая фокусируется не на борьбе с болезнями, а на создании условий для здоровья
+              на всех уровнях.
+            </li>
+            <li>
+              <strong>Проактивная Биоэтика:</strong> Технологии, такие как генная инженерия и ИИ, развиваются быстрее
+              нашего этического осмысления. Мы должны проактивно разработать глобальные этические рамки, чтобы
+              направлять эти технологии, гарантируя, что они служат развитию сознания и системной гармонии, а не
+              разделению и деградации.
+            </li>
+            <li>
+              <strong>Ментальное здоровье как приоритет:</strong> Здоровое общество невозможно без психологически
+              здоровых людей. Мы выступаем за приоритизацию ментального здоровья, снижение общественного стресса и
+              создание среды, способствующей осознанности и эмоциональной устойчивости.
+            </li>
+          </ul>
 
-                <div class="discussion-links">
-                    <h3>Присоединяйтесь к Диалогу</h3>
-                    <p>Помогите нам сформировать будущее здравоохранения. Присоединяйтесь к врачам, ученым и специалистам по этике на наших платформах.</p>
-
-                    <!-- ИЗМЕНЕНИЕ: Добавлен контейнер с отступом сверху -->
-                    <div class="button-container">
-                        <div class="cta-line">
-                            <a href="https://www.facebook.com/groups/CivethicaCommunityRU" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Присоединиться к движению</a>
-                            
-                        </div>
-
-                       <div class="cta-line">
-                           <a href="https://www.facebook.com/groups/CivethicaCommunityEN" class="cta-button-secondary" target="_blank" rel="noopener noreferrer">Join the Movement (English Community)</a>
-                       </div>
-                    </div>
-                </div>
+          <h3>Ключевые материалы и исследования</h3>
+          <div class="resource-list">
+            <div class="article-preview">
+              <h4>Здесь пока ничего нет</h4>
             </div>
-        </section>
+            <h3>Ожидаемые публикации</h3>
+            <div class="article-preview">
+              <h4>Документ: «От патогенеза к салютогенезу»</h4>
+              <p>
+                Обзор принципов салютогенной медицины и дорожная карта для ее интеграции в национальные системы
+                здравоохранения.
+              </p>
+              <a href="#">Читать далее...</a>
+            </div>
+            <div class="article-preview">
+              <h4>Проект: «Этические рамки для ИИ в медицине»</h4>
+              <p>
+                Рабочий документ, излагающий основные принципы разработки и внедрения искусственного интеллекта в
+                здравоохранении, открытый для общественного обсуждения.
+              </p>
+              <a href="#">Читать и комментировать...</a>
+            </div>
+          </div>
+
+          <div class="discussion-links">
+            <h3>Присоединяйтесь к Диалогу</h3>
+            <p>
+              Помогите нам сформировать будущее здравоохранения. Присоединяйтесь к врачам, ученым и специалистам по
+              этике на наших платформах.
+            </p>
+
+            <!-- ИЗМЕНЕНИЕ: Добавлен контейнер с отступом сверху -->
+            <div class="button-container">
+              <div class="cta-line">
+                <a
+                  href="https://www.facebook.com/groups/CivethicaCommunityRU"
+                  class="cta-button-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Присоединиться к движению</a
+                >
+              </div>
+
+              <div class="cta-line">
+                <a
+                  href="https://www.facebook.com/groups/CivethicaCommunityEN"
+                  class="cta-button-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Join the Movement (English Community)</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
-            <p><a href="#">Политика конфиденциальности</a></p>
-        </div>
+      <div class="container">
+        <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
+        <p><a href="#">Политика конфиденциальности</a></p>
+      </div>
     </footer>
-    
+
     <script src="/js/script.js"></script>
-</body>
+  </body>
 </html>
