@@ -2,37 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. GENERAL BLOCK (for all pages) ======================= -->
+    <!-- (This block can be safely copied to all pages without modification) -->
+    <!-- ===================================================================== -->
+
+    <!-- Basic encoding and viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Consent and Analytics Scripts (order is important) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
 
-    <!-- 1. Basic Meta Tags for SEO -->
-    <title>The Civethica Rating: A New Metric for a World Tired of Deception</title>
-    <meta
-      name="description"
-      content="The Civethica Rating is a new system for evaluating businesses based not on profit, but on their true systemic contribution to the health of the planet, society, and humanity."
-    />
-    <meta name="author" content="The Civethica Foundation" />
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
 
-    <!-- 2. Open Graph Tags (for Facebook, LinkedIn, Telegram, etc.) -->
-    <meta property="og:title" content="The Civethica Rating: A New Metric for a World Tired of Deception" />
-    <meta
-      property="og:description"
-      content="Learn how we propose to evaluate companies based on their real-world impact, including their ecological, social, and political responsibility."
-    />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="www.civethica.org/en/articles/economy/rating-civethica.html" />
-    <meta property="og:image" content="www.civethica.org/images/og-image-rating-en.png" />
-    <meta property="og:site_name" content="The Civethica Foundation" />
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
 
-    <!-- 3. Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="The Civethica Rating: A New Metric for a World Tired of Deception" />
-    <meta
-      name="twitter:description"
-      content="Learn how we propose to evaluate companies based on their real-world impact."
-    />
-    <meta name="twitter:image" content="www.civethica.org/images/og-image-rating-en.png" />
-
-    <!-- 4. Linking Stylesheets, Fonts, and Favicon -->
+    <!-- Styles, fonts and site icon -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,14 +53,52 @@
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
 
-    <!-- 5. Structured Data (JSON-LD) for enhanced SEO -->
+    <!-- ======================================================================= -->
+    <!-- ============= 2. UNIQUE BLOCK (adapt for each page) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- Basic SEO and Meta Tags -->
+    <title>The Civethica Rating: A New Metric for a World Tired of Deception</title>
+    <meta
+      name="description"
+      content="The Civethica Rating is a new system for evaluating businesses based not on profit, but on their true systemic contribution to the health of the planet, society, and humanity."
+    />
+    <meta name="author" content="The Civethica Foundation" />
+    <meta
+      name="keywords"
+      content="Civethica Rating, ethical business rating, corporate responsibility, corporate accountability, ESG, greenwashing, ethics-washing, systemic contribution, conscious consumerism, ethical investing, impact investing, supply chain ethics, tax ethics, corporate influence, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/en/articles/economy/rating-civethica.html" />
+    <!-- IMPORTANT: Path to English version is specified -->
+
+    <!-- 2. Open Graph Tags (for Facebook, LinkedIn, Telegram, etc.) -->
+    <meta property="og:title" content="The Civethica Rating: A New Metric for a World Tired of Deception" />
+    <meta
+      property="og:description"
+      content="Learn how we propose to evaluate companies based on their real-world impact, including their ecological, social, and political responsibility."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/en/articles/economy/rating-civethica.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-rating-en.png" />
+    <meta property="og:site_name" content="The Civethica Foundation" />
+
+    <!-- 3. Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Civethica Rating: A New Metric for a World Tired of Deception" />
+    <meta
+      name="twitter:description"
+      content="Learn how we propose to evaluate companies based on their real-world impact."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-rating-en.png" />
+
+    <!-- 4. Structured Data (JSON-LD) for enhanced SEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "The Civethica Rating: A New Metric for a World Tired of Deception",
         "description": "A concept for a new system for evaluating businesses based not on profit, but on their true systemic contribution to the health of the planet, society, and humanity.",
-        "image": "www.civethica.org/images/og-image-rating-de.png",
+        "image": "https://www.civethica.org/images/og-image-rating-en.png",
         "author": {
           "@type": "Organization",
           "name": "The Civethica Foundation"
@@ -59,7 +108,7 @@
           "name": "The Civethica Foundation",
           "logo": {
             "@type": "ImageObject",
-            "url": "www.civethica.org/images/logo.png"
+            "url": "https://www.civethica.org/images/logo.png"
           }
         },
         "datePublished": "2025-08-01"
@@ -69,17 +118,17 @@
 
   <body class="sub-page">
     <!-- ====================================================== -->
-    <!-- ======== ИСПРАВЛЕННЫЙ И ПРАВИЛЬНЫЙ HEADER ======== -->
+    <!-- ================ HEADER ============================== -->
     <!-- ====================================================== -->
     <header class="main-header">
       <div class="container">
-        <!-- 1. Логотип - ссылка на ГЛАВНУЮ АНГЛИЙСКУЮ страницу -->
+        <!-- 1. Logo - link to the MAIN ENGLISH page -->
         <a href="/index.html" class="logo-link">
           <img src="/images/logo.png" alt="Civethica Logo" class="logo-img" />
           <span class="logo-text">Civethica Foundation</span>
         </a>
 
-        <!-- 2. Основная навигация - ссылки на АНГЛИЙСКИЕ страницы -->
+        <!-- 2. Main Navigation -->
         <nav class="main-nav">
           <ul id="main-nav-list">
             <li><a href="/en/manifesto.html">The Manifesto</a></li>
@@ -108,7 +157,7 @@
           <span class="icon-close">×</span>
         </button>
 
-        <!-- 4. Кнопки действий -->
+        <!-- 4. Action Buttons -->
         <div class="header-actions">
           <a
             href="https://www.patreon.com/c/Civethica/membership"
@@ -129,7 +178,6 @@
           <div class="language-switcher">
             <span class="current-lang">EN</span>
             <ul class="lang-dropdown">
-              <!-- ИСПРАВЛЕНО: Приведена единая и правильная структура путей -->
               <li><a href="/en/articles/economy/rating-civethica.html">EN</a></li>
               <li><a href="/de/articles/economy/rating-civethica.de.html">DE</a></li>
               <li><a href="/fr/articles/economy/rating-civethica.fr.html">FR</a></li>
@@ -142,7 +190,7 @@
       </div>
     </header>
     <!-- ====================================================== -->
-    <!-- ================ КОНЕЦ HEADER ====================== -->
+    <!-- ================ END OF HEADER ======================= -->
     <!-- ====================================================== -->
 
     <main>
@@ -295,9 +343,7 @@
             </p>
           </div>
 
-          <!-- ====================================================== -->
-          <!-- ======== НОВЫЙ БЛОК С КНОПКОЙ ОБСУЖДЕНИЯ ======== -->
-          <!-- ====================================================== -->
+
           <div class="discussion-cta-section">
             <h3>Have something to add? Join the discussion!</h3>
             <p>
@@ -312,9 +358,7 @@
               Join the Discussion on Facebook
             </a>
           </div>
-          <!-- ====================================================== -->
-          <!-- ================ КОНЕЦ НОВОГО БЛОКА ================ -->
-          <!-- ====================================================== -->
+
         </div>
       </section>
     </main>
@@ -322,8 +366,8 @@
     <footer class="main-footer">
       <div class="container">
         <p>© 2025 The Civethica Foundation. A non-formal civil initiative.</p>
-
-        <!-- НОВЫЙ БЛОК ДЛЯ КОНТАКТОВ -->
+        
+        <!-- NEW CONTACT BLOCK -->
         <div class="footer-contact">
           <p>
             <a href="mailto:info@civethica.org">info@civethica.org</a>
