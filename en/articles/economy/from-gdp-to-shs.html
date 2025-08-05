@@ -2,31 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+    <!-- (Этот блок можно безопасно копировать на все страницы без изменений) -->
+    <!-- ===================================================================== -->
+
+    <!-- Основная кодировка и viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 1. Core SEO Meta Tags -->
-    <title>From GDP to the System Health Index | Civethica Foundation</title>
-    <meta
-      name="description"
-      content="A detailed analysis of the shortcomings of GDP as an indicator and a proposal for a new, multidimensional 'dashboard' model for assessing a nation's well-being."
-    />
-    <meta name="author" content="Civethica Foundation" />
+    <!-- Скрипты согласия и аналитики (порядок важен) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
 
-    <!-- 2. Open Graph tags (for Facebook, VK, Telegram, etc.) -->
-    <meta property="og:title" content="From GDP to the System Health Index" />
-    <meta property="og:description" content="Why our main economic metric is obsolete and what should replace it." />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="www.civethica.org/en/articles/economy/from-gdp-to-shs.html" />
-    <meta property="og:image" content="www.civethica.org/images/og-image-gdp-vs-shs-en.png" />
-    <meta property="og:site_name" content="Civethica Foundation" />
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
 
-    <!-- 3. Twitter Card tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="From GDP to the System Health Index" />
-    <meta name="twitter:description" content="Why our main economic metric is obsolete and what should replace it." />
-    <meta name="twitter:image" content="www.civethica.org/images/og-image-gdp-vs-shs-en.png" />
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
 
-    <!-- 4. Stylesheets, Fonts, and Favicon -->
+    <!-- Стили, шрифты и иконка сайта -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,14 +54,47 @@
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
 
-    <!-- 5. Structured Data (JSON-LD) for enhanced SEO -->
+    <!-- ======================================================================= -->
+    <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (адаптировать для каждой страницы) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- Основные SEO и мета-теги -->
+    <title>From GDP to the System Health Index | Civethica Foundation</title>
+    <meta
+      name="description"
+      content="A detailed analysis of the shortcomings of GDP as an indicator and a proposal for a new, multidimensional 'dashboard' model for assessing a nation's well-being."
+    />
+    <meta name="author" content="Civethica Foundation" />
+
+    <meta
+      name="keywords"
+      content="System Health Index, beyond GDP, GDP criticism, alternatives to GDP, economic indicators, well-being economy, quality of life, sustainable development, measuring progress, natural capital, social capital, human capital, holistic economics, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/en/articles/economy/from-gdp-to-shs.html" />
+    <!-- ВАЖНО: Указан путь к english версии -->
+
+    <!-- 2. Open Graph tags (for Facebook, VK, Telegram, etc.) -->
+    <meta property="og:title" content="From GDP to the System Health Index" />
+    <meta property="og:description" content="Why our main economic metric is obsolete and what should replace it." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/en/articles/economy/from-gdp-to-shs.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-gdp-vs-shs-en.png" />
+    <meta property="og:site_name" content="Civethica Foundation" />
+
+    <!-- 3. Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="From GDP to the System Health Index" />
+    <meta name="twitter:description" content="Why our main economic metric is obsolete and what should replace it." />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-gdp-vs-shs-en.png" />
+
+    <!-- 4. Structured Data (JSON-LD) for enhanced SEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "From GDP to the System Health Index: Why our main economic metric is obsolete and what should replace it",
         "description": "A detailed analysis of the shortcomings of GDP as an indicator and a proposal for a new, multidimensional 'dashboard' model for assessing a nation's well-being.",
-        "image": "www.civethica.org/images/og-image-gdp-vs-shs-en.png",
+        "image": "https://https://www.civethica.org/images/og-image-gdp-vs-shs-en.png",
         "author": {
           "@type": "Organization",
           "name": "Civethica Foundation"
@@ -53,7 +104,7 @@
           "name": "Civethica Foundation",
           "logo": {
             "@type": "ImageObject",
-            "url": "www.civethica.org/images/logo.png"
+            "url": "https://www.civethica.org/images/logo.png"
           }
         },
         "datePublished": "2025-08-02"
