@@ -3,7 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fondation Civethica | Une Nouvelle Conscience Planétaire</title>
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+    <!-- (Этот блок можно безопасно копировать на все страницы без изменений) -->
+    <!-- ===================================================================== -->
+
+    <!-- Скрипты согласия и аналитики (порядок важен) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Стили, шрифты и иконка сайта -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,10 +51,59 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+
+    <!-- ======================================================================= -->
+    <!-- ============= BLOC UNIQUE pour index.fr.html ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- SEO de base et balises méta -->
+    <title>Fondation Civethica | Une Nouvelle Conscience Planétaire</title>
     <meta
       name="description"
-      content="La Fondation Civethica est un mouvement mondial qui initie une transition culturelle de l'anthropocentrisme vers une nouvelle vision du monde, holistique et basée sur l'unité de la Vie, de la Planète et du Cosmos."
+      content="La Fondation Civethica est un mouvement mondial initiant un changement culturel de l'anthropocentrisme vers une nouvelle vision du monde holistique basée sur l'unité de la Vie, de la Planète et du Cosmos."
     />
+    <meta name="author" content="Fondation Civethica" />
+    <meta
+      name="keywords"
+      content="conscience planétaire, Civethica, vision du monde holistique, pensée systémique, économie régénérative, nouvelle éthique"
+    />
+    <link rel="canonical" href="https://www.civethica.org/fr/index.fr.html" />
+    <!-- IMPORTANT : Chemin vers la version française -->
+
+    <!-- Open Graph (pour les aperçus sur les réseaux sociaux) -->
+    <meta property="og:title" content="Fondation Civethica | Une Nouvelle Conscience Planétaire" />
+    <meta
+      property="og:description"
+      content="Rejoignez un mouvement mondial passant d'un anthropocentrisme dépassé à une vision du monde holistique basée sur l'unité de la Vie, de la Planète et du Cosmos."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.civethica.org/fr/index.fr.html" />
+    <!-- IMPORTANT : Chemin vers la version française -->
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-main.png" />
+    <!-- L'image est la même pour toutes les langues -->
+    <meta property="og:site_name" content="Fondation Civethica" />
+
+    <!-- Twitter Card (pour les aperçus sur Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fondation Civethica | Une Nouvelle Conscience Planétaire" />
+    <meta
+      name="twitter:description"
+      content="Rejoignez un mouvement mondial passant d'un anthropocentrisme dépassé à une vision du monde holistique."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-main.png" />
+
+    <!-- Données structurées (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Fondation Civethica",
+        "url": "https://www.civethica.org/fr/index.fr.html",
+        "logo": "https://www.civethica.org/images/logo.png",
+        "description": "Un mouvement mondial initiant un changement culturel vers une nouvelle vision du monde holistique basée sur l'unité de la Vie, de la Planète et du Cosmos.",
+        "sameAs": ["https://www.facebook.com/groups/CivethicaCommunityEN", "https://www.patreon.com/c/Civethica"]
+      }
+    </script>
   </head>
   <body>
     <!-- Development Banner Start -->
