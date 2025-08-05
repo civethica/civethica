@@ -1,9 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+    <!-- (Этот блок можно безопасно копировать на все страницы без изменений) -->
+    <!-- ===================================================================== -->
+
+    <!-- Основная кодировка и viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Фонд Civethica | Новое планетарное сознание</title>
+
+    <!-- Скрипты согласия и аналитики (порядок важен) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+    
+    <!-- CookieYes Banner Script --> 
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"></script> 
+    
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-N8B9TG8J6X');
+    </script>
+
+    <!-- Стили, шрифты и иконка сайта -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,11 +45,52 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
-    <meta
-      name="description"
-      content="Фонд «Civethica» — это глобальное движение, инициирующее культурный сдвиг от антропоцентризма к новому, целостному мировоззрению, основанному на единстве Жизни, Планеты и Космоса."
-    />
+
+    <!-- ======================================================================= -->
+    <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (адаптировать для каждой страницы) ============= -->
+    <!-- ======================================================================= -->
+
+<!-- Основные SEO и мета-теги -->
+<title>Фонд Civethica | Новое планетарное сознание</title>
+<meta
+  name="description"
+  content="Фонд «Civethica» — это глобальное движение, инициирующее культурный сдвиг от антропоцентризма к новому, целостному мировоззрению, основанному на единстве Жизни, Планеты и Космоса."
+/>
+<meta name="author" content="Фонд Civethica" />
+<meta name="keywords" content="планетарное сознание, Civethica, целостное мировоззрение, системное мышление, регенеративная экономика, новая этика" />
+<link rel="canonical" href="https://www.civethica.org/ru/index.ru.html" /> <!-- ВАЖНО: Указан путь к русской версии -->
+
+<!-- Open Graph (для превью в соцсетях) -->
+<meta property="og:title" content="Фонд Civethica | Новое планетарное сознание" />
+<meta property="og:description" content="Присоединяйтесь к глобальному движению по переходу от устаревшего антропоцентризма к целостному мировоззрению, основанному на единстве Жизни, Планеты и Космоса." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.civethica.org/ru/index.ru.html" /> <!-- ВАЖНО: Указан путь к русской версии -->
+<meta property="og:image" content="https://www.civethica.org/images/og-image-main.png" /> <!-- ВАЖНО: Картинка для русской версии -->
+<meta property="og:site_name" content="Фонд Civethica" />
+
+<!-- Twitter Card (для превью в Twitter) -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Фонд Civethica | Новое планетарное сознание" />
+<meta name="twitter:description" content="Присоединяйтесь к глобальному движению по переходу от устаревшего антропоцентризма к целостному мировоззрению." />
+<meta name="twitter:image" content="https://www.civethica.org/images/og-image-main.png" /> <!-- ВАЖНО: Та же картинка, что и в OG -->
+
+<!-- Структурированные данные (JSON-LD) -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Фонд Civethica",
+    "url": "https://www.civethica.org/ru/index.ru.html",
+    "logo": "https://www.civethica.org/images/logo.png",
+    "description": "Глобальное движение, инициирующее культурный сдвиг к новому, целостному мировоззрению, основанному на единстве Жизни, Планеты и Космоса.",
+    "sameAs": [
+      "https://www.facebook.com/groups/CivethicaCommunityRU",
+      "https://www.patreon.com/c/Civethica"
+    ]
+  }
+</script>
   </head>
+
   <body>
     <!-- Development Banner Start -->
     <div class="dev-banner">
@@ -71,11 +145,6 @@
             <li><a href="/ru/library.ru.html">Библиотека</a></li>
           </ul>
         </nav>
-
-
-
-
-
 
 
         <!-- 3. КНОПКА-ГАМБУРГЕР (ОНА ДОЛЖНА БЫТЬ ЗДЕСЬ) -->
