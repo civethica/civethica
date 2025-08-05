@@ -197,7 +197,7 @@ body {
 /* --- General Content Styles --- */
 .content-section, .hero-section, .platforms-preview-section { padding: 80px 0; text-align: center; scroll-margin-top: 150px; }
 .hero-section {
-    background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('images/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('/images/og-image-main.png') no-repeat center center/cover;
     color: #fff; display: flex; align-items: center; min-height: 80vh;
 }
 h1 { font-family: var(--heading-font); font-size: 3.2rem; margin-bottom: 20px; }
