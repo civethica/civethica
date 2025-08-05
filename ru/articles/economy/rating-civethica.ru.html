@@ -2,34 +2,49 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+    <!-- (Этот блок можно безопасно копировать на все страницы без изменений) -->
+    <!-- ===================================================================== -->
+
+    <!-- Основная кодировка и viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 1. Основные мета-теги для SEO -->
-    <title>Рейтинг Civethica: Новая метрика для мира, уставшего от лжи</title>
-    <meta
-      name="description"
-      content="Рейтинг Civethica — это новая система оценки бизнеса, основанная не на прибыли, а на истинном системном вкладе в здоровье планеты, общества и человека."
-    />
-    <meta name="author" content="Фонд Civethica" />
+    <!-- Скрипты согласия и аналитики (порядок важен) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
 
-    <!-- 2. Open Graph теги (для Facebook, VK, Telegram и др.) -->
-    <meta property="og:title" content="Рейтинг Civethica: Новая метрика для мира, уставшего от лжи" />
-    <meta
-      property="og:description"
-      content="Узнайте, как мы предлагаем оценивать компании по их реальному влиянию, включая экологическую, социальную и политическую ответственность."
-    />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="www.civethica.org/ru/articles/economy/rating-civethica.ru.html" />
-    <meta property="og:image" content="www.civethica.org/images/og-image-rating-ru.png" />
-    <meta property="og:site_name" content="Фонд Civethica" />
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
 
-    <!-- 3. Twitter Card теги -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Рейтинг Civethica: Новая метрика для мира, уставшего от лжи" />
-    <meta name="twitter:description" content="Узнайте, как мы предлагаем оценивать компании по их реальному влиянию." />
-    <meta name="twitter:image" content="www.civethica.org/images/og-image-rating-ru.png" />
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
 
-    <!-- 4. Подключение стилей, шрифтов и иконки -->
+    <!-- Стили, шрифты и иконка сайта -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,15 +53,51 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+    <!-- ======================================================================= -->
+    <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (адаптировать для каждой страницы) ============= -->
+    <!-- ======================================================================= -->
 
-    <!-- 5. Структурированные данные (JSON-LD) для улучшенного SEO -->
+    <!-- Основные SEO и мета-теги -->
+
+    <!-- 1. Основные мета-теги для SEO -->
+    <title>Рейтинг Civethica: Новая метрика для мира, уставшего от лжи</title>
+    <meta
+      name="description"
+      content="Рейтинг Civethica — это новая система оценки бизнеса, основанная не на прибыли, а на истинном системном вкладе в здоровье планеты, общества и человека."
+    />
+    <meta name="author" content="Фонд Civethica" />
+    <meta
+      name="keywords"
+      content="Рейтинг Civethica, этический рейтинг бизнеса, оценка компаний, корпоративная ответственность, системный вклад, гринвошинг, этикс-вошинг, ESG, осознанное потребление, этичное инвестирование, социальная этика, экологическая этика, налоговая этика, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/ru/articles/economy/rating-civethica.ru.html" />
+    <!-- ВАЖНО: Указан путь к русской версии -->
+
+    <!-- 2. Open Graph теги (для Facebook, VK, Telegram и др.) -->
+    <meta property="og:title" content="Рейтинг Civethica: Новая метрика для мира, уставшего от лжи" />
+    <meta
+      property="og:description"
+      content="Узнайте, как мы предлагаем оценивать компании по их реальному влиянию, включая экологическую, социальную и политическую ответственность."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/ru/articles/economy/rating-civethica.ru.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-rating-ru.png" />
+    <meta property="og:site_name" content="Фонд Civethica" />
+
+    <!-- 3. Twitter Card теги -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Рейтинг Civethica: Новая метрика для мира, уставшего от лжи" />
+    <meta name="twitter:description" content="Узнайте, как мы предлагаем оценивать компании по их реальному влиянию." />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-rating-ru.png" />
+
+    <!-- 4. Структурированные данные (JSON-LD) для улучшенного SEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Рейтинг Civethica: Новая метрика для мира, уставшего от лжи",
         "description": "Концепция новой системы оценки бизнеса, основанная не на прибыли, а на истинном системном вкладе в здоровье планеты, общества и человека.",
-        "image": "www.civethica.org/images/og-image-rating-ru.png",
+        "image": "https://www.civethica.org/images/og-image-rating-ru.png",
         "author": {
           "@type": "Organization",
           "name": "Фонд Civethica"
@@ -56,7 +107,7 @@
           "name": "Фонд Civethica",
           "logo": {
             "@type": "ImageObject",
-            "url": "www.civethica.org/images/logo.png"
+            "url": "https://www.civethica.org/images/logo.png"
           }
         },
         "datePublished": "2025-08-01"
@@ -136,9 +187,7 @@
     <main>
       <section class="content-section">
         <div class="container text-left">
-          <h2>
-            Рейтинг Civethica: Новая метрика для мира, уставшего от лжи
-          </h2>
+          <h2>Рейтинг Civethica: Новая метрика для мира, уставшего от лжи</h2>
           <img
             src="/images/og-image-rating-ru.png"
             alt="Концепция Рейтинга Civethica: переход от одномерной метрики роста ВВП, приводящей к разрушению природы, к многомерному индексу, оценивающему здоровье планеты, общества и человека."
