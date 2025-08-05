@@ -2,37 +2,49 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+    <!-- (Этот блок можно безопасно копировать на все страницы без изменений) -->
+    <!-- ===================================================================== -->
+
+    <!-- Основная кодировка и viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 1. Основные мета-теги для SEO -->
-    <title>От ВВП к Индексу Здоровья Системы | Фонд Civethica</title>
-    <meta
-      name="description"
-      content="Детальный разбор недостатков ВВП как индикатора и предложение новой, многомерной модели «приборной панели» для оценки благополучия нации."
-    />
-    <meta name="author" content="Фонд Civethica" />
+    <!-- Скрипты согласия и аналитики (порядок важен) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
 
-    <!-- 2. Open Graph теги (для Facebook, VK, Telegram и др.) -->
-    <meta property="og:title" content="От ВВП к Индексу Здоровья Системы" />
-    <meta
-      property="og:description"
-      content="Почему наша главная экономическая метрика устарела и что должно прийти ей на смену."
-    />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="www.civethica.org/ru/articles/economy/from-gdp-to-shs.ru.html" />
-    <meta property="og:image" content="www.civethica.org/images/og-image-gdp-vs-shs-ru.png" />
-    <meta property="og:site_name" content="Фонд Civethica" />
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
 
-    <!-- 3. Twitter Card теги -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="От ВВП к Индексу Здоровья Системы" />
-    <meta
-      name="twitter:description"
-      content="Почему наша главная экономическая метрика устарела и что должно прийти ей на смену."
-    />
-    <meta name="twitter:image" content="www.civethica.org/images/og-image-gdp-vs-shs-ru.png" />
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
 
-    <!-- 4. Подключение стилей, шрифтов и иконки -->
+    <!-- Стили, шрифты и иконка сайта -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,14 +54,53 @@
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
 
-    <!-- 5. Структурированные данные (JSON-LD) для улучшенного SEO -->
+    <!-- ======================================================================= -->
+    <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (адаптировать для каждой страницы) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- Основные SEO и мета-теги -->
+    <title>От ВВП к Индексу Здоровья Системы | Фонд Civethica</title>
+    <meta
+      name="description"
+      content="Детальный разбор недостатков ВВП как индикатора и предложение новой, многомерной модели «приборной панели» для оценки благополучия нации."
+    />
+    <meta name="author" content="Фонд Civethica" />
+
+    <meta
+      name="keywords"
+      content="Индекс Здоровья Системы, критика ВВП, недостатки ВВП, альтернативы ВВП, экономика благополучия, измерение прогресса, качество жизни, устойчивое развитие, социальный капитал, природный капитал, системный подход в экономике, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/ru/articles/economy/from-gdp-to-shs.ru.html" />
+    <!-- ВАЖНО: Указан путь к русской версии -->
+
+    <!-- 2. Open Graph теги (для Facebook, VK, Telegram и др.) -->
+    <meta property="og:title" content="От ВВП к Индексу Здоровья Системы" />
+    <meta
+      property="og:description"
+      content="Почему наша главная экономическая метрика устарела и что должно прийти ей на смену."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/ru/articles/economy/from-gdp-to-shs.ru.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-gdp-vs-shs-ru.png" />
+    <meta property="og:site_name" content="Фонд Civethica" />
+
+    <!-- 3. Twitter Card теги -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="От ВВП к Индексу Здоровья Системы" />
+    <meta
+      name="twitter:description"
+      content="Почему наша главная экономическая метрика устарела и что должно прийти ей на смену."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-gdp-vs-shs-ru.png" />
+
+    <!-- 4. Структурированные данные (JSON-LD) для улучшенного SEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "От ВВП к Индексу Здоровья Системы: Почему наша главная экономическая метрика устарела и что должно прийти ей на смену",
         "description": "Детальный разбор недостатков ВВП как индикатора и предложение новой, многомерной модели «приборной панели» для оценки благополучия нации.",
-        "image": "www.civethica.org/images/og-image-gdp-vs-shs-ru.png",
+        "image": "https://www.civethica.org/images/og-image-gdp-vs-shs-ru.png",
         "author": {
           "@type": "Organization",
           "name": "Фонд Civethica"
@@ -59,7 +110,7 @@
           "name": "Фонд Civethica",
           "logo": {
             "@type": "ImageObject",
-            "url": "www.civethica.org/images/logo.png"
+            "url": "https://www.civethica.org/images/logo.png"
           }
         },
         "datePublished": "2025-08-02"
@@ -141,11 +192,11 @@
         <div class="container text-left">
           <h2>От ВВП к Индексу Здоровья Системы</h2>
 
-      <img
-        src="/images/og-image-gdp-vs-shs-ru.png"
-        alt="Сравнение роста ВВП с Индексом Здоровья Системы, включающим природу, здоровье и общество"
-        class="article-featured-image"
-      />
+          <img
+            src="/images/og-image-gdp-vs-shs-ru.png"
+            alt="Сравнение роста ВВП с Индексом Здоровья Системы, включающим природу, здоровье и общество"
+            class="article-featured-image"
+          />
           <h3>Почему наша главная экономическая метрика устарела и что должно прийти ей на смену.</h3>
           <p>
             Представьте, что вы пилотируете сложный авиалайнер. Но на вашей приборной панели всего один датчик —
@@ -280,22 +331,23 @@
       </section>
     </main>
 
-<footer class="main-footer">
-    <div class="container">
+    <footer class="main-footer">
+      <div class="container">
         <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
-        
+
         <!-- НОВЫЙ БЛОК ДЛЯ КОНТАКТОВ -->
         <div class="footer-contact">
-            <p>
-                <a href="mailto:info@civethica.org">info@civethica.org</a>
-            </p>
-            <p>
-                 <a href="/ru/privacy-policy.ru.html" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
-            </p>
+          <p>
+            <a href="mailto:info@civethica.org">info@civethica.org</a>
+          </p>
+          <p>
+            <a href="/ru/privacy-policy.ru.html" target="_blank" rel="noopener noreferrer"
+              >Политика конфиденциальности</a
+            >
+          </p>
         </div>
-
-    </div>
-</footer>
+      </div>
+    </footer>
 
     <script src="/js/script.js"></script>
   </body>
