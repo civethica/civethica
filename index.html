@@ -1,9 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+    <!-- (Этот блок можно безопасно копировать на все страницы без изменений) -->
+    <!-- ===================================================================== -->
+
+    <!-- Основная кодировка и viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Civethica Foundation | A New Planetary Consciousness</title>
+
+    <!-- Скрипты согласия и аналитики (порядок важен) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+    
+    <!-- CookieYes Banner Script --> 
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"></script> 
+    
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-N8B9TG8J6X');
+    </script>
+
+    <!-- Стили, шрифты и иконка сайта -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,12 +45,57 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+
+    <!-- ======================================================================= -->
+    <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (адаптировать для каждой страницы) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- Основные SEO и мета-теги -->
+    <title>Civethica Foundation | A New Planetary Consciousness</title>
     <meta
       name="description"
       content="The Civethica Foundation is a global movement initiating a cultural shift from anthropocentrism to a new, holistic worldview based on the unity of Life, Planet, and Cosmos."
     />
-  </head>
+    <meta name="author" content="Civethica Foundation" />
+    <meta name="keywords" content="planetary consciousness, Civethica, holistic worldview, systems thinking, regenerative economy, new ethics" />
+    <link rel="canonical" href="https://www.civethica.org/" />
+
+    <!-- Open Graph (для превью в соцсетях) -->
+    <meta property="og:title" content="Civethica Foundation | A New Planetary Consciousness" />
+    <meta property="og:description" content="Join a global movement shifting from outdated anthropocentrism to a holistic worldview based on the unity of Life, Planet, and Cosmos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.civethica.org/" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-main.png" />
+    <meta property="og:site_name" content="Civethica Foundation" />
+
+    <!-- Twitter Card (для превью в Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Civethica Foundation | A New Planetary Consciousness" />
+    <meta name="twitter:description" content="Join a global movement shifting from outdated anthropocentrism to a holistic worldview based on the unity of Life, Planet, and Cosmos." />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-main.png" />
+
+    <!-- Структурированные данные (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Civethica Foundation",
+        "url": "https://www.civethica.org/",
+        "logo": "https://www.civethica.org/images/logo.png",
+        "description": "A global movement initiating a cultural shift to a new, holistic worldview based on the unity of Life, Planet, and Cosmos.",
+        "sameAs": [
+          "https://www.facebook.com/groups/CivethicaCommunityEN",
+          "https://www.patreon.com/c/Civethica"
+        ]
+      }
+    </script>
+</head>
+
+
+
   <body>
+    <!-- Development Banner Start -->
+    <!-- ... остальная часть вашего кода без изменений ... -->
     <!-- Development Banner Start -->
     <div class="dev-banner">
       <p>
