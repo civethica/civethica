@@ -2,8 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. GENERAL BLOCK (for all pages) ======================= -->
+    <!-- (This block can be safely copied to all pages without modification) -->
+    <!-- ===================================================================== -->
+
+    <!-- Basic encoding and viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Manifesto - Civethica Foundation</title>
+    <!-- Consent and Analytics Scripts (order is important) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Styles, fonts and site icon -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +52,64 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+     <!-- ======================================================================= -->
+    <!-- ============= 2. UNIQUE BLOCK (adapt for each page) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- Basic SEO and Meta Tags -->
+    <title>The Manifesto - Civethica Foundation</title>
+<meta
+  name="description"
+  content="A world built on profit and power leads to destruction. The Civethica Manifesto offers a path to a new consciousness through a holistic worldview and stewardship of our common Home."
+/>
+<meta name="author" content="Civethica Foundation" />
+<meta
+  name="keywords"
+  content="new consciousness, holistic worldview, systems thinking, universal human values, planetary ethics, sustainable development, responsibility for the future, biosphere, co-evolution, manifesto, Civethica"
+/>
+    <link rel="canonical" href="https://www.civethica.org/en/manifesto.html" />
+    <!-- IMPORTANT: Path to English version is specified -->
+
+    <!-- 2. Open Graph tags (for Facebook, VK, Telegram, etc.) -->
+<meta property="og:title" content="A Manifesto for a New Consciousness | Civethica Foundation" />
+<meta
+  property="og:description"
+  content="A world built on profit and power is destroying our common home. The Civethica Manifesto offers a path to a new consciousness and shows how to reconnect with the planet and each other."
+/>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/en/manifesto.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-manifesto-en.png" />
+    <meta property="og:site_name" content="Civethica Foundation" />
+
+   <!-- 3. Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A Manifesto for a New Consciousness | Civethica Foundation" />
+<meta name="twitter:description" content="A world built on profit is destroying our common home. The Civethica Manifesto offers a path to a new consciousness and shows how to reconnect with the planet and each other." />
+<meta name="twitter:image" content="https://www.civethica.org/images/og-image-manifesto-en.png" />
+
+ <!-- 4. Structured Data (JSON-LD) for enhanced SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Civethica: A Manifesto for a New Consciousness",
+        "description": "A world built on power and profit leads to destruction. The Civethica Manifesto offers a path to a new consciousness through a holistic worldview and stewardship of our common Home.",
+        "image": "https://www.civethica.org/images/og-image-manifesto-en.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Civethica Foundation"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Civethica Foundation",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-01"
+      }
+    </script>
   </head>
 
   <body class="sub-page">
@@ -24,9 +122,7 @@
     </div>
     <!-- Development Banner End -->
 
-    <!-- ====================================================== -->
-    <!-- ============= ИСПРАВЛЕННАЯ ШАПКА ================== -->
-    <!-- ====================================================== -->
+
     <header class="main-header">
       <div class="container">
         <a href="/index.html" class="logo-link">
@@ -34,7 +130,7 @@
           <span class="logo-text">Civethica Foundation</span>
         </a>
         <nav class="main-nav">
-          <!-- ВОТ КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ: ID ВОЗВРАЩЕН НА UL -->
+
           <ul id="main-nav-list">
             <li><a href="/en/manifesto.html">The Manifesto</a></li>
             <li class="dropdown">
@@ -92,9 +188,6 @@
         </div>
       </div>
     </header>
-    <!-- ====================================================== -->
-    <!-- ================ КОНЕЦ ШАПКИ ======================= -->
-    <!-- ====================================================== -->
 
     <main>
       <section class="content-section">
@@ -215,7 +308,7 @@
       <div class="container">
         <p>© 2025 The Civethica Foundation. A non-formal civil initiative.</p>
 
-        <!-- НОВЫЙ БЛОК ДЛЯ КОНТАКТОВ -->
+        <!-- NEW CONTACT BLOCK -->
         <div class="footer-contact">
           <p>
             <a href="mailto:info@civethica.org">info@civethica.org</a>
