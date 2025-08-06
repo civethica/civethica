@@ -2,8 +2,48 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. BLOC GÉNÉRAL (pour toutes les pages) ======================= -->
+    <!-- (Ce bloc peut être copié sur toutes les pages sans modification) -->
+    <!-- ===================================================================== -->
+
+    <!-- Encodage de base et viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le Manifeste - Fondation Civethica</title>
+    <!-- Scripts de consentement et d'analyse (l'ordre est important) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- Fin du Google Consent Mode -->
+
+    <!-- Script de bannière CookieYes -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Script Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Styles, polices et icône du site -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +52,69 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+
+    <!-- ======================================================================= -->
+    <!-- ============= 2. BLOC UNIQUE (à adapter pour chaque page) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- SEO de base et balises Meta -->
+    <title>Le Manifeste - Fondation Civethica</title>
+    <meta
+      name="description"
+      content="Un monde bâti sur le profit et le pouvoir mène à la destruction. Le Manifeste Civethica propose une voie vers une nouvelle conscience à travers une vision du monde holistique et le soin de notre Maison commune."
+    />
+    <meta name="author" content="Fondation Civethica" />
+    <meta
+      name="keywords"
+      content="nouvelle conscience, vision holistique, pensée systémique, valeurs humaines universelles, éthique planétaire, développement durable, responsabilité pour l'avenir, biosphère, co-évolution, manifeste, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/fr/manifesto.fr.html" />
+
+    <!-- Balises Open Graph (pour Facebook, VK, Telegram, etc.) -->
+    <meta property="og:title" content="Un Manifeste pour une Nouvelle Conscience | Fondation Civethica" />
+    <meta
+      property="og:description"
+      content="Un monde fondé sur le profit détruit notre maison commune. Le Manifeste Civethica montre comment renouer avec la planète et les uns avec les autres."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/fr/manifesto.fr.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-manifesto-fr.png" />
+    <meta property="og:site_name" content="Fondation Civethica" />
+
+    <!-- Balises Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Un Manifeste pour une Nouvelle Conscience | Fondation Civethica" />
+    <meta
+      name="twitter:description"
+      content="Un monde fondé sur le profit détruit notre maison commune. Le Manifeste Civethica montre comment renouer avec la planète et les uns avec les autres."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-manifesto-fr.png" />
+
+    <!-- Données structurées (JSON-LD) pour un meilleur SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Civethica : Un Manifeste pour une Nouvelle Conscience",
+        "description": "Un monde bâti sur le profit et le pouvoir mène à la destruction. Le Manifeste Civethica propose une voie vers une nouvelle conscience à travers une vision du monde holistique et le soin de notre Maison commune.",
+        "image": "https://www.civethica.org/images/og-image-manifesto-fr.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Fondation Civethica"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Fondation Civethica",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-01"
+      }
+    </script>
   </head>
+
   <body class="sub-page">
     <!-- Development Banner Start -->
     <div class="dev-banner">
@@ -22,10 +124,6 @@
       </p>
     </div>
     <!-- Development Banner End -->
-
-    <!-- ====================================================== -->
-    <!-- ======== ПОЛНОСТЬЮ РАБОЧАЯ ШАПКА (HEADER) ======== -->
-    <!-- ====================================================== -->
 
     <header class="main-header">
       <div class="container">
