@@ -2,18 +2,120 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. 通用区块 (所有页面通用) ======================= -->
+    <!-- (此区块可安全复制到所有页面，无需修改) -->
+    <!-- ===================================================================== -->
+
+    <!-- 基本编码和视口 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>宣言 - Civethica基金会</title>
+    <!-- 同意和分析脚本 (顺序很重要) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- 样式、字体和网站图标 -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Подключаем Noto Sans SC для китайского языка -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&family=Roboto:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+
+    <!-- ======================================================================= -->
+    <!-- ============= 2. 独立区块 (根据每个页面进行调整) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- 基本SEO和元标签 -->
+    <title>宣言 - Civethica基金会</title>
+    <meta
+      name="description"
+      content="一个建立在利益和权力之上的世界将走向毁灭。Civethica宣言通过整体世界观和对我们共同家园的守护，为新意识指明了一条道路。"
+    />
+    <meta name="author" content="Civethica基金会" />
+    <meta
+      name="keywords"
+      content="新意识, 整体世界观, 系统思维, 普世人类价值观, 行星伦理, 可持续发展, 对未来的责任, 生物圈, 共同进化, 宣言, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/zh/manifesto.zh.html" />
+
+    <!-- Open Graph 标签 (用于 Facebook, VK, Telegram 等) -->
+    <meta property="og:title" content="新意识宣言 | Civethica基金会" />
+    <meta
+      property="og:description"
+      content="一个追逐利益的世界正在摧毁我们的共同家园。Civethica宣言展示了如何与地球和彼此重新建立连接。"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/zh/manifesto.zh.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-manifesto-zh.png" />
+    <meta property="og:site_name" content="Civethica基金会" />
+
+    <!-- Twitter Card 标签 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="新意识宣言 | Civethica基金会" />
+    <meta
+      name="twitter:description"
+      content="一个追逐利益的世界正在摧毁我们的共同家园。Civethica宣言展示了如何与地球和彼此重新建立连接。"
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-manifesto-zh.png" />
+
+    <!-- 结构化数据 (JSON-LD) 用于增强SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Civethica：新意识宣言",
+        "description": "一个建立在利益和权力之上的世界将走向毁灭。Civethica宣言通过整体世界观和对我们共同家园的守护，为新意识指明了一条道路。",
+        "image": "https://www.civethica.org/images/og-image-manifesto-zh.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Civethica基金会"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Civethica基金会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-01"
+      }
+    </script>
   </head>
+
+
   <body class="sub-page">
     <!-- Development Banner Start -->
     <div class="dev-banner">
@@ -87,9 +189,6 @@
         </div>
       </div>
     </header>
-    <!-- ====================================================== -->
-    <!-- ================ КОНЕЦ ШАПКИ ======================= -->
-    <!-- ====================================================== -->
 
     <main>
       <section class="content-section">
