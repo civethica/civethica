@@ -1,9 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. GENERAL BLOCK (for all pages) ======================= -->
+    <!-- (This block can be safely copied to all pages without modification) -->
+    <!-- ===================================================================== -->
+
+    <!-- Basic encoding and viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Platform: Culture & Education - Civethica Foundation</title>
+
+    <!-- Consent and Analytics Scripts (order is important) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Styles, fonts and site icon -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +53,70 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
-  </head>
+    <!-- ======================================================================= -->
+    <!-- ============= 2. UNIQUE BLOCK (adapt for each page) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- 1. Basic SEO and Meta Tags -->
+    <title>Platform: Culture & Education | Civethica Foundation</title>
+    <meta
+      name="description"
+      content="Culture and education are tools to upgrade our collective consciousness. The Civethica platform advocates for a shift to a culture that finds beauty in interconnection and systemic harmony."
+    />
+    <meta name="author" content="Civethica Foundation" />
+    <meta
+      name="keywords"
+      content="culture, education, new renaissance, collective consciousness, systems thinking, planetary consciousness, wisdom, aesthetics, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/en/platform-culture.html" />
+
+    <!-- 2. Open Graph tags (for Facebook, VK, Telegram, etc.) -->
+    <meta property="og:title" content="Platform: Culture & Education | Civethica Foundation" />
+    <meta
+      property="og:description"
+      content="Shifting from a culture of ego to one that finds beauty in interconnection. Learn about the principles of the New Renaissance on the Civethica platform."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/en/platform-culture.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-platform-culture.png" />
+    <meta property="og:site_name" content="Civethica Foundation" />
+
+    <!-- 3. Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Platform: Culture & Education | Civethica Foundation" />
+    <meta
+      name="twitter:description"
+      content="Shifting from a culture of ego to one that finds beauty in interconnection. Learn about the principles of the New Renaissance on the Civethica platform."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-platform-culture.png" />
+
+    <!-- 4. Structured Data (JSON-LD) for enhanced SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Manifesto for a New Renaissance: Culture & Education",
+        "description": "Culture and education are the tools for upgrading our collective consciousness. We advocate for a shift from a culture that celebrates the individual ego to one that finds beauty in interconnection and systemic harmony.",
+        "image": "https://www.civethica.org/images/og-image-platform-culture.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Civethica Foundation"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Civethica Foundation",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-01"
+      }
+    </script>
+</head>
+
+
+  
   <body class="sub-page">
     <header class="main-header">
       <div class="container">
