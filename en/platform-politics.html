@@ -1,9 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. GENERAL BLOCK (for all pages) ======================= -->
+    <!-- (This block can be safely copied to all pages without modification) -->
+    <!-- ===================================================================== -->
+
+    <!-- Basic encoding and viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Platform: Politics & Governance - Civethica Foundation</title>
+
+    <!-- Consent and Analytics Scripts (order is important) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Styles, fonts and site icon -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +53,68 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
-  </head>
+    <!-- ======================================================================= -->
+    <!-- ============= 2. UNIQUE BLOCK (adapt for each page) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- 1. Basic SEO and Meta Tags -->
+    <title>Platform: Politics & Governance | Civethica Foundation</title>
+    <meta
+      name="description"
+      content="Politics is the collective responsibility for the planet's health. The Civethica platform proposes a geo-governance paradigm—a collaborative process of caring for the 'Humanity + Biosphere' system."
+    />
+    <meta name="author" content="Civethica Foundation" />
+    <meta
+      name="keywords"
+      content="politics, governance, planetary governance, geo-governance, collective responsibility, biosphere, ethics, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/en/platform-politics.html" />
+
+    <!-- 2. Open Graph tags (for Facebook, VK, Telegram, etc.) -->
+    <meta property="og:title" content="Platform: Politics & Governance | Civethica Foundation" />
+    <meta
+      property="og:description"
+      content="Rejecting geopolitics for geo-governance. Learn how Civethica proposes to collaboratively and ethically care for our shared home."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/en/platform-politics.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-platform-politics.png" />
+    <meta property="og:site_name" content="Civethica Foundation" />
+
+    <!-- 3. Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Platform: Politics & Governance | Civethica Foundation" />
+    <meta
+      name="twitter:description"
+      content="Rejecting geopolitics for geo-governance. Learn how Civethica proposes to collaboratively and ethically care for our shared home."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-platform-politics.png" />
+
+    <!-- 4. Structured Data (JSON-LD) for enhanced SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Manifesto for Planetary Governance: Politics & Governance",
+        "description": "Politics is the collective responsibility for the health of our shared home. We propose a new paradigm: geo-governance—a collaborative, science-based, and ethically-aligned process of caring for the 'Humanity + Biosphere' system.",
+        "image": "https://www.civethica.org/images/og-image-platform-politics.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Civethica Foundation"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Civethica Foundation",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-01"
+      }
+    </script>
+</head>
+
   <body class="sub-page">
     <header class="main-header">
       <div class="container">
