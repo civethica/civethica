@@ -1,0 +1,677 @@
+:root {
+    --primary-color: #005f73;
+    --secondary-color: #0a9396;
+    --accent-color: #94d2bd;
+    --bg-color: #f8f9fa;
+    --text-color: #343a40;
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', 'Noto Sans SC', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Development Banner --- */
+.dev-banner {
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    color: #000;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.dev-banner p {
+    margin: 0;
+}
+
+/* --- Header & Navigation (Desktop) --- */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 120px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    position: relative;
+}
+
+.main-nav ul li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+    display: block;
+    white-space: nowrap;
+}
+
+.main-nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Dropdown Menu (Universal Click-Based) --- */
+.dropdown-menu {
+    display: none; /* ИЗМЕНЕНО: меню скрыто по умолчанию */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    width: max-content;
+    max-width: 800px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, margin-top 0.3s ease;
+    z-index: 1100;
+}
+
+/* ИЗМЕНЕНО: Правило :hover удалено. Теперь меню открывается только через JS */
+.dropdown.is-open > .dropdown-menu {
+    display: grid;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 5px;
+}
+
+.dropdown-menu a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.language-switcher {
+    position: relative;
+}
+
+.current-lang {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 8px 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-user-select: none; /* Для Safari и Chrome-подобных */
+    user-select: none; /* Чтобы текст не выделялся при клике */
+}
+
+.lang-dropdown {
+    display: none; /* ИЗМЕНЕНО: меню скрыто по умолчанию */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 5px 0;
+    margin-top: 5px;
+    min-width: 80px;
+    text-align: center;
+    z-index: 1100;
+}
+
+/* ИЗМЕНЕНО: Правило :hover удалено. Теперь меню открывается только через JS */
+.language-switcher.is-open .lang-dropdown {
+    display: block;
+}
+
+.lang-dropdown li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.lang-dropdown li a:hover {
+    background-color: var(--bg-color);
+}
+
+/* --- General Content Styles --- */
+.content-section, .hero-section, .platforms-preview-section { padding: 80px 0; text-align: center; scroll-margin-top: 150px; }
+.hero-section {
+    background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)), url('/images/og-image-main.png') no-repeat center center/cover;
+    color: #fff; display: flex; align-items: center; min-height: 80vh;
+}
+h1 { font-family: var(--heading-font); font-size: 3.2rem; margin-bottom: 20px; }
+.subtitle { font-size: 1.2rem; font-weight: 300; max-width: 700px; margin: 0 auto 30px auto; }
+h2 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-color); margin-bottom: 40px; }
+
+/* --- Buttons --- */
+.cta-button, .cta-button-secondary, .cta-button-small {
+    display: inline-block; padding: 15px 30px; text-decoration: none;
+    border-radius: 5px; font-weight: bold; transition: transform 0.3s, background-color 0.3s;
+}
+.cta-button { background-color: var(--secondary-color); color: #fff; }
+.cta-button:hover { background-color: #087c7e; transform: translateY(-3px); }
+.cta-button-secondary { background-color: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); }
+.cta-button-secondary:hover { background-color: var(--primary-color); color: #fff; transform: translateY(-3px); }
+.cta-button-small { padding: 8px 15px; background-color: var(--primary-color); color: #fff; font-size: 0.9rem; }
+.cta-button-small:hover { background-color: var(--secondary-color); }
+
+/* --- Specific Section Styles --- */
+.platforms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.platform-card {
+    display: block; background-color: #fff; padding: 30px; border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-decoration: none; color: var(--text-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.platform-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.platform-card h3 { color: var(--primary-color); margin-bottom: 10px; }
+.join-buttons { margin-top: 30px; display: flex; justify-content: center; gap: 20px; }
+
+/* --- Sub-pages & Manifesto --- */
+.text-left { text-align: left; }
+.text-left h3 { font-family: var(--heading-font); color: var(--primary-color); margin-top: 30px; margin-bottom: 15px; }
+.manifesto-list, .manifesto-sublist { list-style-position: outside; padding-left: 20px; }
+.manifesto-sublist { margin-top: 1em; padding-left: 40px; }
+.manifesto-list li, .manifesto-sublist li { margin-bottom: 1em; }
+.cta-container { margin-top: 50px; text-align: left; }
+.cta-line { display: flex; align-items: center; gap: 25px; margin-bottom: 20px; }
+.cta-line:last-child { margin-bottom: 0; }
+.cta-note { font-style: italic; font-size: 0.9em; color: #555; }
+
+/* --- Footer --- */
+.main-footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 40px 0; }
+.main-footer a { color: var(--accent-color); text-decoration: none; }
+
+
+
+/*
+=====================================================
+======= СТИЛИ ДЛЯ ОФОРМЛЕНИЯ СТАТЕЙ (CIVETHICA) =======
+=====================================================
+*/
+
+/* --- 1. Общие стили для тела статьи --- */
+.article-body {
+    font-family: var(--body-font);
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.article-header {
+    margin-bottom: 2rem;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color, #6c757d); /* Используем запасной цвет, если переменной нет */
+    margin-top: 1rem;
+}
+
+.subsection {
+    margin-top: 3rem;
+}
+
+.subsection h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-preview {
+    margin-bottom: 30px; /* Добавляет отступ в 30 пикселей ПОСЛЕ каждого блока */
+}
+
+
+/* --- 2. Стили для красивых цитат и акцентов --- */
+.analogy-quote {
+    background-color: var(--bg-color);
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem 2rem;
+    margin: 2.5rem 0;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #555;
+}
+
+.analogy-quote p {
+    margin: 0;
+}
+
+.key-concept {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem;
+    margin: 2.5rem auto;
+    max-width: 80%;
+}
+
+/* --- 3. Стили для карточек ("7 грехов ВВП") --- */
+.cards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h4 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+/* --- 4. Стили для "Приборной панели" (ИЗС) --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.dashboard-card {
+    background-color: var(--bg-color);
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.dashboard-card h4 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.dashboard-card h4 small {
+    font-weight: 400;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.dashboard-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.dashboard-card ul li {
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.dashboard-card ul li:last-child {
+    border-bottom: none;
+}
+
+
+/* --- 5. Стили для заключения и призыва к действию --- */
+.article-footer {
+    margin-top: 3rem;
+}
+
+.conclusion-box {
+    background-color: #f0f7f7; /* Очень светлый оттенок вашего основного цвета */
+    border-left: 4px solid var(--secondary-color);
+    padding: 2rem;
+    margin: 3rem 0;
+    border-radius: 4px;
+}
+
+.conclusion-box h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.discussion-cta-section {
+    text-align: center;
+    margin-top: 0rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.discussion-cta-section h3 {
+    font-size: 1.6rem;
+}
+
+.discussion-cta-section p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+=====================================================
+======= СТИЛИ ДЛЯ КРАСИВЫХ НУМЕРОВАННЫХ СПИСКОВ =======
+=====================================================
+*/
+.styled-list {
+  list-style: none; /* Убираем стандартные цифры и точки */
+  padding-left: 0;  /* Убираем стандартный отступ */
+  margin-top: 1.5rem; /* Добавляем отступ сверху */
+}
+
+.styled-list li {
+  padding-left: 2.5em;  /* Создаем слева место для нашей кастомной цифры */
+  position: relative;     /* Это нужно для позиционирования цифры */
+  margin-bottom: 1.25rem; /* Расстояние между пунктами списка */
+}
+
+.styled-list li::before {
+  /* Создаем нашу собственную нумерацию */
+  counter-increment: list-item; /* Увеличиваем счетчик для каждого пункта */
+  content: counter(list-item) "."; /* Отображаем номер счетчика и точку после него */
+  
+  /* Позиционируем номер */
+  position: absolute;
+  left: 0;
+  top: 0.1em; /* Небольшая коррекция, чтобы номер был на уровне текста */
+
+  /* Стилизуем номер */
+  font-family: var(--heading-font);
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+/* Инициализируем счетчик для нашего списка */
+main ol.styled-list {
+  counter-reset: list-item;
+}
+
+
+/* ===================================================== */
+/*                   КОНЕЦ СТИЛЕЙ СТАТЬИ                  */
+/* ===================================================== */
+
+
+
+/*
+==============================================
+======= MOBILE & RESPONSIVE STYLES ===========
+==============================================
+*/
+.mobile-nav-toggle { display: none; background: none; border: none; cursor: pointer; z-index: 1001; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.mobile-nav-toggle { padding: 10px; }
+
+.mobile-nav-toggle .icon-open,
+.mobile-nav-toggle .icon-close {
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-toggle .icon-close { display: none; }
+
+@media (max-width: 992px) {
+    .main-header .container { flex-wrap: wrap; justify-content: space-between; }
+    .logo-img { height: 80px; }
+    .logo-text { font-size: 1.2rem; }
+    .header-actions { order: 2; margin-left: auto; }
+    .mobile-nav-toggle { display: block; order: 3; }
+    
+    .main-nav { order: 4; width: 100%; }
+    .main-nav ul {
+        display: none; flex-direction: column; width: 100%; background-color: #fff;
+        padding: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        position: absolute; top: 100%; left: 0;
+    }
+    .main-nav ul.is-open { display: flex; }
+    .main-nav ul li { margin-bottom: 10px; }
+    .main-nav ul li a { font-size: 1.2rem; padding: 15px; }
+
+    /* --- Выпадающее меню в мобильной версии --- */
+    /* Правило :hover не нужно, так как теперь все работает по клику */
+    
+    .main-nav .dropdown .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        box-shadow: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        background-color: transparent !important;
+        display: none;
+        width: 100%;
+        list-style: none;
+        padding: 10px 0 10px 20px;
+        margin-top: 0;
+        border-radius: 0;
+    }
+    
+    /* Правило для открытия подменю по клику */
+    .main-nav .dropdown.is-open > .dropdown-menu {
+        display: block;
+    }
+
+    .main-nav .dropdown-menu a {
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        padding: 10px 15px;
+        color: var(--secondary-color);
+    }
+
+    /* --- Адаптация основного контента --- */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .join-buttons { flex-direction: column; align-items: center; }
+    .platforms-grid { grid-template-columns: 1fr; }
+
+    /* --- Показ/скрытие иконок при активном меню --- */
+    .mobile-nav-toggle.is-active .icon-open { display: none; }
+    .mobile-nav-toggle.is-active .icon-close { display: block; }
+}
+/* Добавляем расстояние между контейнером кнопок и текстом */
+.button-container {
+    margin-top: 2rem;
+}
+
+.conclusion {
+    margin-top: 0rem;
+    font-style: normal;
+    border-top: 1px solid #eee; /* Тонкая линия сверху */
+    padding-top: rem;
+}
+.conclusion-it {
+    margin-top: 2.5rem;
+    font-style: italic;
+    border-top: 1px solid #eee; /* Тонкая линия сверху */
+    padding-top: 1rem;
+}
+.conclusion ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/*
+=====================================================
+======= АДАПТИВНЫЕ КНОПКИ В ШАПКЕ (Мультиязычные) ====
+=====================================================
+*/
+
+/* По умолчанию (на десктопе) мобильная кнопка скрыта */
+.mobile-only-button {
+    display: none;
+}
+
+/* На мобильных устройствах (экран <= 992px) */
+@media (max-width: 992px) {
+    /* Скрываем десктопную кнопку */
+    .desktop-only-button {
+        display: none;
+    }
+
+    /* И показываем мобильную кнопку */
+    .mobile-only-button {
+        display: inline-block;
+    }
+}
+/*
+======================================================
+======= СТИЛИ ДЛЯ ССЫЛОК В БИБЛИОТЕКЕ (по классу) =====
+======================================================
+*/
+
+/* 
+  Это правило говорит, что ссылки с классом .library-topic-link
+  ДОЛЖНЫ БЫТЬ цвета --primary-color ВО ВСЕХ СОСТОЯНИЯХ:
+  - :link    -> обычная, непосещенная ссылка
+  - :visited -> посещенная ссылка
+  - :hover   -> ссылка при наведении курсора
+  - :active  -> ссылка в момент нажатия
+*/
+.library-topic-link:link,
+.library-topic-link:visited,
+.library-topic-link:hover,
+.library-topic-link:active {
+  color: var(--primary-color);
+  text-decoration: none; /* Убираем подчеркивание во всех состояниях */
+}
+
+/* 
+  Опционально: если вы хотите, чтобы при наведении
+  ссылка все-таки подчеркивалась, но не меняла цвет,
+  добавьте это правило.
+*/
+.library-topic-link:hover {
+  text-decoration: underline;
+}
+
+/*
+=====================================================
+======= СТИЛИ ДЛЯ ИЗОБРАЖЕНИЯ С ОБТЕКАНИЕМ ТЕКСТОМ ====
+================================
+*/
+.article-featured-image {
+  /* --- 1. Включаем обтекание --- */
+  float: left; /* Главное свойство! Заставляет другие элементы обтекать этот справа */
+
+  /* --- 2. Устанавливаем размеры --- */
+  width: 50%; /* Картинка будет занимать половину ширины родительского контейнера */
+  max-width: 450px; /* Но не будет больше 400px (чтобы не была слишком большой на широких экранах) */
+  height: auto; /* Сохраняем пропорции */
+
+  /* --- 3. Настраиваем отступы --- */
+  /* Добавляем отступ СПРАВА (чтобы текст не "прилипал") и СНИЗУ */
+  margin: 10px 30px 10px 0; /* 10px сверху, 30px справа, 10px снизу, 0 слева */
+
+  /* --- 4. Внешний вид (оставляем как было) --- */
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+/*
+=====================================================
+======= "ОЧИСТКА" ПОТОКА ПОСЛЕ FLOAT-ЭЛЕМЕНТОВ =======
+=====================================================
+*/
+/* Этот класс мы будем добавлять к элементу, который должен идти ПОСЛЕ картинки и текста */
+
+hr {
+  clear: both;
+}
+
+/* --- Стили для "липкого" заголовка платформы --- */
+
+.platform-header {
+  position: sticky;
+  top: 80px; /* Подберите под высоту вашей шапки */
+  background-color: #f8f9fa;
+  padding: 15px 0;
+  border-bottom: 1px solid #dee2e6;
+  z-index: 999;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #333;
+}
+
+/* Стиль для подписи "Платформа:" */
+.platform-header .platform-label {
+  font-weight: 700;
+  color: #555;
+  margin-right: 10px;
+}
