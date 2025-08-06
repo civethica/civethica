@@ -2,8 +2,49 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. BLOC GÉNÉRAL (pour toutes les pages) ======================= -->
+    <!-- (Ce bloc peut être copié sur toutes les pages sans modification) -->
+    <!-- ===================================================================== -->
+
+    <!-- Encodage de base et viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plateforme : Politique & Gouvernance - Fondation Civethica</title>
+
+    <!-- Scripts de consentement et d'analyse (l'ordre est important) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- Fin du Google Consent Mode -->
+
+    <!-- Script de bannière CookieYes -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Script Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Styles, polices et icône du site -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +53,68 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+    <!-- ======================================================================= -->
+    <!-- ============= 2. BLOC UNIQUE (à adapter pour chaque page) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- 1. SEO de base et balises Meta -->
+    <title>Plateforme : Politique & Gouvernance | Fondation Civethica</title>
+    <meta
+      name="description"
+      content="La politique est la responsabilité collective pour la santé de la planète. La plateforme Civethica propose un paradigme de géo-gouvernance — un processus collaboratif de soin du système « Humanité + Biosphère »."
+    />
+    <meta name="author" content="Fondation Civethica" />
+    <meta
+      name="keywords"
+      content="politique, gouvernance, gouvernance planétaire, géo-gouvernance, responsabilité collective, biosphère, éthique, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/fr/platform-politics.fr.html" />
+
+    <!-- 2. Balises Open Graph (pour Facebook, VK, Telegram, etc.) -->
+    <meta property="og:title" content="Plateforme : Politique & Gouvernance | Fondation Civethica" />
+    <meta
+      property="og:description"
+      content="Rejeter la géopolitique au profit de la géo-gouvernance. Découvrez comment Civethica propose de prendre soin de notre maison commune de manière collaborative et éthique."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/fr/platform-politics.fr.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-platform-politics-fr.png" />
+    <meta property="og:site_name" content="Fondation Civethica" />
+
+    <!-- 3. Balises Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Plateforme : Politique & Gouvernance | Fondation Civethica" />
+    <meta
+      name="twitter:description"
+      content="Rejeter la géopolitique au profit de la géo-gouvernance. Découvrez comment Civethica propose de prendre soin de notre maison commune de manière collaborative et éthique."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-platform-politics-fr.png" />
+
+    <!-- 4. Données structurées (JSON-LD) pour un meilleur SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Manifeste pour la Gouvernance Planétaire : Politique & Gouvernance",
+        "description": "La politique n'est pas une lutte pour le pouvoir. C'est la responsabilité collective pour la santé de notre maison commune. Nous proposons un nouveau paradigme : la géo-gouvernance — un processus collaboratif, scientifique et éthique de soin du système « Humanité + Biosphère ».",
+        "image": "https://www.civethica.org/images/og-image-platform-politics-fr.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Fondation Civethica"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Fondation Civethica",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-01"
+      }
+    </script>
   </head>
+
   <body class="sub-page">
     <header class="main-header">
       <div class="container">
