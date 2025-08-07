@@ -1,7 +1,47 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+   // =======================================================================================
+    // --- НОВЫЙ БЛОК: ЗАГРУЗКА И ЛОКАЛИЗАЦИЯ HTML-КОМПОНЕНТОВ ---
     // =======================================================================================
-    // --- ГЛАВНЫЙ БЛОК ЛОГИКИ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ (Язык, меню, заголовки) ---
+    
+    // Определяем текущий язык (этот код у вас уже есть)
+    const currentLang = document.documentElement.lang || 'en';
+
+    // Функция для загрузки и локализации HTML-фрагмента
+    const loadAndLocalizeHTML = (elementId, filePath) => {
+        const placeholder = document.getElementById(elementId);
+        if (placeholder) {
+            fetch(filePath)
+                .then(response => response.ok ? response.text() : Promise.reject('Файл не найден'))
+                .then(html => {
+                    // 1. Вставляем универсальный HTML в плейсхолдер
+                    placeholder.innerHTML = html;
+
+                    // 2. Находим все элементы с переводами ВНУТРИ загруженного блока
+                    const translatableElements = placeholder.querySelectorAll('[data-lang-' + currentLang + ']');
+                    
+                    // 3. Для каждого элемента вставляем текст нужного языка
+                    translatableElements.forEach(el => {
+                        el.textContent = el.getAttribute('data-lang-' + currentLang);
+                    });
+                })
+                .catch(error => {
+                    console.error(`Ошибка при загрузке ${filePath}:`, error);
+                    placeholder.style.display = 'none';
+                });
+        }
+    };
+
+    // Загружаем наш ЕДИНСТВЕННЫЙ универсальный баннер
+    loadAndLocalizeHTML('dev-banner-placeholder', '/includes/dev-banner.html');
+    
+    // В будущем так же можно будет загружать и другие компоненты
+    // loadAndLocalizeHTML('header-placeholder', '/includes/header.html');
+    // loadAndLocalizeHTML('footer-placeholder', '/includes/footer.html');
+
+
+    // =======================================================================================
+    // --- ВАШ СУЩЕСТВУЮЩИЙ КОД НАЧИНАЕТСЯ ЗДЕСЬ ---
     // =======================================================================================
     
     // 1. Определяем общие переменные
