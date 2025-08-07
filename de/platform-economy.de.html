@@ -2,8 +2,49 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ALLGEMEINER BLOCK (für alle Seiten) ======================= -->
+    <!-- (Dieser Block kann ohne Änderungen auf alle Seiten kopiert werden) -->
+    <!-- ===================================================================== -->
+
+    <!-- Grundlegende Kodierung und Ansichtsfenster -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plattform: Wirtschaft & Ressourcen - Stiftung Civethica</title>
+
+    <!-- Skripte für Einwilligung und Analyse (Reihenfolge ist wichtig) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- Ende Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Stile, Schriftarten und Seitenicon -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +53,68 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+    <!-- ======================================================================= -->
+    <!-- ============= 2. EINZIGARTIGER BLOCK (für jede Seite anpassen) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- 1. Grundlegende SEO und Meta-Tags -->
+    <title>Plattform: Wirtschaft & Ressourcen | Stiftung Civethica</title>
+    <meta
+      name="description"
+      content="Die Wirtschaft ist das Stoffwechselsystem der Zivilisation. Die Civethica-Plattform schlägt einen Wandel von endlosem Wachstum zu einem regenerativen, zirkulären Modell vor, das auf Systemgesundheit statt auf dem BIP basiert."
+    />
+    <meta name="author" content="Stiftung Civethica" />
+    <meta
+      name="keywords"
+      content="Wirtschaft, Ressourcen, regenerative Wirtschaft, Kreislaufwirtschaft, Systemgesundheit, BIP, Wachstumskritik, Symbiose, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/de/platform-economy.de.html" />
+
+    <!-- 2. Open Graph Tags (für Facebook, VK, Telegram etc.) -->
+    <meta property="og:title" content="Plattform: Wirtschaft & Ressourcen | Stiftung Civethica" />
+    <meta
+      property="og:description"
+      content="Weg von der Besessenheit mit dem BIP-Wachstum. Erfahren Sie, wie Civethica eine zirkuläre und regenerative Wirtschaft vorschlägt, die auf Systemgesundheit basiert."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/de/platform-economy.de.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-platform-economy-de.png" />
+    <meta property="og:site_name" content="Stiftung Civethica" />
+
+    <!-- 3. Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Plattform: Wirtschaft & Ressourcen | Stiftung Civethica" />
+    <meta
+      name="twitter:description"
+      content="Weg von der Besessenheit mit dem BIP-Wachstum. Erfahren Sie, wie Civethica eine zirkuläre und regenerative Wirtschaft vorschlägt, die auf Systemgesundheit basiert."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-platform-economy-de.png" />
+
+    <!-- 4. Strukturierte Daten (JSON-LD) für verbesserte SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Manifest für eine Regenerative Wirtschaft",
+        "description": "Die Wirtschaft ist keine Maschine zur Erzeugung von Wohlstand; sie ist das Stoffwechselsystem unserer Zivilisation. Wir schlagen ein neues Paradigma vor: eine Wirtschaft, die wie ein natürliches Ökosystem funktioniert – zirkulär, regenerativ und symbiotisch.",
+        "image": "https://www.civethica.org/images/og-image-platform-economy-de.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Stiftung Civethica"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Stiftung Civethica",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-01"
+      }
+    </script>
   </head>
+
   <body class="sub-page">
     <header class="main-header">
       <div class="container">
@@ -90,19 +192,19 @@
         </div>
       </div>
     </header>
-<!-- ====================================================== -->
-<!-- ================ БЛОК ЗАГОЛОВКА ПЛАТФОРМЫ ============ -->
-<!-- ====================================================== -->
-<!-- Этот блок теперь пустой. JavaScript заполнит его сам. -->
-<div id="platform-header-sticky" class="platform-header">
-  <div class="container">
-    <!-- Сюда будет вставлен текст, например: -->
-    <!-- <span class="platform-label">Платформа:</span> Экономика и Ресурсы -->
-  </div>
-</div>
-<!-- ====================================================== -->
-<!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
-<!-- ====================================================== -->
+    <!-- ====================================================== -->
+    <!-- ================ БЛОК ЗАГОЛОВКА ПЛАТФОРМЫ ============ -->
+    <!-- ====================================================== -->
+    <!-- Этот блок теперь пустой. JavaScript заполнит его сам. -->
+    <div id="platform-header-sticky" class="platform-header">
+      <div class="container">
+        <!-- Сюда будет вставлен текст, например: -->
+        <!-- <span class="platform-label">Платформа:</span> Экономика и Ресурсы -->
+      </div>
+    </div>
+    <!-- ====================================================== -->
+    <!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
+    <!-- ====================================================== -->
     <main>
       <section class="content-section is-visible">
         <div class="container text-left">
