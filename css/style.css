@@ -421,7 +421,7 @@ main ol.styled-list { counter-reset: list-item; }
     /* ИСПРАВЛЕНИЕ 3: Адаптация "липких" заголовков для мобильных */
     .platform-header,
     .library-header {
-        top: 122px; /* ВЫСОТА МОБИЛЬНОЙ ШАПКИ. Подберите точное значение */
+        top: 162px; /* ВЫСОТА МОБИЛЬНОЙ ШАПКИ. Подберите точное значение */
         font-size: 1.1rem;
         text-align: center;
         padding: 10px 0;
