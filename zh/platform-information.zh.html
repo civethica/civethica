@@ -2,17 +2,113 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. 通用区块 (所有页面通用) ======================= -->
+    <!-- (此区块可安全复制到所有页面，无需修改) -->
+    <!-- ===================================================================== -->
+
+    <!-- 基本编码和视口 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>平台：信息与意识 - Civethica基金会</title>
+
+    <!-- 同意和分析脚本 (顺序很重要) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- 样式、字体和网站图标 -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+    <!-- ======================================================================= -->
+    <!-- ============= 2. 独立区块 (根据每个页面进行调整) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- 1. 基本SEO和元标签 -->
+    <title>平台：信息与意识 | Civethica基金会</title>
+    <meta
+      name="description"
+      content="数字空间是意识的新栖息地。Civethica平台提倡以对待地球生物圈的谨慎态度来对待信息空间。"
+    />
+    <meta name="author" content="Civethica基金会" />
+    <meta
+      name="keywords"
+      content="信息, 意识, 媒体素养, 数字卫生, 虚假信息, 注意力经济, 认知偏见, 批判性思维, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/zh/platform-information.zh.html" />
+
+    <!-- 2. Open Graph 标签 (用于 Facebook, VK, Telegram 等) -->
+    <meta property="og:title" content="平台：信息与意识 | Civethica基金会" />
+    <meta property="og:description" content="从信息过载到意识清晰。了解Civethica如何提倡创建一个健康的数字生物圈。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/zh/platform-information.zh.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-platform-information-zh.png" />
+    <meta property="og:site_name" content="Civethica基金会" />
+
+    <!-- 3. Twitter Card 标签 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="平台：信息与意识 | Civethica基金会" />
+    <meta name="twitter:description" content="从信息过载到意识清晰。了解Civethica如何提倡创建一个健康的数字生物圈。" />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-platform-information-zh.png" />
+
+    <!-- 4. 结构化数据 (JSON-LD) 用于增强SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "数字生物圈宣言: 信息与意识",
+        "description": "数字空间已成为人类意识的新栖息地。我们主张以对待地球生物圈同样的谨慎态度来对待信息空间。",
+        "image": "https://www.civethica.org/images/og-image-platform-information-zh.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Civethica基金会"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Civethica基金会",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-01"
+      }
+    </script>
   </head>
+
   <body class="sub-page">
     <header class="main-header">
       <div class="container">
@@ -87,19 +183,19 @@
         </div>
       </div>
     </header>
-<!-- ====================================================== -->
-<!-- ================ БЛОК ЗАГОЛОВКА ПЛАТФОРМЫ ============ -->
-<!-- ====================================================== -->
-<!-- Этот блок теперь пустой. JavaScript заполнит его сам. -->
-<div id="platform-header-sticky" class="platform-header">
-  <div class="container">
-    <!-- Сюда будет вставлен текст, например: -->
-    <!-- <span class="platform-label">Платформа:</span> Экономика и Ресурсы -->
-  </div>
-</div>
-<!-- ====================================================== -->
-<!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
-<!-- ====================================================== -->
+    <!-- ====================================================== -->
+    <!-- ================ БЛОК ЗАГОЛОВКА ПЛАТФОРМЫ ============ -->
+    <!-- ====================================================== -->
+    <!-- Этот блок теперь пустой. JavaScript заполнит его сам. -->
+    <div id="platform-header-sticky" class="platform-header">
+      <div class="container">
+        <!-- Сюда будет вставлен текст, например: -->
+        <!-- <span class="platform-label">Платформа:</span> Экономика и Ресурсы -->
+      </div>
+    </div>
+    <!-- ====================================================== -->
+    <!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
+    <!-- ====================================================== -->
     <main>
       <section class="content-section is-visible">
         <div class="container text-left">

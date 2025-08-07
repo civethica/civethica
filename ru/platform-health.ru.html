@@ -2,8 +2,49 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+    <!-- (Этот блок можно безопасно копировать на все страницы без изменений) -->
+    <!-- ===================================================================== -->
+
+    <!-- Основная кодировка и viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Платформа: Здоровье и Биоэтика - Фонд Civethica</title>
+
+    <!-- Скрипты согласия и аналитики (порядок важен) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Стили, шрифты и иконка сайта -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +53,68 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+    <!-- ======================================================================= -->
+    <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (адаптировать для каждой страницы) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- 1. Основные мета-теги для SEO -->
+    <title>Платформа: Здоровье и Биоэтика | Фонд Civethica</title>
+    <meta
+      name="description"
+      content="Здоровье человека неотделимо от здоровья планеты. Платформа Civethica предлагает переход от реактивной медицины к проактивному, целостному подходу и разработке глобальной биоэтики."
+    />
+    <meta name="author" content="Фонд Civethica" />
+    <meta
+      name="keywords"
+      content="здоровье, биоэтика, планетарное здоровье, единое здоровье, салютогенез, ментальное здоровье, этика ИИ, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/ru/platform-health.ru.html" />
+
+    <!-- 2. Open Graph теги (для Facebook, VK, Telegram и др.) -->
+    <meta property="og:title" content="Платформа: Здоровье и Биоэтика | Фонд Civethica" />
+    <meta
+      property="og:description"
+      content="Переход от медицины болезней к созданию условий для здоровья. Узнайте о принципах планетарного здоровья и проактивной биоэтики."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/ru/platform-health.ru.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-platform-health-ru.png" />
+    <meta property="og:site_name" content="Фонд Civethica" />
+
+    <!-- 3. Twitter Card теги -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Платформа: Здоровье и Биоэтика | Фонд Civethica" />
+    <meta
+      name="twitter:description"
+      content="Переход от медицины болезней к созданию условий для здоровья. Узнайте о принципах планетарного здоровья и проактивной биоэтики."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-platform-health-ru.png" />
+
+    <!-- 4. Структурированные данные (JSON-LD) для улучшенного SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Манифест Планетарного Здоровья",
+        "description": "Здоровье человека не может существовать в отрыве от здоровья планеты. Мы предлагаем переход от реактивной, сфокусированной на болезнях медицины к проактивному, целостному подходу.",
+        "image": "https://www.civethica.org/images/og-image-platform-health-ru.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Фонд Civethica"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Фонд Civethica",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-01"
+      }
+    </script>
   </head>
+
   <body class="sub-page">
     <header class="main-header">
       <div class="container">
@@ -86,19 +188,19 @@
         </div>
       </div>
     </header>
-<!-- ====================================================== -->
-<!-- ================ БЛОК ЗАГОЛОВКА ПЛАТФОРМЫ ============ -->
-<!-- ====================================================== -->
-<!-- Этот блок теперь пустой. JavaScript заполнит его сам. -->
-<div id="platform-header-sticky" class="platform-header">
-  <div class="container">
-    <!-- Сюда будет вставлен текст, например: -->
-    <!-- <span class="platform-label">Платформа:</span> Экономика и Ресурсы -->
-  </div>
-</div>
-<!-- ====================================================== -->
-<!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
-<!-- ====================================================== -->
+    <!-- ====================================================== -->
+    <!-- ================ БЛОК ЗАГОЛОВКА ПЛАТФОРМЫ ============ -->
+    <!-- ====================================================== -->
+    <!-- Этот блок теперь пустой. JavaScript заполнит его сам. -->
+    <div id="platform-header-sticky" class="platform-header">
+      <div class="container">
+        <!-- Сюда будет вставлен текст, например: -->
+        <!-- <span class="platform-label">Платформа:</span> Экономика и Ресурсы -->
+      </div>
+    </div>
+    <!-- ====================================================== -->
+    <!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
+    <!-- ====================================================== -->
     <main>
       <section class="content-section is-visible">
         <div class="container text-left">

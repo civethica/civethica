@@ -2,8 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. GENERAL BLOCK (for all pages) ======================= -->
+    <!-- (This block can be safely copied to all pages without modification) -->
+    <!-- ===================================================================== -->
+
+    <!-- Basic encoding and viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Platform: Information & Consciousness - Civethica Foundation</title>
+
+    <!-- Consent and Analytics Scripts (order is important) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Styles, fonts and site icon -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +53,68 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+    <!-- ======================================================================= -->
+    <!-- ============= 2. UNIQUE BLOCK (adapt for each page) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- 1. Basic SEO and Meta Tags -->
+    <title>Platform: Information & Consciousness | Civethica Foundation</title>
+    <meta
+      name="description"
+      content="The digital space is the new habitat for consciousness. The Civethica platform advocates for treating the information space with the same care as our planet's biosphere."
+    />
+    <meta name="author" content="Civethica Foundation" />
+    <meta
+      name="keywords"
+      content="information, consciousness, media literacy, digital hygiene, misinformation, attention economy, cognitive biases, critical thinking, Civethica"
+    />
+    <link rel="canonical" href="https://www.civethica.org/en/platform-information.html" />
+
+    <!-- 2. Open Graph tags (for Facebook, VK, Telegram, etc.) -->
+    <meta property="og:title" content="Platform: Information & Consciousness | Civethica Foundation" />
+    <meta
+      property="og:description"
+      content="From information overload to clarity of consciousness. Learn how Civethica proposes to create a healthy digital biosphere."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/en/platform-information.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-platform-information.png" />
+    <meta property="og:site_name" content="Civethica Foundation" />
+
+    <!-- 3. Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Platform: Information & Consciousness | Civethica Foundation" />
+    <meta
+      name="twitter:description"
+      content="From information overload to clarity of consciousness. Learn how Civethica proposes to create a healthy digital biosphere."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-platform-information.png" />
+
+    <!-- 4. Structured Data (JSON-LD) for enhanced SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Manifesto for a Digital Biosphere: Information & Consciousness",
+        "description": "The digital space has become the new habitat for human consciousness. We advocate for treating the information space with the same care as our planet's biosphere.",
+        "image": "https://www.civethica.org/images/og-image-platform-information.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Civethica Foundation"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Civethica Foundation",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-01"
+      }
+    </script>
   </head>
+
   <body class="sub-page">
     <header class="main-header">
       <div class="container">
@@ -96,19 +198,19 @@
         </div>
       </div>
     </header>
-<!-- ====================================================== -->
-<!-- ================ БЛОК ЗАГОЛОВКА ПЛАТФОРМЫ ============ -->
-<!-- ====================================================== -->
-<!-- Этот блок теперь пустой. JavaScript заполнит его сам. -->
-<div id="platform-header-sticky" class="platform-header">
-  <div class="container">
-    <!-- Сюда будет вставлен текст, например: -->
-    <!-- <span class="platform-label">Платформа:</span> Экономика и Ресурсы -->
-  </div>
-</div>
-<!-- ====================================================== -->
-<!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
-<!-- ====================================================== -->
+    <!-- ====================================================== -->
+    <!-- ================ БЛОК ЗАГОЛОВКА ПЛАТФОРМЫ ============ -->
+    <!-- ====================================================== -->
+    <!-- Этот блок теперь пустой. JavaScript заполнит его сам. -->
+    <div id="platform-header-sticky" class="platform-header">
+      <div class="container">
+        <!-- Сюда будет вставлен текст, например: -->
+        <!-- <span class="platform-label">Платформа:</span> Экономика и Ресурсы -->
+      </div>
+    </div>
+    <!-- ====================================================== -->
+    <!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
+    <!-- ====================================================== -->
 
     <main>
       <section class="content-section is-visible">
