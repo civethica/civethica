@@ -204,7 +204,37 @@
     <main>
       <section class="content-section is-visible">
         <div class="container text-left">
-          <h2>Manifesto of a Regenerative Economy</h2>
+          <!-- ====================================================== -->
+          <!-- ============= PAGE TITLE WITH MODAL BUTTON =========== -->
+          <!-- ====================================================== -->
+          <div class="page-title-container">
+            <h2>Manifesto of a Regenerative Economy</h2>
+
+            <button
+              type="button"
+              id="show-og-image-btn"
+              class="show-image-btn"
+              data-tooltip="View the visual concept"
+              aria-label="View the visual concept"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </button>
+          </div>
+
           <p class="page-intro">
             The economy is not a machine for generating wealth; it is the metabolic system of our civilization. The
             current model, obsessed with infinite growth, is consuming its host—the planet. We propose a new paradigm:
@@ -293,6 +323,16 @@
         </div>
       </div>
     </footer>
+    <!-- ====================================================== -->
+    <!-- ============= OG IMAGE MODAL WINDOW ================== -->
+    <!-- ====================================================== -->
+    <div id="og-image-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button type="button" class="modal-close" title="Close">&times;</button>
+        <img id="modal-image-src" src="" alt="Visual concept of the platform" />
+      </div>
+    </div>
+    <!-- ====================================================== -->
     <script src="/js/script.js"></script>
   </body>
 </html>

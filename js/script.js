@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 3. Подсветка активного меню и ЗАПОМИНАНИЕ активного родителя
     const navLinks = document.querySelectorAll('.main-nav a');
-    let activeParentDropdown = null; // Переменная, которая "запомнит" активный выпадающий список
+    let activeParentDropdown = null;
 
     navLinks.forEach(link => {
         if (link.href === currentUrl) {
@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (mainDropdownLink) {
                     mainDropdownLink.classList.add('active-parent');
                 }
-                // Запоминаем родительский элемент для использования в мобильном меню
                 activeParentDropdown = parentDropdown; 
             }
         }
@@ -80,10 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const isOpen = mainNavList.classList.toggle('is-open');
             mobileNavToggle.classList.toggle('is-active');
 
-            // === НОВАЯ УЛУЧШЕННАЯ ЛОГИКА ===
-            // Если мы только что ОТКРЫЛИ мобильное меню И находимся на странице подменю
             if (isOpen && activeParentDropdown) {
-                // Автоматически раскрываем нужное подменю
                 activeParentDropdown.classList.add('is-open');
             }
         });
@@ -114,4 +110,61 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileNavToggle.classList.remove('is-active');
         }
     });
+
+    // =======================================================================================
+    // --- ЛОГИКА ДЛЯ МОДАЛЬНОГО ОКНА И МОБИЛЬНОЙ ПОДСКАЗКИ (ОБЪЕДИНЕННАЯ) ---
+    // =======================================================================================
+    const showOgImageBtn = document.getElementById('show-og-image-btn');
+    const modal = document.getElementById('og-image-modal');
+    const modalImage = document.getElementById('modal-image-src');
+    const modalCloseBtn = document.querySelector('.modal-close');
+
+    if (showOgImageBtn && modal && modalImage) {
+
+        showOgImageBtn.addEventListener('click', function(event) {
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+            // Если это сенсорное устройство И подсказка еще не была показана
+            if (isTouchDevice && !this.classList.contains('tooltip-visible')) {
+                event.preventDefault(); // Останавливаем открытие модального окна
+                event.stopPropagation(); // Останавливаем другие клики
+                
+                this.classList.add('tooltip-visible'); // Показываем нашу CSS-подсказку
+
+                // Прячем подсказку через 2.5 секунды
+                setTimeout(() => {
+                    this.classList.remove('tooltip-visible');
+                }, 2500);
+                
+                return; // Выходим из функции, чтобы модальное окно не открылось
+            }
+
+            // Этот код сработает на десктопе сразу, а на мобильном — при втором клике
+            const ogImageTag = document.querySelector('meta[property="og:image"]');
+            if (ogImageTag) {
+                const imageUrl = ogImageTag.getAttribute('content');
+                modalImage.src = imageUrl;
+                modal.classList.add('is-visible');
+            }
+        });
+
+        // --- Функция для закрытия окна ---
+        function closeModal() {
+            modal.classList.remove('is-visible');
+        }
+
+        // 3 способа закрыть окно:
+        modalCloseBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+                closeModal();
+            }
+        });
+    }
+
 });

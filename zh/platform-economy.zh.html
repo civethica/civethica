@@ -202,7 +202,33 @@
     <main>
       <section class="content-section is-visible">
         <div class="container text-left">
-          <h2>再生经济宣言</h2>
+          <div class="page-title-container">
+            <h2>再生经济宣言</h2>
+            <button
+              type="button"
+              id="show-og-image-btn"
+              class="show-image-btn"
+              data-tooltip="查看视觉概念"
+              aria-label="查看视觉概念"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </button>
+          </div>
+
           <p class="page-intro">
             经济不是创造财富的机器；它是我们文明的新陈代谢系统。当前痴迷于无尽增长的模式正在吞噬其宿主——地球。我们提出一个新的范式：一个像自然生态系统一样运作的经济——循环、再生和共生。
           </p>
@@ -277,6 +303,16 @@
         </div>
       </div>
     </footer>
+    <!-- ====================================================== -->
+    <!-- ================ МОДАЛЬНОЕ ОКНО ДЛЯ OG-КАРТИНКИ ====== -->
+    <!-- ====================================================== -->
+    <div id="og-image-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button type="button" class="modal-close" title="关闭">&times;</button>
+        <img id="modal-image-src" src="" alt="平台视觉概念" />
+      </div>
+    </div>
+    <!-- ====================================================== -->
     <script src="/js/script.js"></script>
   </body>
 </html>

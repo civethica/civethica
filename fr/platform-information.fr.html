@@ -198,7 +198,33 @@
     <main>
       <section class="content-section is-visible">
         <div class="container text-left">
-          <h2>Manifeste pour une Biosphère Numérique</h2>
+          <div class="page-title-container">
+            <h2>Manifeste pour une Biosphère Numérique</h2>
+            <button
+              type="button"
+              id="show-og-image-btn"
+              class="show-image-btn"
+              data-tooltip="Voir le concept visuel"
+              aria-label="Voir le concept visuel"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </button>
+          </div>
+
           <p class="page-intro">
             L'espace numérique est devenu le nouvel habitat de la conscience humaine. Ce nouvel environnement peut soit
             favoriser la sagesse, la connexion et l'intelligence collective, soit devenir un écosystème toxique de
@@ -296,6 +322,16 @@
         </div>
       </div>
     </footer>
+    <!-- ====================================================== -->
+    <!-- ================ МОДАЛЬНОЕ ОКНО ДЛЯ OG-КАРТИНКИ ====== -->
+    <!-- ====================================================== -->
+    <div id="og-image-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button type="button" class="modal-close" title="Fermer">&times;</button>
+        <img id="modal-image-src" src="" alt="Concept visuel de la plateforme" />
+      </div>
+    </div>
+    <!-- ====================================================== -->
     <script src="/js/script.js"></script>
   </body>
 </html>
