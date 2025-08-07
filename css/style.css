@@ -79,7 +79,7 @@ main {
 }
 
 .logo-img {
-    height: 50px;
+    height: 100px;
     margin-right: 15px;
 }
 
@@ -211,7 +211,7 @@ main {
 .platform-header,
 .library-header {
   position: sticky;
-  top: 82px; /* ВЫСОТА ШАПКИ НА ДЕСКТОПЕ. Подберите точное значение */
+  top: 130px; /* ВЫСОТА ШАПКИ НА ДЕСКТОПЕ. Подберите точное значение */
   background-color: var(--primary-color);
   color: #ffffff;
   font-size: 1.2rem;
@@ -376,7 +376,7 @@ main ol.styled-list { counter-reset: list-item; }
 
 @media (max-width: 992px) {
     .main-header .container { flex-wrap: wrap; justify-content: space-between; align-items: center; min-height: 80px; }
-    .logo-img { height: 40px; }
+    .logo-img { height: 80px; }
     .logo-text { font-size: 1.2rem; }
     .header-actions { order: 2; margin-left: 0; }
     .mobile-nav-toggle { display: block; order: 3; }
@@ -421,7 +421,7 @@ main ol.styled-list { counter-reset: list-item; }
     /* ИСПРАВЛЕНИЕ 3: Адаптация "липких" заголовков для мобильных */
     .platform-header,
     .library-header {
-        top: 80px; /* ВЫСОТА МОБИЛЬНОЙ ШАПКИ. Подберите точное значение */
+        top: 162px; /* ВЫСОТА МОБИЛЬНОЙ ШАПКИ. Подберите точное значение */
         font-size: 1.1rem;
         text-align: center;
         padding: 10px 0;
