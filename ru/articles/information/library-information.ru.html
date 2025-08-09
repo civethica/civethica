@@ -5,19 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Библиотека - Фонд Civethica</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/images/logo.png" type="image/png" />
+    <!-- ... остальные теги head ... -->
   </head>
   <body class="sub-page">
-    <!-- Контейнер для баннера о разработке -->
-    <div id="dev-banner-placeholder"></div>
-    <!-- Development Banner End -->
-     
     <header class="main-header">
       <div class="container">
         <!-- 1. Логотип -->
@@ -92,12 +82,12 @@
           <div class="language-switcher">
             <span class="current-lang">RU</span>
             <ul class="lang-dropdown">
-              <li><a href="/en/library.html">EN</a></li>
-              <li><a href="/de/library.de.html">DE</a></li>
-              <li><a href="/fr/library.fr.html">FR</a></li>
-              <li><a href="/es/library.es.html">ES</a></li>
-              <li><a href="/zh/library.zh.html">ZH</a></li>
-              <li><a href="/ru/library.ru.html">RU</a></li>
+              <li><a href="/en/articles/economy/library-economy.html">EN</a></li>
+              <li><a href="/de/articles/economy/library-economy.de.html">DE</a></li>
+              <li><a href="/fr/articles/economy/library-economy.fr.html">FR</a></li>
+              <li><a href="/es/articles/economy/library-economy.es.html">ES</a></li>
+              <li><a href="/zh/articles/economy/library-economy.zh.html">ZH</a></li>
+              <li><a href="/ru/articles/economy/library-economy.ru.html">RU</a></li>
             </ul>
           </div>
         </div>
@@ -105,41 +95,45 @@
     </header>
     <!-- Вставьте сюда вашу обычную шапку (header) -->
 
+    <!-- ====================================================== -->
+    <!-- ================ БЛОК ЗАГОЛОВКА БИБЛИОТЕКИ ============ -->
+    <!-- ====================================================== -->
+    <!-- Этот блок пустой. JavaScript заполнит его сам. -->
+    <div id="library-header-sticky" class="library-header">
+      <div class="container">
+        <!-- Сюда будет вставлен текст, например: -->
+        <!-- <span class="library-label">Библиотека:</span> Экономика и Ресурсы -->
+      </div>
+    </div>
+    <!-- ====================================================== -->
+    <!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
+    <!-- ====================================================== -->
+
     <main>
       <section class="content-section">
         <div class="container text-left">
-          <h2>Библиотека</h2>
-          <p class="page-intro">
-            Здесь собраны все ключевые статьи и концепции, разработанные в рамках проекта Civethica. Выберите
-            интересующий вас раздел, чтобы начать.
-          </p>
+          <!-- === Секция Экономика === -->
+          <h2>Информация и Сознание</h2>
+          <h3>Здесь собраны все ключевые статьи и концепции по данному разделу в рамках проекта Civethica.</h3>
+          <div class="resource-list">
+            <div class="article-preview">
+              <h4>Статья: «Civethica: Пробуждение в эпоху хаоса»</h4>
+              <p>
+                Анализ цивилизационного кризиса — от эксперимента «Вселенная 25» до критики общества потребления — и
+                предложение философии Civethica как пути к пробуждению сознания.
+              </p>
+              <a href="/ru/articles/information/awakening-in-chaos.ru.html">Читать далее...</a>
+            </div>
+            <!-- === <div class="article-preview">
+              <h4>Концепция: «Рейтинг Civethica для бизнеса»</h4>
+              <p>Основы для рейтинговой системы, которая оценивает компании по их истинному системному вкладу.</p>
+              <a href="/ru/articles/economy/rating-civethica.ru.html">Читать далее...</a>
+            </div> === -->
 
-          <div class="library-links">
-            <!-- К КАЖДОЙ ССЫЛКЕ ДОБАВЛЕН КЛАСС "library-topic-link" -->
-            <h3>
-              <a href="/ru/articles/politics/library-politic.ru.html" class="library-topic-link"
-                >❌ Политика и Управление</a
-              >
-            </h3>
-            <h3>
-              <a href="/ru/articles/economy/library-economy.ru.html" class="library-topic-link"
-                >✅ Экономика и Ресурсы</a
-              >
-            </h3>
-            <h3>
-              <a href="/ru/articles/culture/library-culture.ru.html" class="library-topic-link"
-                >❌ Культура и Образование</a
-              >
-            </h3>
-            <h3>
-              <a href="/ru/articles/health/library-health.ru.html" class="library-topic-link">❌ Здоровье и Биоэтика</a>
-            </h3>
-            <h3>
-              <a href="/ru/articles/information/library-information.ru.html" class="library-topic-link"
-                >✅ Информация и Сознание</a
-              >
-            </h3>
+            <!-- === Секция Политика === -->
           </div>
+
+          <!-- ... и так далее для других категорий ... -->
         </div>
       </section>
     </main>
