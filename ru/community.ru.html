@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <!-- ===================================================================== -->
+  <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+  <!-- ===================================================================== -->
+
+  <!-- Основная кодировка и viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Скрипты согласия и аналитики (порядок важен) -->
+  <!-- Google Consent Mode (v2) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
+    });
+  </script>
+  <!-- End Google Consent Mode -->
+
+  <!-- CookieYes Banner Script -->
+  <script
+    id="cookieyes"
+    type="text/javascript"
+    src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+  ></script>
+
+  <!-- Google Analytics 4 Script -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-N8B9TG8J6X");
+  </script>
+
+  <!-- Стили, шрифты и favicon -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="/images/logo.png" type="image/png" />
+
+  <!-- ======================================================================= -->
+  <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (для страницы Сообщества) ============= -->
+  <!-- ======================================================================= -->
+
+  <!-- 1. Основные SEO мета-теги -->
+  <title>Сообщество | The Civethica Foundation</title>
+  <meta
+    name="description"
+    content="Присоединяйтесь к сообществу Civethica в Facebook, X (Twitter) и Medium, чтобы участвовать в обсуждениях, быть в курсе новостей и вносить свой вклад в построение лучшего будущего."
+  />
+  <meta name="author" content="The Civethica Foundation" />
+  <meta
+    name="keywords"
+    content="сообщество, Civethica, социальные сети, Facebook, X, Twitter, Medium, дискуссии, гражданская инициатива"
+  />
+  <link rel="canonical" href="https://www.civethica.org/ru/community.ru.html" />
+
+  <!-- 2. Open Graph теги (для Facebook, Telegram и т.д.) -->
+  <meta property="og:title" content="Сообщество | The Civethica Foundation" />
+  <meta
+    property="og:description"
+    content="Присоединяйтесь к нашему движению. Общайтесь, обсуждайте и следите за новостями на наших официальных платформах."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.civethica.org/ru/community.ru.html" />
+  <meta property="og:image" content="https://www.civethica.org/images/og-image-community.png" />
+  <!-- РЕКОМЕНДАЦИЯ: Создать специальное изображение для этой страницы -->
+  <meta property="og:site_name" content="The Civethica Foundation" />
+
+  <!-- 3. Twitter Card теги -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Сообщество | The Civethica Foundation" />
+  <meta
+    name="twitter:description"
+    content="Присоединяйтесь к нашему движению. Общайтесь, обсуждайте и следите за новостями на наших официальных платформах."
+  />
+  <meta name="twitter:image" content="https://www.civethica.org/images/og-image-community.png" />
+
+  <!-- 4. Структурированные данные (JSON-LD) для улучшенного SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Сообщество Civethica",
+      "description": "Официальные страницы сообщества Civethica для обсуждений, новостей и углубленных статей.",
+      "url": "https://www.civethica.org/ru/community.ru.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Civethica Foundation",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.civethica.org/images/logo.png"
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    .community-section {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .community-hub-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+    }
+    .community-hub-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #f0f6fc;
+      margin-bottom: 1rem;
+    }
+    .community-hub-header .highlight {
+      color: #58a6ff;
+    }
+    .community-hub-header p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .social-card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      text-decoration: none;
+      color: #c9d1d9;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .social-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .social-card-icon {
+      width: 32px;
+      height: 32px;
+    }
+    .social-card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f0f6fc;
+    }
+    .social-card-description {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      flex-grow: 1;
+      margin-bottom: 2rem;
+    }
+    .social-card-button {
+      background-color: #2f81f7;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      display: block;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .social-card-button:hover {
+        background-color: #3b8cf8;
+    }
+    @media (max-width: 768px) {
+      .community-hub-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+  <body class="sub-page">
+    <header class="main-header">
+      <div class="container">
+        <!-- 1. Логотип -->
+        <a href="/ru/index.html" class="logo-link">
+          <img src="/images/logo.png" alt="Логотип Civethica" class="logo-img" />
+          <span class="logo-text">Civethica Foundation</span>
+        </a>
+
+        <!-- 2. Основная навигация -->
+        <nav class="main-nav">
+          <ul id="main-nav-list">
+            <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
+            <li class="dropdown">
+              <a href="#platforms-section">Платформы</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/ru/platform-politics.ru.html">Политика и Управление</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-culture.ru.html">Культура и Образование</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-information.ru.html">Информация и Сознание</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/ru/community.ru.html">Сообщество</a>
+            </li>
+            <li><a href="/ru/library.ru.html">Библиотека</a></li>
+          </ul>
+        </nav>
+
+        <!-- 3. Кнопка "Гамбургер" -->
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+          <span class="sr-only">Меню</span>
+          <span class="icon-open">☰</span>
+          <span class="icon-close">×</span>
+        </button>
+
+        <!-- 4. Кнопки действий -->
+        <div class="header-actions">
+          <a
+            href="https://www.patreon.com/c/Civethica/membership"
+            class="cta-button-small desktop-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Поддержать</a
+          >
+          <div class="language-switcher">
+            <span class="current-lang">RU</span>
+            <ul class="lang-dropdown">
+              <li><a href="/en/community.html">EN</a></li>
+              <li><a href="/fr/community.fr.html">FR</a></li>
+              <li><a href="/es/community.es.html">ES</a></li>
+              <li><a href="/zh/community.zh.html">ZH</a></li>
+              <li><a href="/ru/community.ru.html">RU</a></li>
+
+
+
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="community-section">
+        <div class="container">
+          <div class="community-hub-header">
+              <h1>Присоединяйтесь к сообществу <span class="highlight">Civethica</span></h1>
+              <p>Общайтесь с нами на наших платформах, чтобы участвовать в содержательных дискуссиях, следить за нашими новостями и помогать формировать более сознательный и этичный мир.</p>
+          </div>
+          <div class="community-grid">
+            <!-- Facebook Card -->
+            <a href="https://www.facebook.com/groups/CivethicaCommunityRU" target="_blank" rel="noopener noreferrer" class="social-card">
+              <div class="social-card-header">
+                <svg class="social-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path d="M13.765 17.5V12.622H15.498L15.759 10.49H13.765V9.16C13.765 8.525 13.943 8.083 14.733 8.083L15.86 8.082V6.108C15.663 6.082 14.978 6 14.18 6C12.518 6 11.455 7.022 11.455 8.92V10.49H9.5V12.622H11.455V17.5H13.765Z" fill="white"/></svg>
+                <span class="social-card-title">Facebook</span>
+              </div>
+              <p class="social-card-description">Присоединяйтесь к нашей группе в Facebook для обсуждений, опросов и анонсов мероприятий.</p>
+              <span class="social-card-button">Вступить в группу →</span>
+            </a>
+
+            <!-- X (Twitter) Card -->
+            <a href="https://x.com/civethica" target="_blank" rel="noopener noreferrer" class="social-card">
+              <div class="social-card-header">
+                <svg class="social-card-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span class="social-card-title">X (Twitter)</span>
+              </div>
+              <p class="social-card-description">Следите за нами в X, чтобы получать новости в реальном времени, ключевые идеи и короткие анонсы проекта.</p>
+              <span class="social-card-button">Читать в X →</span>
+            </a>
+
+            <!-- Medium Card -->
+            <a href="https://medium.com/@civethica" target="_blank" rel="noopener noreferrer" class="social-card">
+                <div class="social-card-header">
+                  <svg class="social-card-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.42.92A11.58 11.58 0 000 11.5a11.58 11.58 0 007.42 10.58A11.58 11.58 0 0014.84 11.5a11.58 11.58 0 00-7.42-10.58zm6.33 10.58a5.25 5.25 0 01-5.25 5.25A5.25 5.25 0 013.25 11.5a5.25 5.25 0 015.25-5.25A5.25 5.25 0 0113.75 11.5zm6.33 0a2.92 2.92 0 01-2.92 2.92A2.92 2.92 0 0114.25 11.5a2.92 2.92 0 012.92-2.92A2.92 2.92 0 0120.08 11.5zm3 0a.92.92 0 01-.92.92A.92.92 0 0121.25 11.5a.92.92 0 01.92-.92A.92.92 0 0123.08 11.5z"/></svg>
+                  <span class="social-card-title">Medium</span>
+                </div>
+                <p class="social-card-description">Читайте наши подробные статьи, глубокий анализ манифеста и развернутые размышления на Medium.</p>
+                <span class="social-card-button">Читать статьи →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <p>© 2025 The Civethica Foundation. Неформальная гражданская инициатива.</p>
+        <div class="footer-contact">
+          <p>
+            <a href="mailto:info@civethica.org">info@civethica.org</a>
+          </p>
+          <p>
+            <a href="/ru/privacy-policy.html" target="_blank" rel="noopener noreferrer"
+              >Политика конфиденциальности</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
