@@ -2,8 +2,48 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+    <!-- ===================================================================== -->
+
+    <!-- Основная кодировка и viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Библиотека - Фонд Civethica</title>
+
+    <!-- Скрипты согласия и аналитики (порядок важен) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Стили, шрифты и иконка сайта -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,12 +52,69 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/images/logo.png" type="image/png" />
+
+    <!-- ======================================================================= -->
+    <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (для страницы "Библиотека") ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- 1. Основные мета-теги для SEO -->
+    <title>Библиотека | Все статьи и концепции Фонда Civethica</title>
+    <meta
+      name="description"
+      content="Полный архив ключевых статей и концепций проекта Civethica, структурированных по основным платформам: Экономика, Политика, Культура, Здоровье и Сознание."
+    />
+    <meta name="author" content="Фонд Civethica" />
+    <meta
+      name="keywords"
+      content="Civethica, библиотека, статьи, концепции, архив, экономика, политика, культура, сознание, биоэтика, философия, социология"
+    />
+    <link rel="canonical" href="https://www.civethica.org/ru/library.ru.html" />
+
+    <!-- 2. Open Graph теги (для Facebook, VK, Telegram и др.) -->
+    <meta property="og:title" content="Библиотека Фонда Civethica" />
+    <meta
+      property="og:description"
+      content="Исследуйте полный сборник наших статей и концепций по всем ключевым направлениям — от новой экономики до пробуждения сознания."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.civethica.org/ru/library.ru.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-library-ru.png" />
+    <meta property="og:site_name" content="Фонд Civethica" />
+
+    <!-- 3. Twitter Card теги -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Библиотека Фонда Civethica" />
+    <meta
+      name="twitter:description"
+      content="Исследуйте полный сборник наших статей и концепций по всем ключевым направлениям — от новой экономики до пробуждения сознания."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-library-ru.png" />
+
+    <!-- 4. Структурированные данные (JSON-LD) для улучшенного SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Библиотека Фонда Civethica",
+        "description": "Полный архив ключевых статей и концепций проекта Civethica, структурированных по основным платформам: Экономика, Политика, Культура, Здоровье и Сознание.",
+        "url": "https://www.civethica.org/ru/library.ru.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Фонд Civethica",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        }
+      }
+    </script>
   </head>
+
   <body class="sub-page">
     <!-- Контейнер для баннера о разработке -->
     <div id="dev-banner-placeholder"></div>
     <!-- Development Banner End -->
-     
+
     <header class="main-header">
       <div class="container">
         <!-- 1. Логотип -->
@@ -51,9 +148,7 @@
               </ul>
             </li>
             <li>
-              <a href="/ru/community.ru.html" target="_blank" rel="noopener noreferrer"
-                >Сообщество</a
-              >
+              <a href="/ru/community.ru.html" target="_blank" rel="noopener noreferrer">Сообщество</a>
             </li>
             <li><a href="/ru/library.ru.html">Библиотека</a></li>
           </ul>
