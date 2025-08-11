@@ -623,3 +623,105 @@ hr {
   visibility: visible;
   transition-delay: 0s; /* Без задержки */
 }
+
+
+
+
+.community-section {
+      /* Фоновый цвет на случай, если изображение не загрузится */
+      background-color: #087c7e;
+      /* ЗАМЕНИТЕ ЭТО на путь к вашему фоновому изображению
+      background-image: url('/images/og-image-main.png'); */
+      background-size: cover; /* Изображение покроет всю область */
+      background-position: center; /* Центрировать изображение */
+      background-repeat: no-repeat; /* Не повторять изображение */
+      color: #c9d1d9;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .community-hub-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+    }
+    .community-hub-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #f0f6fc;
+      margin-bottom: 1rem;
+    }
+    .community-hub-header .highlight {
+      color: #58a6ff;
+    }
+    .community-hub-header p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .social-card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      text-decoration: none;
+      color: #c9d1d9;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .social-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .social-card-icon {
+      width: 32px;
+      height: 32px;
+    }
+    .social-card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f0f6fc;
+    }
+    .social-card-description {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      flex-grow: 1;
+      margin-bottom: 2rem;
+    }
+    .social-card-button {
+      background-color: #2f81f7;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      display: block;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .social-card-button:hover {
+        background-color: #3b8cf8;
+    }
+    @media (max-width: 768px) {
+      .community-hub-header h1 {
+        font-size: 2rem;
+      }
+    }
