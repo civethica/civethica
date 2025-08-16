@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="/images/logo.png" type="image/png" />
+<!-- Consent and Analytics Scripts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+  });
+</script>
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("js", new Date());
+  gtag("config", "G-N8B9TG8J6X");
+</script>
+    <title>Library: Politics &amp; Governance | The Civethica Foundation</title>
+    <meta name="description" content="Key articles and concepts on politics and governance." />
+    <meta name="keywords" content="politics, governance, civethica" />
+    <link rel="canonical" href="https://www.civethica.org/en/articles/politics/library-politics.html" />
+    
+    <!-- Open Graph, Twitter -->
+    <meta property="og:title" content="Library: Politics &amp; Governance" />
+    <meta property="og:description" content="Key articles and concepts on politics and governance." />
+    <meta name="twitter:title" content="Library: Politics &amp; Governance" />
+    <meta name="twitter:description" content="Key articles and concepts on politics and governance." />
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Library: Politics &amp; Governance",
+        "description": "Key articles and concepts on politics and governance.",
+        "url": "https://www.civethica.org/en/articles/politics/library-politics.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "The Civethica Foundation",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="sub-page">
+    
+
+<header class="main-header">
+    <div class="container">
+        <!-- 1. Логотип -->
+        
+        <a href="/index.html" class="logo-link">
+            <img src="/images/logo.png" alt="Civethica Logo" class="logo-img" />
+            <span class="logo-text">The Civethica Foundation</span>
+        </a>
+
+        <!-- 2. Основная навигация -->
+        <nav class="main-nav">
+            <ul id="main-nav-list">
+                
+                <li><a href="/en/manifesto.html">The Manifesto</a></li>
+                <li class="dropdown">
+                    <a href="#platforms-section">Platforms</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/en/platform-politics.html">Politics &amp; Governance</a></li>
+                        <li><a href="/en/platform-economy.html">Economy &amp; Resources</a></li>
+                        <li><a href="/en/platform-culture.html">Culture &amp; Education</a></li>
+                        <li><a href="/en/platform-health.html">Health &amp; Bioethics</a></li>
+                        <li><a href="/en/platform-information.html">Information &amp; Consciousness</a></li>
+                    </ul>
+                </li>
+                <li><a href="/en/community.html" target="_blank" rel="noopener noreferrer">Community</a></li>
+                <li><a href="/en/library.html">Library</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. Кнопка "Гамбургер" -->
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <span class="icon-open">☰</span>
+          <span class="icon-close">×</span>
+        </button>
+
+        <!-- 4. Кнопки действий -->
+        <div class="header-actions">
+            <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small desktop-only-button" target="_blank" rel="noopener noreferrer">Support</a>
+            <a href="/en/community.html" class="cta-button-small mobile-only-button" target="_blank" rel="noopener noreferrer">Community</a>
+            <div class="language-switcher">
+                <span class="current-lang">EN</span>
+                <ul class="lang-dropdown">
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="/articles/politics/library-politics.html">EN</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="/de/articles/politics/library-politics.de.html">DE</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="/fr/articles/politics/library-politics.fr.html">FR</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="/es/articles/politics/library-politics.es.html">ES</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="/zh/articles/politics/library-politics.zh.html">ZH</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="/ru/articles/politics/library-politics.ru.html">RU</a></li>
+                        
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="library-header-sticky" class="library-header">
+      <div class="container">
+        <span class="library-label">Library:</span> Politics &amp; Governance
+      </div>
+    </div>
+
+    <main>
+      <section class="content-section">
+        <div class="container text-left">
+          <h2>Politics &amp; Governance</h2>
+          <h3>Key articles and concepts on politics and governance.</h3>
+          
+          <div class="resource-list">
+            
+              
+                  <div class="article-preview">
+                    <h4>Article: «The Political System of the World After &#39;Point X&#39;»</h4>
+                    <p>An analysis of the global crisis, suggesting that the Civethica philosophy could become the foundation for societal revival after the collapse of old paradigms.</p>
+                    <a href="/en/articles/politics/political-system-after-x.html">Read more...</a>
+                  </div>
+              
+            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    
+
+<footer class="main-footer">
+    <div class="container">
+        <p>© 2025 The Civethica Foundation. A non-formal civil initiative.</p>
+        <div class="footer-contact">
+            <p><a href="mailto:info@civethica.org">info@civethica.org</a></p>
+            <p><a href="/en/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

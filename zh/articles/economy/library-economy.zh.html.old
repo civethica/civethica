@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图书馆 - Civethica 基金会</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+  </head>
+  <body class="sub-page">
+    <header class="main-header">
+      <div class="container">
+        <!-- 1. 标志 -->
+        <a href="/zh/index.zh.html" class="logo-link">
+          <img src="/images/logo.png" alt="Civethica 标志" class="logo-img" />
+          <span class="logo-text">Civethica 基金会</span>
+        </a>
+
+        <!-- 2. 主导航 -->
+        <nav class="main-nav">
+          <ul id="main-nav-list">
+            <li><a href="/zh/manifesto.zh.html">宣言</a></li>
+            <li class="dropdown">
+              <a href="#platforms-section">平台</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/zh/platform-politics.zh.html">政治与治理</a>
+                </li>
+                <li>
+                  <a href="/zh/platform-economy.zh.html">经济与资源</a>
+                </li>
+                <li>
+                  <a href="/zh/platform-culture.zh.html">文化与教育</a>
+                </li>
+                <li>
+                  <a href="/zh/platform-health.zh.html">健康与生命伦理</a>
+                </li>
+                <li>
+                  <a href="/zh/platform-information.zh.html">信息与意识</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/zh/community.zh.html" target="_blank" rel="noopener noreferrer"
+                >社群</a
+              >
+            </li>
+            <li><a href="/zh/library.zh.html">图书馆</a></li>
+          </ul>
+        </nav>
+
+        <!-- 3. 汉堡包按钮 -->
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+          <span class="sr-only">菜单</span>
+          <span class="icon-open">☰</span>
+          <span class="icon-close">×</span>
+        </button>
+
+        <!-- 4. 操作按钮 -->
+        <div class="header-actions">
+          <a
+            href="https://www.patreon.com/c/Civethica/membership"
+            class="cta-button-small desktop-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >支持</a
+          >
+
+          <!-- 移动设备按钮 -->
+          <a
+            href="/zh/community.zh.html"
+            class="cta-button-small mobile-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >社群</a
+          >
+          <div class="language-switcher">
+            <span class="current-lang">ZH</span>
+            <ul class="lang-dropdown">
+              <li><a href="/en/articles/economy/library-economy.html">EN</a></li>
+              <li><a href="/de/articles/economy/library-economy.de.html">DE</a></li>
+              <li><a href="/fr/articles/economy/library-economy.fr.html">FR</a></li>
+              <li><a href="/es/articles/economy/library-economy.es.html">ES</a></li>
+              <li><a href="/zh/articles/economy/library-economy.zh.html">ZH</a></li>
+              <li><a href="/ru/articles/economy/library-economy.ru.html">RU</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+<!-- ====================================================== -->
+<!-- ================ БЛОК ЗАГОЛОВКА БИБЛИОТЕКИ ============ -->
+<!-- ====================================================== -->
+<!-- Этот блок пустой. JavaScript заполнит его сам. -->
+<div id="library-header-sticky" class="library-header">
+  <div class="container">
+    <!-- Сюда будет вставлен текст, например: -->
+    <!-- <span class="library-label">Библиотека:</span> Экономика и Ресурсы -->
+  </div>
+</div>
+<!-- ====================================================== -->
+<!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
+<!-- ====================================================== -->
+    <main>
+      <section class="content-section">
+        <div class="container text-left">
+          <!-- === 经济部分 === -->
+          <h2>经济与资源</h2>
+          <h3>这里汇集了Civethica项目框架内所有关于经济与资源的关键文章和概念。</h3>
+          <div class="resource-list">
+
+            <div class="article-preview">
+              <h4>文章：《循环经济：实用指南</h4>
+              <p>概述了循环设计原则和商业模式，旨在消除浪费、创建再生系统，并超越线性的“获取-制造-丢弃”经济模式。</p>
+              <a href="/zh/articles/economy/circular-economy-guide.zh.html">阅读更多...</a>
+            </div>
+
+
+
+            <div class="article-preview">
+              <h4>文章：《从GDP到系统健康指数》</h4>
+              <p>详细分析GDP作为指标的缺点，并提出一个用于评估国家福祉的全新模型。</p>
+              <a href="/zh/articles/economy/from-gdp-to-shs.zh.html">阅读更多...</a>
+            </div>
+            <div class="article-preview">
+              <h4>概念：“商业Civethica评级”</h4>
+              <p>一个评级系统的基础，该系统根据公司的真实系统性贡献对其进行评估。</p>
+              <a href="/zh/articles/economy/rating-civethica.zh.html">阅读更多...</a>
+            </div>
+
+            <!-- === 政治部分 === -->
+          </div>
+
+          <!-- ... 其他类别的依此类推 ... -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <p>© 2025 Civethica 基金会。一个非正式的公民倡议。</p>
+
+        <!-- 新的联系方式区块 -->
+        <div class="footer-contact">
+          <p>
+            <a href="mailto:info@civethica.org">info@civethica.org</a>
+          </p>
+          <p>
+            <a href="/zh/privacy-policy.zh.html" target="_blank" rel="noopener noreferrer"
+              >隐私政策</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

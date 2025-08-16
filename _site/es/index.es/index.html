@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+    <!-- (Этот блок можно безопасно копировать на все страницы без изменений) -->
+    <!-- ===================================================================== -->
+
+    <!-- Скрипты согласия и аналитики (порядок важен) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Стили, шрифты и иконка сайта -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+
+    <!-- ======================================================================= -->
+    <!-- ============= BLOQUE ÚNICO para index.es.html ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- SEO básico y metaetiquetas -->
+    <title>Fundación Civethica | Una Nueva Conciencia Planetaria</title>
+    <meta
+      name="description"
+      content="La Fundación Civethica es un movimiento global que inicia un cambio cultural desde el antropocentrismo hacia una nueva cosmovisión holística basada en la unidad de la Vida, el Planeta y el Cosmos."
+    />
+    <meta name="author" content="Fundación Civethica" />
+    <meta
+      name="keywords"
+      content="conciencia planetaria, Civethica, cosmovisión holística, pensamiento sistémico, economía regenerativa, nueva ética"
+    />
+    <link rel="canonical" href="https://www.civethica.org/es/index.es.html" />
+    <!-- IMPORTANTE: Ruta a la versión en español -->
+
+    <!-- Open Graph (para vistas previas en redes sociales) -->
+    <meta property="og:title" content="Fundación Civethica | Una Nueva Conciencia Planetaria" />
+    <meta
+      property="og:description"
+      content="Únase a un movimiento global que pasa del antropocentrismo obsoleto a una cosmovisión holística basada en la unidad de la Vida, el Planeta y el Cosmos."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.civethica.org/es/index.es.html" />
+    <!-- IMPORTANTE: Ruta a la versión en español -->
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-main.png" />
+    <!-- La imagen es la misma para todos los idiomas -->
+    <meta property="og:site_name" content="Fundación Civethica" />
+
+    <!-- Twitter Card (para vistas previas en Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fundación Civethica | Una Nueva Conciencia Planetaria" />
+    <meta
+      name="twitter:description"
+      content="Únase a un movimiento global que pasa del antropocentrismo obsoleto a una cosmovisión holística."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-main.png" />
+
+    <!-- Datos estructurados (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Fundación Civethica",
+        "url": "https://www.civethica.org/es/index.es.html",
+        "logo": "https://www.civethica.org/images/logo.png",
+        "description": "La Fundación Civethica es un movimiento global que inicia un cambio cultural desde el antropocentrismo hacia una nueva cosmovisión holística basada en la unidad de la Vida, el Planeta y el Cosmos.",
+        "sameAs": [
+          "https://www.facebook.com/groups/CivethicaCommunityEN",
+          "https://x.com/SatAgama",
+          "https://medium.com/@civethica",
+          "https://www.patreon.com/c/Civethica"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@civethica.org",
+          "contactType": "customer support"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Контейнер для баннера о разработке -->
+    <div id="dev-banner-placeholder"></div>
+    <!-- Development Banner End -->
+
+    <header class="main-header">
+      <div class="container">
+        <!-- 1. Логотип -->
+        <a href="/es/index.es.html" class="logo-link">
+          <img src="/images/logo.png" alt="Logo de Civethica" class="logo-img" />
+          <span class="logo-text">Fundación Civethica</span>
+        </a>
+
+        <!-- 2. Основная навигация -->
+        <nav class="main-nav">
+          <ul id="main-nav-list">
+            <li><a href="/es/manifesto.es.html">TEl Manifiesto</a></li>
+            <li class="dropdown">
+              <a href="#platforms-section">Plataformas</a>
+              <ul class="dropdown-menu">
+                <li><a href="/es/platform-politics.es.html">Política y Gobernanza</a></li>
+                <li><a href="/es/platform-economy.es.html">Economía y Recursos</a></li>
+                <li><a href="/es/platform-culture.es.html">Cultura y Educación</a></li>
+                <li><a href="/es/platform-health.es.html">Salud y Bioética</a></li>
+                <li><a href="/es/platform-information.es.html">Información y Conciencia</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/es/community.es.html" target="_blank" rel="noopener noreferrer">Comunidad</a>
+            </li>
+            <li><a href="/es/library.es.html">Biblioteca</a></li>
+          </ul>
+        </nav>
+
+        <!-- 3. КНОПКА-ГАМБУРГЕР (ОНА ДОЛЖНА БЫТЬ ЗДЕСЬ) -->
+        <!-- НОВЫЙ КОД С ИКОНКАМИ -->
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <span class="icon-open">☰</span>
+          <!-- Это иконка "гамбургер" -->
+          <span class="icon-close">×</span>
+          <!-- Это иконка "крестик" -->
+        </button>
+
+        <!-- 4. Кнопки действий (Support Us, EN) -->
+        <div class="header-actions">
+          <!-- Кнопка для десктопа -->
+          <a
+            href="https://www.patreon.com/c/Civethica/membership"
+            class="cta-button-small desktop-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Apoyar</a
+          >
+
+          <!-- Кнопка для мобильных -->
+          <a
+            href="/es/community.es.html"
+            class="cta-button-small mobile-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Comunidad</a
+          >
+          <div class="language-switcher">
+            <span class="current-lang">ES</span>
+            <ul class="lang-dropdown">
+              <li><a href="/index.html">EN</a></li>
+              <li><a href="/de/index.de.html">DE</a></li>
+              <li><a href="/fr/index.fr.html">FR</a></li>
+              <li><a href="/es/index.es.html">ES</a></li>
+              <li><a href="/zh/index.zh.html">ZH</a></li>
+              <li><a href="/ru/index.ru.html">RU</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <h1>Cambiando el sistema operativo de la conciencia humana</h1>
+          <p class="subtitle">
+            Somos un movimiento global que inicia un cambio cultural desde un antropocentrismo obsoleto hacia una nueva
+            cosmovisión holística basada en la unidad de la Vida, el Planeta y el Cosmos.
+          </p>
+          <a href="/es/manifesto.es.html" class="cta-button">Leer el Manifiesto</a>
+        </div>
+      </section>
+
+      <section id="platforms-section" class="platforms-preview-section">
+        <div class="container">
+          <h2>Nuestras plataformas para el cambio</h2>
+          <div class="platforms-grid">
+            <a href="/es/platform-politics.es.html" class="platform-card"
+              ><h3>Política y Gobernanza</h3>
+              <p>Pasando de la geopolítica a la administración planetaria.</p></a
+            >
+            <a href="/es/platform-economy.es.html" class="platform-card"
+              ><h3>Economía y Recursos</h3>
+              <p>Construyendo una economía regenerativa dentro de un sistema vivo.</p></a
+            >
+            <a href="/es/platform-culture.es.html" class="platform-card"
+              ><h3>Cultura y Educación</h3>
+              <p>Fomentando una nueva conciencia planetaria.</p></a
+            >
+            <a href="/es/platform-health.es.html" class="platform-card"
+              ><h3>Salud y Bioética</h3>
+              <p>Redefiniendo el bienestar humano en un ecosistema saludable.</p></a
+            >
+            <a href="/es/platform-information.es.html" class="platform-card"
+              ><h3>Información y Conciencia</h3>
+              <p>Creando una biosfera digital saludable.</p></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="join" class="content-section accent-bg">
+        <div class="container">
+          <h2>Conviértete en cofundador de un nuevo futuro</h2>
+          <p>
+            Civethica no es una organización a la que unirse, sino una idea para vivir. Apoya nuestra misión
+            convirtiéndote en mecenas o uniéndote a la discusión.
+          </p>
+          <div class="join-buttons">
+            <a
+              href="https://www.patreon.com/c/Civethica/membership"
+              class="cta-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Apóyanos en Patreon</a
+            >
+            <a href="/es/community.es.html" class="cta-button-secondary" target="_blank" rel="noopener noreferrer"
+              >Únete a la comunidad</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <p>© 2025 Fundación Civethica. Una iniciativa civil no formal.</p>
+
+        <!-- НОВЫЙ БЛОК ДЛЯ КОНТАКТОВ -->
+        <div class="footer-contact">
+          <p>
+            <a href="mailto:info@civethica.org">info@civethica.org</a>
+          </p>
+          <p>
+            <a href="/es/privacy-policy.es.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

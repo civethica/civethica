@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <!-- ===================================================================== -->
+  <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+  <!-- (Этот блок можно безопасно копировать на все страницы без изменений) -->
+  <!-- ===================================================================== -->
+
+  <!-- Основная кодировка и viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Скрипты согласия и аналитики (порядок важен) -->
+  <!-- Google Consent Mode (v2) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
+    });
+  </script>
+  <!-- End Google Consent Mode -->
+
+  <!-- CookieYes Banner Script -->
+  <script
+    id="cookieyes"
+    type="text/javascript"
+    src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+  ></script>
+
+  <!-- Google Analytics 4 Script -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-N8B9TG8J6X");
+  </script>
+
+  <!-- Стили, шрифты и иконка сайта -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="/images/logo.png" type="image/png" />
+
+  <!-- ======================================================================= -->
+  <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (для страницы "Библиотека: Здоровье") ============= -->
+  <!-- ======================================================================= -->
+
+  <!-- 1. Основные мета-теги для SEO -->
+  <title>Библиотека: Здоровье и Биоэтика | Фонд Civethica</title>
+  <meta
+    name="description"
+    content="Полный архив статей и концепций проекта Civethica, посвященных платформе 'Здоровье и Биоэтика'. Исследования в области системного здоровья и этических дилемм."
+  />
+  <meta name="author" content="Фонд Civethica" />
+  <meta
+    name="keywords"
+    content="Civethica, библиотека, здоровье, биоэтика, медицина, системное здоровье, этика, статьи, концепции"
+  />
+  <link rel="canonical" href="https://www.civethica.org/ru/articles/health/library-health.ru.html" />
+
+  <!-- 2. Open Graph теги (для Facebook, VK, Telegram и др.) -->
+  <meta property="og:title" content="Библиотека: Здоровье и Биоэтика | Фонд Civethica" />
+  <meta
+    property="og:description"
+    content="Исследуйте наши статьи и концепции в области здоровья, медицины и биоэтики через призму системного подхода."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.civethica.org/ru/articles/health/library-health.ru.html" />
+  <meta property="og:image" content="https://www.civethica.org/images/og-image-library-health-ru.png" />
+  <!-- РЕКОМЕНДАЦИЯ: Создайте отдельное изображение для этого раздела библиотеки -->
+  <meta property="og:site_name" content="Фонд Civethica" />
+
+  <!-- 3. Twitter Card теги -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Библиотека: Здоровье и Биоэтика | Фонд Civethica" />
+  <meta
+    name="twitter:description"
+    content="Исследуйте наши статьи и концепции в области здоровья, медицины и биоэтики через призму системного подхода."
+  />
+  <meta name="twitter:image" content="https://www.civethica.org/images/og-image-library-health-ru.png" />
+
+  <!-- 4. Структурированные данные (JSON-LD) для улучшенного SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Библиотека Civethica: Здоровье и Биоэтика",
+      "description": "Полный архив статей и концепций проекта Civethica, посвященных платформе 'Здоровье и Биоэтика'.",
+      "url": "https://www.civethica.org/ru/articles/health/library-health.ru.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Фонд Civethica",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.civethica.org/images/logo.png"
+        }
+      }
+    }
+  </script>
+</head>
+
+  <body class="sub-page">
+    <header class="main-header">
+      <div class="container">
+        <!-- 1. Логотип -->
+        <a href="/ru/index.ru.html" class="logo-link">
+          <img src="/images/logo.png" alt="Логотип Civethica" class="logo-img" />
+          <span class="logo-text">Фонд Civethica</span>
+        </a>
+
+        <!-- 2. Основная навигация -->
+        <nav class="main-nav">
+          <ul id="main-nav-list">
+            <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
+            <li class="dropdown">
+              <a href="#platforms-section">Платформы</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/ru/platform-politics.ru.html">Политика и Управление</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-culture.ru.html">Культура и Образование</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-information.ru.html">Информация и Сознание</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/ru/community.ru.html" target="_blank" rel="noopener noreferrer"
+                >Сообщество</a
+              >
+            </li>
+            <li><a href="/ru/library.ru.html">Библиотека</a></li>
+          </ul>
+        </nav>
+
+        <!-- 3. КНОПКА-ГАМБУРГЕР (ОНА ДОЛЖНА БЫТЬ ЗДЕСЬ) -->
+        <!-- НОВЫЙ КОД С ИКОНКАМИ -->
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <span class="icon-open">☰</span>
+          <!-- Это иконка "гамбургер" -->
+          <span class="icon-close">×</span>
+          <!-- Это иконка "крестик" -->
+        </button>
+
+        <!-- 4. Кнопки действий (Support Us, EN) -->
+        <div class="header-actions">
+          <!-- <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Поддержать</a>
+ -->
+          <a
+            href="https://www.patreon.com/c/Civethica/membership"
+            class="cta-button-small desktop-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Поддержать</a
+          >
+
+          <!-- Кнопка для мобильных -->
+          <a
+            href="/ru/community.ru.html"
+            class="cta-button-small mobile-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Сообщество</a
+          >
+          <div class="language-switcher">
+            <span class="current-lang">RU</span>
+            <ul class="lang-dropdown">
+              <li><a href="/en/articles/health/library-health.html">EN</a></li>
+              <li><a href="/de/articles/health/library-health.de.html">DE</a></li>
+              <li><a href="/fr/articles/health/library-health.fr.html">FR</a></li>
+              <li><a href="/es/articles/health/library-health.es.html">ES</a></li>
+              <li><a href="/zh/articles/health/library-health.zh.html">ZH</a></li>
+              <li><a href="/ru/articles/health/library-health.ru.html">RU</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Вставьте сюда вашу обычную шапку (header) -->
+
+
+<!-- ====================================================== -->
+<!-- ================ БЛОК ЗАГОЛОВКА БИБЛИОТЕКИ ============ -->
+<!-- ====================================================== -->
+<!-- Этот блок пустой. JavaScript заполнит его сам. -->
+<div id="library-header-sticky" class="library-header">
+  <div class="container">
+    <!-- Сюда будет вставлен текст, например: -->
+    <!-- <span class="library-label">Библиотека:</span> Здоровье и Биоэтика -->
+  </div>
+</div>
+<!-- ====================================================== -->
+<!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
+<!-- ====================================================== -->
+
+
+    <main>
+      <section class="content-section">
+        <div class="container text-left">
+          <!-- === Секция Здоровье и Биоэтика === -->
+          <h2>Здоровье и Биоэтика</h2>
+          <h3>Здесь собраны все ключевые статьи и концепции по здоровью и биоэтике в рамках проекта Civethica</h3>
+          <!-- Здесь будет список статей -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
+
+        <!-- НОВЫЙ БЛОК ДЛЯ КОНТАКТОВ -->
+        <div class="footer-contact">
+          <p>
+            <a href="mailto:info@civethica.org">info@civethica.org</a>
+          </p>
+          <p>
+            <a href="/ru/privacy-policy.ru.html" target="_blank" rel="noopener noreferrer"
+              >Политика конфиденциальности</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

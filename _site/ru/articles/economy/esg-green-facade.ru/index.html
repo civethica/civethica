@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="/images/logo.png" type="image/png" />
+<!-- Consent and Analytics Scripts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+  });
+</script>
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("js", new Date());
+  gtag("config", "G-N8B9TG8J6X");
+</script>
+    <title>ESG — это зеленый фасад для корпораций. Давайте создадим рейтинг с открытым исходным кодом, который измеряет реальное влияние | Фонд Civethica</title>
+    <meta name="description" content="Существующие экономические рейтинги измеряют отчеты, а не реальность. Давайте разберем, почему они не работают, и набросаем архитектуру системы, которая могла бы это исправить." />
+    <meta name="author" content="Фонд Civethica" />
+    <meta name="keywords" content="ESG, гринвошинг, этический рейтинг, корпоративная ответственность, открытый исходный код, системный вклад, Civethica" />
+    <link rel="canonical" href="https://www.civethica.org/ru/articles/economy/esg-green-facade.ru.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ESG — это зеленый фасад для корпораций. Давайте создадим рейтинг с открытым исходным кодом, который измеряет реальное влияние" />
+    <meta property="og:description" content="Существующие экономические рейтинги измеряют отчеты, а не реальность. Давайте разберем, почему они не работают, и набросаем архитектуру системы, которая могла бы это исправить." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/ru/articles/economy/esg-green-facade.ru.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-rating.png" />
+    <meta property="og:site_name" content="Фонд Civethica" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ESG — это зеленый фасад для корпораций. Давайте создадим рейтинг с открытым исходным кодом, который измеряет реальное влияние" />
+    <meta name="twitter:description" content="Существующие экономические рейтинги измеряют отчеты, а не реальность. Давайте разберем, почему они не работают, и набросаем архитектуру системы, которая могла бы это исправить." />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-rating.png" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ESG — это зеленый фасад для корпораций. Давайте создадим рейтинг с открытым исходным кодом, который измеряет реальное влияние",
+        "alternativeHeadline": "",
+        "description": "Существующие экономические рейтинги измеряют отчеты, а не реальность. Давайте разберем, почему они не работают, и набросаем архитектуру системы, которая могла бы это исправить.",
+        "image": "https://www.civethica.org/images/og-image-rating.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Фонд Civethica"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Фонд Civethica",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-12"
+      }
+    </script>
+  </head>
+  <body class="sub-page">
+    
+
+<header class="main-header">
+    <div class="container">
+        <!-- 1. Логотип -->
+        
+        <a href="/ru/index.ru.html" class="logo-link">
+            <img src="/images/logo.png" alt="Логотип Civethica" class="logo-img" />
+            <span class="logo-text">Фонд Civethica</span>
+        </a>
+
+        <!-- 2. Основная навигация -->
+        <nav class="main-nav">
+            <ul id="main-nav-list">
+                
+                <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
+                <li class="dropdown">
+                    <a href="/ru/index.ru.html#platforms-section">Платформы</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/ru/platform-politics.ru.html">Политика и Управление</a></li>
+                        <li><a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a></li>
+                        <li><a href="/ru/platform-culture.ru.html">Культура и Образование</a></li>
+                        <li><a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a></li>
+                        <li><a href="/ru/platform-information.ru.html">Информация и Сознание</a></li>
+                    </ul>
+                </li>
+                <li><a href="/ru/community.ru.html" target="_blank" rel="noopener noreferrer">Сообщество</a></li>
+                <li><a href="/ru/library.ru.html">Библиотека</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. Кнопка "Гамбургер" -->
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+          <span class="sr-only">Меню</span>
+          <span class="icon-open">☰</span>
+          <span class="icon-close">×</span>
+        </button>
+
+        <!-- 4. Кнопки действий -->
+        <div class="header-actions">
+            <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small desktop-only-button" target="_blank" rel="noopener noreferrer">Поддержать</a>
+            <a href="/ru/community.ru.html" class="cta-button-small mobile-only-button" target="_blank" rel="noopener noreferrer">Сообщество</a>
+            <div class="language-switcher">
+                <span class="current-lang">RU</span>
+                <ul class="lang-dropdown">
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/en/articles/economy/esg-green-facade.html">EN</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/de/articles/economy/esg-green-facade.de.html">DE</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/fr/articles/economy/esg-green-facade.fr.html">FR</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/es/articles/economy/esg-green-facade.es.html">ES</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/zh/articles/economy/esg-green-facade.zh.html">ZH</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/ru/articles/economy/esg-green-facade.ru.html">RU</a></li>
+                        
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <main>
+      <section class="content-section">
+        <div class="container text-left">
+          <h2>ESG — это зеленый фасад для корпораций. Давайте создадим рейтинг с открытым исходным кодом, который измеряет реальное влияние</h2>
+          <p class="article-meta">(Фонд Civethica, 12 августа 2025)</p>
+          <img src="/images/og-image-rating.png" alt="Изображение, символизирующее фальшивый зеленый фасад корпорации, за которым скрывается промышленное загрязнение" class="article-featured-image" />
+          
+          
+          <p class="page-intro">В мире IT и бизнеса мы привыкли измерять все: производительность, конверсию, время безотказной работы. Но как измерить реальное влияние компании на мир? Аббревиатура ESG (Environmental, Social, Governance) пытается ответить на этот вопрос. Идея благородна — оценивать бизнес не только по прибыли, но и по его вкладу в окружающую среду, общество и качество управления.</p>
+          <p>Проблема в том, что ESG превратился из инструмента в маркетинговое оружие. Компании тратят миллионы на глянцевые отчеты, которые часто скрывают истинное положение дел. Это явление известно как «гринвошинг».</p>
+          <p>В этой статье я предлагаю деконструировать существующие подходы и наметить концепцию альтернативной рейтинговой системы с открытым исходным кодом, которую мы в нашем проекте Civethica называем системным этическим рейтингом. Цель — измерять реальный системный вклад, а не просто слова.</p>
+          <h3>1. Анализ существующих рейтингов (ESG и аналогичные): почему компас сломан</h3>
+          <p>На рынке доминируют несколько крупных игроков: MSCI, Sustainalytics, Bloomberg ESG. Их методологии в целом сводятся к нескольким ключевым подходам:</p>
+          <ul class="manifesto-list">
+            <li>Анализ нефинансовой отчетности: Компании сами заполняют анкеты и предоставляют отчеты об устойчивом развитии.</li>
+            <li>Оценка внутренней политики: Рейтинг проверяет, есть ли у компании политика по сокращению выбросов, продвижению гендерного равенства или борьбе с коррупцией.</li>
+            <li>Мониторинг СМИ: Алгоритмы отслеживают упоминания компании в СМИ для выявления скандалов.</li>
+          </ul>
+          <p>На бумаге это звучит хорошо, но на практике эта система создает несколько фундаментальных недостатков.</p>
+          <h3>2. Системные недостатки: гринвошинг, «черные ящики» и конфликты интересов</h3>
+          <p><strong>Двигатель гринвошинга.</strong> Когда оценка зависит от самоотчетности, побеждает не тот, кто искренне заботится о планете, а тот, у кого лучше PR-отдел. Компания может вырубать леса в одной стране и одновременно получать высшие оценки за посадку деревьев в парке у своей штаб-квартиры.</p>
+          <p><strong>Отсутствие прозрачности («Черный ящик»).</strong> Для большинства агентств методологии рейтинга являются коммерческой тайной. Невозможно понять, почему одна компания получила рейтинг «А», а другая — «Б». Для IT-сообщества, которое ценит открытость, это нонсенс.</p>
+          <p><strong>Конфликт интересов.</strong> Рейтинговые агентства часто получают оплату от тех же компаний, которых они оценивают. Это создает очевидное давление на присвоение рейтингов, которые не отпугнут клиента.</p>
+          <p><strong>Парадокс «хорошего против плохого».</strong> Существующие системы не оценивают суть бизнеса. Табачная компания может получить высокий рейтинг ESG за эффективную переработку окурков и инклюзивную политику найма. Но ее основной продукт продолжает убивать людей. Система оценивает, *как* что-то делается, но игнорирует, *что* делается.</p>
+          <h3>3. Необходимость в этических стандартах: от процессов к системному вкладу</h3>
+          <p>Чтобы это исправить, нам нужно сместить фокус с внутренних процессов компании на ее внешний системный вклад. Дело не в том, сколько красивых политик написано, а в том, сделала ли деятельность компании мир более здоровым, стабильным и чистым.</p>
+          <p>Мы предлагаем оценивать бизнес на основе двух ключевых циклов:</p>
+          <ul class="manifesto-list">
+            <li><strong>Цикл создания ценности:</strong> Что и как производит компания? Приносит ли ее продукт пользу или вред? Каковы экологические и социальные издержки ее производства?</li>
+            <li><strong>Цикл распределения ценности:</strong> Куда уходят прибыль и влияние компании? Финансирует ли она политические партии, разжигающие конфликты? Использует ли она офшоры для уклонения от налогов? Ведет ли она информационные войны?</li>
+          </ul>
+          <p>Это коренным образом меняет подход: производитель органического йогурта, который спонсирует кампании по дезинформации, получил бы в нашей системе глубоко отрицательный рейтинг.</p>
+          <h3>4. Где брать данные? Архитектура сбора данных</h3>
+          <p>С технической точки зрения это самый сложный и интересный вопрос. Информация для такого рейтинга должна поступать из множества открытых и альтернативных источников. Наша концепция предполагает создание системы-агрегатора, которая работает со следующими типами данных:</p>
+          <ul class="manifesto-list">
+            <li><strong>Публичные данные:</strong> Финансовые отчеты (например, документы SEC), корпоративные пресс-релизы и официальные отчеты об устойчивом развитии. Они важны, но их нужно анализировать с критической точки зрения на предмет предвзятости.</li>
+            <li><strong>Альтернативные данные (Alt-data):</strong>
+              <ul class="manifesto-sublist">
+                <li>Анализ СМИ: Парсинг новостных изданий со всего мира с использованием моделей NLP для анализа тональности публикаций с целью выявления скандалов и позитивных инициатив.</li>
+                <li>Отчеты НПО и активистов: Данные от таких организаций, как Amnesty International, Greenpeace и Human Rights Watch о нарушениях прав человека, экологическом ущербе и т.д.</li>
+                <li>Правительственные и юридические базы данных: Реестры лоббистов (например, OpenSecrets в США), судебные дела, налоговые данные (где это возможно) и санкционные списки.</li>
+                <li>Геопространственные данные: Анализ спутниковых снимков для отслеживания вырубки лесов, разливов нефти или промышленных выбросов (проекты, подобные Climate TRACE).</li>
+                <li>Краудсорсинг: Проверенная сообществом информация от сотрудников, местных жителей и экспертов (с использованием модели, подобной Википедии, со строгой модерацией и проверкой фактов).</li>
+              </ul>
+            </li>
+          </ul>
+          <h3>5. Как это реализовать? Механизм оценки и открытый исходный код</h3>
+          <p>Простая шкала от A до F здесь не сработает. Система должна быть многомерной.</p>
+          <ul class="manifesto-list">
+            <li><strong>Взвешенные коэффициенты:</strong> Самая сложная задача — определить вес каждого критерия. Как сравнить тонну выбросов CO₂ с одним случаем детского труда? Эта модель должна стать предметом открытых научных и общественных дебатов.</li>
+            <li><strong>Разделение положительного и отрицательного вклада:</strong> Компания может делать хорошие и плохие вещи одновременно. Поэтому логично иметь два независимых показателя: Индекс Созидания и Индекс Разрушения. Это дает более честную картину.</li>
+            <li><strong>Полная открытость (Open Source):</strong> Вся методология, алгоритмы подсчета, парсеры и исходный код должны быть опубликованы на GitHub. Любой желающий должен иметь возможность проверить рейтинг или предложить улучшение.</li>
+          </ul>
+          <h3>6. Ожидаемый эффект: от манипуляции к осознанному выбору</h3>
+          <p>Внедрение такого прозрачного и системного рейтинга может вызвать цепную реакцию:</p>
+          <ul class="manifesto-list">
+            <li>Инвесторы получат инструмент для настоящего импакт-инвестирования, а не просто для покупки индульгенций.</li>
+            <li>Потребители смогут делать выбор на основе реальных ценностей, а не только маркетинга.</li>
+            <li>Сотрудники (особенно в IT) смогут выбирать работодателей, чьи миссии совпадают с их совестью.</li>
+            <li>Компании получат честную обратную связь и дорожную карту для реальных улучшений, а не для написания очередного отчета.</li>
+          </ul>
+          <div class="conclusion">
+            <h3>Заключение</h3>
+            <p>Существующая система экономической оценки устарела. Она поощряет симуляцию ответственности вместо самой ответственности. Мы считаем, что создание открытого, честного и системного инструмента оценки — это вызов, достойный IT-сообщества.</p>
+          </div>
+        
+
+          <div class="discussion-cta-section">
+            <h3>Есть идеи или возражения?</h3>
+            <p>Обсудите эту и другие концепции в нашем сообществе.</p>
+            <a href="/ru/community.ru.html" class="cta-button" target="_blank" rel="noopener noreferrer">
+              Перейти к обсуждению
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    
+
+<footer class="main-footer">
+    <div class="container">
+        <p>© 2025 Фонд Civethica. Неформальная гражданская инициатива.</p>
+        <div class="footer-contact">
+            <p><a href="mailto:info@civethica.org">info@civethica.org</a></p>
+            <p><a href="/ru/privacy-policy.ru.html" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a></p>
+        </div>
+    </div>
+</footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

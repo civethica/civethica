@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- ===================================================================== -->
+  <!-- ======================= 1. COMMON BLOCK (for all pages) ======================= -->
+  <!-- ===================================================================== -->
+
+  <!-- Basic encoding and viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Consent and analytics scripts (order is important) -->
+  <!-- Google Consent Mode (v2) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
+    });
+  </script>
+  <!-- End Google Consent Mode -->
+
+  <!-- CookieYes Banner Script -->
+  <script
+    id="cookieyes"
+    type="text/javascript"
+    src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+  ></script>
+
+  <!-- Google Analytics 4 Script -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-N8B9TG8J6X");
+  </script>
+
+  <!-- Styles, fonts, and favicon -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="/images/logo.png" type="image/png" />
+
+  <!-- ======================================================================= -->
+  <!-- ============= 2. UNIQUE BLOCK (for the Platform page) ============= -->
+  <!-- ======================================================================= -->
+
+  <!-- 1. Main SEO meta tags -->
+  <title>Platform: Information & Consciousness | The Civethica Foundation</title>
+  <meta
+    name="description"
+    content="Information is food for consciousness. The Civethica platform proposes a shift from the attention economy and disinformation to a healthy information ecosystem that fosters clarity of thought."
+  />
+  <meta name="author" content="The Civethica Foundation" />
+  <meta
+    name="keywords"
+    content="information, consciousness, media literacy, information hygiene, disinformation, attention economy, cognitive biases, critical thinking, Civethica"
+  />
+  <link rel="canonical" href="https://www.civethica.org/en/platform-information.html" />
+
+  <!-- 2. Open Graph tags (for Facebook, Telegram, etc.) -->
+  <meta property="og:title" content="Platform: Information & Consciousness | The Civethica Foundation" />
+  <meta
+    property="og:description"
+    content="From information overload to clarity of mind. Discover how Civethica proposes to create a healthy information environment."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.civethica.org/en/platform-information.html" />
+  <meta property="og:image" content="https://www.civethica.org/images/og-image-platform-information.png" />
+  <!-- RECOMMENDATION: Create a specific image for this platform -->
+  <meta property="og:site_name" content="The Civethica Foundation" />
+
+  <!-- 3. Twitter Card tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Platform: Information & Consciousness | The Civethica Foundation" />
+  <meta
+    name="twitter:description"
+    content="From information overload to clarity of mind. Discover how Civethica proposes to create a healthy information environment."
+  />
+  <meta name="twitter:image" content="https://www.civethica.org/images/og-image-platform-information.png" />
+
+  <!-- 4. Structured Data (JSON-LD) for enhanced SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Platform: Information & Consciousness",
+      "description": "Information is food for consciousness. The Civethica platform proposes a shift from the attention economy and disinformation to a healthy information ecosystem that fosters clarity of thought.",
+      "url": "https://www.civethica.org/en/platform-information.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Civethica Foundation",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.civethica.org/images/logo.png"
+        }
+      }
+    }
+  </script>
+</head>
+  <body class="sub-page">
+    <header class="main-header">
+      <div class="container">
+        <!-- 1. Logo -->
+        <a href="/index.html" class="logo-link">
+          <img src="/images/logo.png" alt="Civethica Logo" class="logo-img" />
+          <span class="logo-text">Civethica Foundation</span>
+        </a>
+
+        <!-- 2. Main Navigation -->
+        <nav class="main-nav">
+          <ul id="main-nav-list">
+            <li><a href="/en/manifesto.html">The Manifesto</a></li>
+            <li class="dropdown">
+              <a href="#platforms-section">Platforms</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/en/platform-politics.html">Politics & Governance</a>
+                </li>
+                <li>
+                  <a href="/en/platform-economy.html">Economy & Resources</a>
+                </li>
+                <li>
+                  <a href="/en/platform-culture.html">Culture & Education</a>
+                </li>
+                <li>
+                  <a href="/en/platform-health.html">Health & Bioethics</a>
+                </li>
+                <li>
+                  <a href="/en/platform-information.html">Information & Consciousness</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/en/community.html" target="_blank" rel="noopener noreferrer"
+                >Community</a
+              >
+            </li>
+            <li><a href="/en/library.html">Library</a></li>
+          </ul>
+        </nav>
+
+        <!-- 3. Hamburger Button -->
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <span class="icon-open">☰</span>
+          <span class="icon-close">×</span>
+        </button>
+
+        <!-- 4. Action Buttons -->
+        <div class="header-actions">
+          <a
+            href="https://www.patreon.com/c/Civethica/membership"
+            class="cta-button-small desktop-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Support</a
+          >
+
+          <!-- Mobile button -->
+          <a
+            href="/en/community.html"
+            class="cta-button-small mobile-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Community</a
+          >
+          <div class="language-switcher">
+            <span class="current-lang">EN</span>
+            <ul class="lang-dropdown">
+              <li><a href="/en/articles/information/library-information.html">EN</a></li>
+              <li><a href="/de/articles/information/library-information.de.html">DE</a></li>
+              <li><a href="/fr/articles/information/library-information.fr.html">FR</a></li>
+              <li><a href="/es/articles/information/library-information.es.html">ES</a></li>
+              <li><a href="/zh/articles/information/library-information.zh.html">ZH</a></li>
+              <li><a href="/ru/articles/information/library-information.ru.html">RU</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+<!-- ====================================================== -->
+<!-- ================ БЛОК ЗАГОЛОВКА БИБЛИОТЕКИ ============ -->
+<!-- ====================================================== -->
+<!-- Этот блок пустой. JavaScript заполнит его сам. -->
+<div id="library-header-sticky" class="library-header">
+  <div class="container">
+    <!-- Сюда будет вставлен текст, например: -->
+    <!-- <span class="library-label">Библиотека:</span> Экономика и Ресурсы -->
+  </div>
+</div>
+<!-- ====================================================== -->
+<!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
+<!-- ====================================================== -->
+    <main>
+      <section class="content-section">
+        <div class="container text-left">
+          <!-- === Economy Section === -->
+          <h2>Information & Consciousness</h2>
+          <h3>Here you will find all the key articles and concepts for this section within the Civethica project.</h3>
+          <div class="resource-list">
+            <div class="article-preview">
+              <h4>Article: "From GDP to the System Health Index"</h4>
+              <p>A detailed analysis of the shortcomings of GDP and a proposal for a new model for assessing a nation's well-being.</p>
+              <a href="/en/articles/information/awakening-in-chaos.html">Read more...</a>
+            </div>
+            <!-- === <div class="article-preview">
+              <h4>Concept: "The Civethica Rating for Business"</h4>
+              <p>The foundations for a rating system that evaluates companies based on their true systemic contribution.</p>
+              <a href="/en/articles/economy/rating-civethica.html">Read more...</a>
+            </div> === -->
+
+            <!-- === Politics Section === -->
+          </div>
+
+          <!-- ... and so on for other categories ... -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <p>© 2025 The Civethica Foundation. A non-formal civil initiative.</p>
+
+        <!-- NEW BLOCK FOR CONTACTS -->
+        <div class="footer-contact">
+          <p>
+            <a href="mailto:info@civethica.org">info@civethica.org</a>
+          </p>
+          <p>
+            <a href="/en/privacy-policy.html" target="_blank" rel="noopener noreferrer"
+              >Privacy Policy</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

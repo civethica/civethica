@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- ===================================================================== -->
+    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
+    <!-- (Этот блок можно безопасно копировать на все страницы без изменений) -->
+    <!-- ===================================================================== -->
+
+    <!-- Основная кодировка и viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Скрипты согласия и аналитики (порядок важен) -->
+    <!-- Google Consent Mode (v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <!-- End Google Consent Mode -->
+
+    <!-- CookieYes Banner Script -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
+    ></script>
+
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N8B9TG8J6X");
+    </script>
+
+    <!-- Стили, шрифты и иконка сайта -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+
+    <!-- ======================================================================= -->
+    <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (адаптировать для каждой страницы) ============= -->
+    <!-- ======================================================================= -->
+
+    <!-- Основные SEO и мета-теги -->
+    <title>Фонд Civethica | Новое планетарное сознание</title>
+    <meta
+      name="description"
+      content="Фонд «Civethica» — это глобальное движение, инициирующее культурный сдвиг от антропоцентризма к новому, целостному мировоззрению, основанному на единстве Жизни, Планеты и Космоса."
+    />
+    <meta name="author" content="Фонд Civethica" />
+    <meta
+      name="keywords"
+      content="планетарное сознание, Civethica, целостное мировоззрение, системное мышление, регенеративная экономика, новая этика"
+    />
+    <link rel="canonical" href="https://www.civethica.org/ru/index.ru.html" />
+    <!-- ВАЖНО: Указан путь к русской версии -->
+
+    <!-- Open Graph (для превью в соцсетях) -->
+    <meta property="og:title" content="Фонд Civethica | Новое планетарное сознание" />
+    <meta
+      property="og:description"
+      content="Присоединяйтесь к глобальному движению по переходу от устаревшего антропоцентризма к целостному мировоззрению, основанному на единстве Жизни, Планеты и Космоса."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.civethica.org/ru/index.ru.html" />
+    <!-- ВАЖНО: Указан путь к русской версии -->
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-main.png" />
+    <!-- ВАЖНО: Картинка для русской версии -->
+    <meta property="og:site_name" content="Фонд Civethica" />
+
+    <!-- Twitter Card (для превью в Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Фонд Civethica | Новое планетарное сознание" />
+    <meta
+      name="twitter:description"
+      content="Присоединяйтесь к глобальному движению по переходу от устаревшего антропоцентризма к целостному мировоззрению."
+    />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-main.png" />
+    <!-- ВАЖНО: Та же картинка, что и в OG -->
+
+    <!-- Структурированные данные (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Фонд Civethica",
+        "url": "https://www.civethica.org/ru/index.ru.html",
+        "logo": "https://www.civethica.org/images/logo.png",
+        "description": "Фонд «Civethica» — это глобальное движение, инициирующее культурный сдвиг от антропоцентризма к новому, целостному мировоззрению, основанному на единстве Жизни, Планеты и Космоса.",
+        "sameAs": [
+          "https://www.facebook.com/groups/CivethicaCommunityEN",
+          "https://x.com/SatAgama",
+          "https://medium.com/@civethica",
+          "https://www.patreon.com/c/Civethica"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@civethica.org",
+          "contactType": "customer support"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Контейнер для баннера о разработке -->
+    <div id="dev-banner-placeholder"></div>
+    <!-- Development Banner End -->
+
+    <header class="main-header">
+      <div class="container">
+        <!-- 1. Логотип -->
+        <a href="/ru/index.ru.html" class="logo-link">
+          <img src="/images/logo.png" alt="Логотип Civethica" class="logo-img" />
+          <span class="logo-text">Фонд Civethica</span>
+        </a>
+
+        <!-- 2. Основная навигация -->
+
+        <nav class="main-nav">
+          <ul id="main-nav-list">
+            <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
+            <li class="dropdown">
+              <a href="#platforms-section">Платформы</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/ru/platform-politics.ru.html">Политика и Управление</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-culture.ru.html">Культура и Образование</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a>
+                </li>
+                <li>
+                  <a href="/ru/platform-information.ru.html">Информация и Сознание</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <!-- <a href="/ru/community.ru.html" target="_blank" rel="noopener noreferrer"
+                >Сообщество</a
+              > -->
+              <a href="/ru/community.ru.html" target="_blank" rel="noopener noreferrer">Сообщество</a>
+            </li>
+            <li><a href="/ru/library.ru.html">Библиотека</a></li>
+          </ul>
+        </nav>
+
+        <!-- 3. КНОПКА-ГАМБУРГЕР (ОНА ДОЛЖНА БЫТЬ ЗДЕСЬ) -->
+        <!-- НОВЫЙ КОД С ИКОНКАМИ -->
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <span class="icon-open">☰</span>
+          <!-- Это иконка "гамбургер" -->
+          <span class="icon-close">×</span>
+          <!-- Это иконка "крестик" -->
+        </button>
+
+        <!-- 4. Кнопки действий (Support Us, EN) -->
+        <div class="header-actions">
+          <!-- <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small" target="_blank" rel="noopener noreferrer">Поддержать</a>
+ -->
+          <a
+            href="https://www.patreon.com/c/Civethica/membership"
+            class="cta-button-small desktop-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Поддержать</a
+          >
+
+          <!-- Кнопка для мобильных -->
+          <a
+            href="/ru/community.ru.html"
+            class="cta-button-small mobile-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Сообщество</a
+          >
+          <div class="language-switcher">
+            <span class="current-lang">RU</span>
+            <ul class="lang-dropdown">
+              <li><a href="/index.html">EN</a></li>
+              <li><a href="/de/index.de.html">DE</a></li>
+              <li><a href="/fr/index.fr.html">FR</a></li>
+              <li><a href="/es/index.es.html">ES</a></li>
+              <li><a href="/zh/index.zh.html">ZH</a></li>
+              <li><a href="/ru/ndex.ru.html">RU</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <h1>Меняя операционную систему человеческого сознания</h1>
+          <p class="subtitle">
+            Мы — глобальное движение, инициирующее культурный сдвиг от устаревшего антропоцентризма к новому, целостному
+            мировоззрению, основанному на единстве Жизни, Планеты и Космоса.
+          </p>
+          <a href="/ru/manifesto.ru.html" class="cta-button">Читать Манифест</a>
+        </div>
+      </section>
+
+      <section id="platforms-section" class="platforms-preview-section">
+        <div class="container">
+          <h2>Наши платформы для изменений</h2>
+          <div class="platforms-grid">
+            <a href="/ru/platform-politics.ru.html" class="platform-card"
+              ><h3>Политика и Управление</h3>
+              <p>Переход от геополитики к планетарной ответственности.</p></a
+            >
+            <a href="/ru/platform-economy.ru.html" class="platform-card"
+              ><h3>Экономика и Ресурсы</h3>
+              <p>Построение регенеративной экономики внутри живой системы.</p></a
+            >
+            <a href="/ru/platform-culture.ru.html" class="platform-card"
+              ><h3>Культура и Образование</h3>
+              <p>Формирование нового планетарного сознания.</p></a
+            >
+            <a href="/ru/platform-health.ru.html" class="platform-card"
+              ><h3>Здоровье и Биоэтика</h3>
+              <p>Переосмысление благополучия человека в здоровой экосистеме.</p></a
+            >
+            <a href="/ru/platform-information.ru.html" class="platform-card"
+              ><h3>Информация и Сознание</h3>
+              <p>Создание здоровой цифровой биосферы.</p></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="join" class="content-section accent-bg">
+        <div class="container">
+          <h2>Станьте сооснователем нового будущего</h2>
+          <p>
+            Civethica — это не организация, в которую вступают, а идея, которой живут. Поддержите нашу миссию, став
+            патроном, или присоединяйтесь к дискуссии.
+          </p>
+          <div class="join-buttons">
+            <a href="#" class="cta-button">Поддержать на Patreon</a>
+            <a href="#" class="cta-button-secondary">Присоединиться к сообществу</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
+
+        <!-- НОВЫЙ БЛОК ДЛЯ КОНТАКТОВ -->
+        <div class="footer-contact">
+          <p>
+            <a href="mailto:info@civethica.org">info@civethica.org</a>
+          </p>
+          <p>
+            <a href="/ru/privacy-policy.ru.html" target="_blank" rel="noopener noreferrer"
+              >Политика конфиденциальности</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

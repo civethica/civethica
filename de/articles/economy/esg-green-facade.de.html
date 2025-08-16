@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="/images/logo.png" type="image/png" />
+<!-- Consent and Analytics Scripts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+  });
+</script>
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("js", new Date());
+  gtag("config", "G-N8B9TG8J6X");
+</script>
+    <title>ESG ist eine grüne Fassade für Konzerne. Entwerfen wir ein Open-Source-Rating, das echte Auswirkungen misst | Die Civethica Stiftung</title>
+    <meta name="description" content="Bestehende Wirtschaftsratings messen Berichte, nicht die Realität. Wir analysieren, warum sie nicht funktionieren, und skizzieren die Architektur eines Systems, das dies beheben könnte." />
+    <meta name="author" content="Die Civethica Stiftung" />
+    <meta name="keywords" content="ESG, Greenwashing, ethisches Rating, Unternehmensverantwortung, Open Source, systemischer Einfluss, Civethica" />
+    <link rel="canonical" href="https://www.civethica.org/de/articles/economy/esg-green-facade.de.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ESG ist eine grüne Fassade für Konzerne. Entwerfen wir ein Open-Source-Rating, das echte Auswirkungen misst" />
+    <meta property="og:description" content="Bestehende Wirtschaftsratings messen Berichte, nicht die Realität. Wir analysieren, warum sie nicht funktionieren, und skizzieren die Architektur eines Systems, das dies beheben könnte." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.civethica.org/de/articles/economy/esg-green-facade.de.html" />
+    <meta property="og:image" content="https://www.civethica.org/images/og-image-rating.png" />
+    <meta property="og:site_name" content="Die Civethica Stiftung" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ESG ist eine grüne Fassade für Konzerne. Entwerfen wir ein Open-Source-Rating, das echte Auswirkungen misst" />
+    <meta name="twitter:description" content="Bestehende Wirtschaftsratings messen Berichte, nicht die Realität. Wir analysieren, warum sie nicht funktionieren, und skizzieren die Architektur eines Systems, das dies beheben könnte." />
+    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-rating.png" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ESG ist eine grüne Fassade für Konzerne. Entwerfen wir ein Open-Source-Rating, das echte Auswirkungen misst",
+        "alternativeHeadline": "",
+        "description": "Bestehende Wirtschaftsratings messen Berichte, nicht die Realität. Wir analysieren, warum sie nicht funktionieren, und skizzieren die Architektur eines Systems, das dies beheben könnte.",
+        "image": "https://www.civethica.org/images/og-image-rating.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Die Civethica Stiftung"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Die Civethica Stiftung",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.civethica.org/images/logo.png"
+          }
+        },
+        "datePublished": "2025-08-12"
+      }
+    </script>
+  </head>
+  <body class="sub-page">
+    
+
+<header class="main-header">
+    <div class="container">
+        <!-- 1. Логотип -->
+        
+        <a href="/de/index.de.html" class="logo-link">
+            <img src="/images/logo.png" alt="Civethica Logo" class="logo-img" />
+            <span class="logo-text">Die Civethica Stiftung</span>
+        </a>
+
+        <!-- 2. Основная навигация -->
+        <nav class="main-nav">
+            <ul id="main-nav-list">
+                
+                <li><a href="/de/manifesto.de.html">Das Manifest</a></li>
+                <li class="dropdown">
+                    <a href="/de/index.de.html#platforms-section">Plattformen</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/de/platform-politics.de.html">Politik &amp; Regierung</a></li>
+                        <li><a href="/de/platform-economy.de.html">Wirtschaft &amp; Ressourcen</a></li>
+                        <li><a href="/de/platform-culture.de.html">Kultur &amp; Bildung</a></li>
+                        <li><a href="/de/platform-health.de.html">Gesundheit &amp; Bioethik</a></li>
+                        <li><a href="/de/platform-information.de.html">Information &amp; Bewusstsein</a></li>
+                    </ul>
+                </li>
+                <li><a href="/de/community.de.html" target="_blank" rel="noopener noreferrer">Gemeinschaft</a></li>
+                <li><a href="/de/library.de.html">Bibliothek</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. Кнопка "Гамбургер" -->
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+          <span class="sr-only">Menü</span>
+          <span class="icon-open">☰</span>
+          <span class="icon-close">×</span>
+        </button>
+
+        <!-- 4. Кнопки действий -->
+        <div class="header-actions">
+            <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small desktop-only-button" target="_blank" rel="noopener noreferrer">Unterstützen</a>
+            <a href="/de/community.de.html" class="cta-button-small mobile-only-button" target="_blank" rel="noopener noreferrer">Gemeinschaft</a>
+            <div class="language-switcher">
+                <span class="current-lang">DE</span>
+                <ul class="lang-dropdown">
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/en/articles/economy/esg-green-facade.html">EN</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/de/articles/economy/esg-green-facade.de.html">DE</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/fr/articles/economy/esg-green-facade.fr.html">FR</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/es/articles/economy/esg-green-facade.es.html">ES</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/zh/articles/economy/esg-green-facade.zh.html">ZH</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/ru/articles/economy/esg-green-facade.ru.html">RU</a></li>
+                        
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <main>
+      <section class="content-section">
+        <div class="container text-left">
+          <h2>ESG ist eine grüne Fassade für Konzerne. Entwerfen wir ein Open-Source-Rating, das echte Auswirkungen misst</h2>
+          <p class="article-meta">(Die Civethica Stiftung, 12. August 2025)</p>
+          <img src="/images/og-image-rating.png" alt="Bild, das die falsche grüne Fassade eines Unternehmens symbolisiert, hinter der sich industrielle Verschmutzung verbirgt" class="article-featured-image" />
+          
+          
+          <p class="page-intro">In der Welt der IT und des Geschäfts sind wir es gewohnt, alles zu messen: Leistung, Konversion, Betriebszeit. Aber wie misst man den tatsächlichen Einfluss eines Unternehmens auf die Welt? Das Akronym ESG (Environmental, Social, Governance) versucht, diese Frage zu beantworten. Die Idee ist edel – ein Unternehmen nicht nur nach seinem Gewinn zu bewerten, sondern auch nach seinem Beitrag zur Umwelt, zur Gesellschaft und zur Qualität der Unternehmensführung.</p>
+          <p>Das Problem ist, dass ESG von einem Werkzeug zu einer Marketingwaffe verkommen ist. Unternehmen geben Millionen für Hochglanzberichte aus, die oft den wahren Sachverhalt verschleiern. Dieses Phänomen ist als „Greenwashing“ bekannt.</p>
+          <p>In diesem Artikel schlage ich vor, dass wir die bestehenden Ansätze dekonstruieren und ein Konzept für ein alternatives, quelloffenes Bewertungssystem skizzieren, das wir in unserem Projekt Civethica als systemisches ethisches Rating bezeichnen. Das Ziel ist, den realen systemischen Beitrag zu messen, nicht nur Worte.</p>
+          <h3>1. Analyse bestehender Ratings (ESG und ähnliche): Warum der Kompass kaputt ist</h3>
+          <p>Der Markt wird von einigen wenigen großen Akteuren dominiert: MSCI, Sustainalytics, Bloomberg ESG. Ihre Methoden lassen sich im Allgemeinen auf einige Schlüsselansätze reduzieren:</p>
+          <ul class="manifesto-list">
+            <li>Analyse der nichtfinanziellen Berichterstattung: Unternehmen füllen selbst Umfragen aus und stellen Nachhaltigkeitsberichte zur Verfügung.</li>
+            <li>Bewertung interner Richtlinien: Das Rating prüft, ob ein Unternehmen Richtlinien zur Emissionsreduzierung, zur Förderung der Gleichstellung der Geschlechter oder zur Korruptionsbekämpfung hat.</li>
+            <li>Medienbeobachtung: Algorithmen verfolgen die Erwähnungen von Unternehmen in den Medien, um Skandale aufzudecken.</li>
+          </ul>
+          <p>Auf dem Papier klingt das gut, aber in der Praxis führt dieses System zu mehreren grundlegenden Mängeln.</p>
+          <h3>2. Systemfehler: Greenwashing, Black Boxes und Interessenkonflikte</h3>
+          <p><strong>Der Motor des Greenwashing.</strong> Wenn eine Bewertung von der Selbstauskunft abhängt, gewinnt nicht derjenige, dem der Planet wirklich am Herzen liegt, sondern derjenige mit der besseren PR-Abteilung. Ein Unternehmen kann in einem Land Wälder abholzen und gleichzeitig Bestnoten für das Pflanzen von Bäumen in einem Park in der Nähe seines Hauptsitzes erhalten.</p>
+          <p><strong>Mangel an Transparenz (Die „Black Box“).</strong> Bei den meisten Agenturen sind die Bewertungsmethoden ein Geschäftsgeheimnis. Es ist unmöglich zu verstehen, warum ein Unternehmen die Note „A“ und ein anderes die Note „B“ erhalten hat. Für die IT-Community, die Offenheit schätzt, ist das Unsinn.</p>
+          <p><strong>Interessenkonflikt.</strong> Rating-Agenturen werden oft von denselben Unternehmen bezahlt, die sie bewerten. Dies schafft einen offensichtlichen Druck, Bewertungen zu vergeben, die den Kunden nicht abschrecken.</p>
+          <p><strong>Das „Gut gegen Schlecht“-Paradox.</strong> Bestehende Systeme bewerten nicht den Kern des Geschäfts. Ein Tabakunternehmen kann durch effizientes Recycling von Zigarettenkippen und eine integrative Einstellungspolitik eine hohe ESG-Bewertung erreichen. Aber sein Kernprodukt tötet weiterhin Menschen. Das System bewertet, *wie* etwas getan wird, ignoriert aber, *was* getan wird.</p>
+          <h3>3. Die Notwendigkeit ethischer Standards: Von Prozessen zum systemischen Beitrag</h3>
+          <p>Um dies zu beheben, müssen wir unseren Fokus von den internen Prozessen eines Unternehmens auf seinen externen systemischen Beitrag verlagern. Es geht nicht darum, wie viele schöne Richtlinien geschrieben werden, sondern darum, ob die Aktivitäten des Unternehmens die Welt gesünder, stabiler und sauberer gemacht haben.</p>
+          <p>Wir schlagen vor, Unternehmen anhand von zwei Schlüsselzyklen zu bewerten:</p>
+          <ul class="manifesto-list">
+            <li><strong>Der Wertschöpfungszyklus:</strong> Was produziert das Unternehmen und wie? Bringt sein Produkt Nutzen oder Schaden? Was sind die ökologischen und sozialen Kosten seiner Produktion?</li>
+            <li><strong>Der Wertverteilungszyklus:</strong> Wohin fließen die Gewinne und der Einfluss des Unternehmens? Finanziert es politische Parteien, die Konflikte schüren? Nutzt es Offshore-Konten, um Steuern zu vermeiden? Führt es Informationskriege?</li>
+          </ul>
+          <p>Dies verändert den Ansatz grundlegend: Ein Hersteller von Bio-Joghurt, der Desinformationskampagnen sponsert, würde in unserem System eine zutiefst negative Bewertung erhalten.</p>
+          <h3>4. Woher die Daten nehmen? Eine Architektur zur Datenerfassung</h3>
+          <p>Aus technischer Sicht ist dies die anspruchsvollste und interessanteste Frage. Die Informationen für ein solches Rating müssen aus einer Vielzahl offener und alternativer Quellen stammen. Unser Konzept sieht die Schaffung eines Aggregatorsystems vor, das mit folgenden Datentypen arbeitet:</p>
+          <ul class="manifesto-list">
+            <li><strong>Öffentliche Daten:</strong> Finanzberichte (z. B. SEC-Einreichungen), Pressemitteilungen von Unternehmen und offizielle Nachhaltigkeitsberichte. Diese sind wichtig, müssen aber kritisch auf Voreingenommenheit analysiert werden.</li>
+            <li><strong>Alternative Daten (Alt-data):</strong>
+              <ul class="manifesto-sublist">
+                <li>Medienanalyse: Parsen von Nachrichtenagenturen aus aller Welt unter Verwendung von NLP-Modellen zur Analyse der Stimmung von Veröffentlichungen, um Skandale und positive Initiativen zu identifizieren.</li>
+                <li>Berichte von NGOs und Aktivisten: Daten von Organisationen wie Amnesty International, Greenpeace und Human Rights Watch zu Menschenrechtsverletzungen, Umweltschäden usw.</li>
+                <li>Regierungs- und Rechtsdatenbanken: Lobbyistenregister (wie OpenSecrets in den USA), Gerichtsverfahren, Steuerdaten (sofern verfügbar) und Sanktionslisten.</li>
+                <li>Geodaten: Analyse von Satellitenbildern zur Verfolgung von Abholzung, Ölverschmutzungen oder Industrieemissionen (Projekte wie Climate TRACE).</li>
+                <li>Crowdsourcing: Von der Community verifizierte Informationen von Mitarbeitern, Anwohnern und Experten (unter Verwendung eines Modells ähnlich wie Wikipedia, mit strenger Moderation und Faktenprüfung).</li>
+              </ul>
+            </li>
+          </ul>
+          <h3>5. Wie umsetzen? Der Bewertungsmechanismus und Open Source</h3>
+          <p>Eine einfache A-bis-F-Skala funktioniert hier nicht. Das System muss mehrdimensional sein.</p>
+          <ul class="manifesto-list">
+            <li><strong>Gewichtete Koeffizienten:</strong> Die schwierigste Aufgabe besteht darin, das Gewicht jedes Kriteriums zu bestimmen. Wie vergleicht man eine Tonne CO₂-Emissionen mit einem Fall von Kinderarbeit? Dieses Modell muss Gegenstand einer offenen wissenschaftlichen und öffentlichen Debatte sein.</li>
+            <li><strong>Trennung von positiven und negativen Beiträgen:</strong> Ein Unternehmen kann gleichzeitig Gutes und Schlechtes tun. Daher ist es logisch, zwei unabhängige Bewertungen zu haben: einen Schöpfungsindex und einen Zerstörungsindex. Dies ergibt ein ehrlicheres Bild.</li>
+            <li><strong>Vollständige Offenheit (Open Source):</strong> Die gesamte Methodik, die Bewertungsalgorithmen, Parser und der Quellcode sollten auf GitHub veröffentlicht werden. Jeder sollte in der Lage sein, eine Bewertung zu überprüfen oder eine Verbesserung vorzuschlagen.</li>
+          </ul>
+          <h3>6. Der erwartete Effekt: Von der Manipulation zur bewussten Wahl</h3>
+          <p>Die Implementierung eines solch transparenten und systemischen Ratings könnte eine Kettenreaktion auslösen:</p>
+          <ul class="manifesto-list">
+            <li>Investoren erhalten ein Werkzeug für echtes Impact Investing, nicht nur für den Kauf von Ablässen.</li>
+            <li>Verbraucher können Entscheidungen auf der Grundlage echter Werte treffen, nicht nur auf der Grundlage von Marketing.</li>
+            <li>Mitarbeiter (insbesondere in der IT) können Arbeitgeber wählen, deren Missionen mit ihrem Gewissen übereinstimmen.</li>
+            <li>Unternehmen erhalten ehrliches Feedback und einen Fahrplan für echte Verbesserungen, nicht nur für das Verfassen eines weiteren Berichts.</li>
+          </ul>
+          <div class="conclusion">
+            <h3>Fazit</h3>
+            <p>Das bestehende wirtschaftliche Bewertungssystem ist veraltet. Es fördert die Simulation von Verantwortung anstelle von Verantwortung selbst. Wir glauben, dass die Schaffung eines offenen, ehrlichen und systemischen Bewertungsinstruments eine Herausforderung ist, die der IT-Community würdig ist.</p>
+          </div>
+        
+
+          <div class="discussion-cta-section">
+            <h3>Haben Sie Ideen oder Einwände?</h3>
+            <p>Diskutieren Sie dieses und andere Konzepte in unserer Gemeinschaft.</p>
+            <a href="/en/community.html" class="cta-button" target="_blank" rel="noopener noreferrer">
+              Zur Diskussion
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    
+
+<footer class="main-footer">
+    <div class="container">
+        <p>© 2025 Die Civethica Stiftung. Eine nicht-formale bürgerliche Initiative.</p>
+        <div class="footer-contact">
+            <p><a href="mailto:info@civethica.org">info@civethica.org</a></p>
+            <p><a href="/de/privacy-policy.de.html" target="_blank" rel="noopener noreferrer">Datenschutzrichtlinie</a></p>
+        </div>
+    </div>
+</footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

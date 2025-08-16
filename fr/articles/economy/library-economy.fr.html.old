@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bibliothèque - Fondation Civethica</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- ... autres balises head ... -->
+  </head>
+  <body class="sub-page">
+    <header class="main-header">
+      <div class="container">
+        <!-- 1. Logo -->
+        <a href="/fr/index.fr.html" class="logo-link">
+          <img src="/images/logo.png" alt="Logo de Civethica" class="logo-img" />
+          <span class="logo-text">Fondation Civethica</span>
+        </a>
+
+        <!-- 2. Navigation principale -->
+        <nav class="main-nav">
+          <ul id="main-nav-list">
+            <li><a href="/fr/manifesto.fr.html">Le Manifeste</a></li>
+            <li class="dropdown">
+              <a href="#platforms-section">Plateformes</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/fr/platform-politics.fr.html">Politique et Gouvernance</a>
+                </li>
+                <li>
+                  <a href="/fr/platform-economy.fr.html">Économie et Ressources</a>
+                </li>
+                <li>
+                  <a href="/fr/platform-culture.fr.html">Culture et Éducation</a>
+                </li>
+                <li>
+                  <a href="/fr/platform-health.fr.html">Santé et Bioéthique</a>
+                </li>
+                <li>
+                  <a href="/fr/platform-information.fr.html">Information et Conscience</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/fr/community.fr.html" target="_blank" rel="noopener noreferrer">Communauté</a>
+            </li>
+            <li><a href="/fr/library.fr.html">Bibliothèque</a></li>
+          </ul>
+        </nav>
+
+        <!-- 3. Bouton hamburger -->
+        <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <span class="icon-open">☰</span>
+          <span class="icon-close">×</span>
+        </button>
+
+        <!-- 4. Boutons d'action -->
+        <div class="header-actions">
+          <a
+            href="https://www.patreon.com/c/Civethica/membership"
+            class="cta-button-small desktop-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Soutenir</a
+          >
+
+          <!-- Bouton pour mobile -->
+          <a
+            href="/fr/community.fr.html"
+            class="cta-button-small mobile-only-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Communauté</a
+          >
+          <div class="language-switcher">
+            <span class="current-lang">FR</span>
+            <ul class="lang-dropdown">
+              <li><a href="/en/articles/economy/library-economy.html">EN</a></li>
+              <li><a href="/de/articles/economy/library-economy.de.html">DE</a></li>
+              <li><a href="/fr/articles/economy/library-economy.fr.html">FR</a></li>
+              <li><a href="/es/articles/economy/library-economy.es.html">ES</a></li>
+              <li><a href="/zh/articles/economy/library-economy.zh.html">ZH</a></li>
+              <li><a href="/ru/articles/economy/library-economy.ru.html">RU</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ====================================================== -->
+    <!-- ================ БЛОК ЗАГОЛОВКА БИБЛИОТЕКИ ============ -->
+    <!-- ====================================================== -->
+    <!-- Этот блок пустой. JavaScript заполнит его сам. -->
+    <div id="library-header-sticky" class="library-header">
+      <div class="container">
+        <!-- Сюда будет вставлен текст, например: -->
+        <!-- <span class="library-label">Библиотека:</span> Экономика и Ресурсы -->
+      </div>
+    </div>
+    <!-- ====================================================== -->
+    <!-- ================ КОНЕЦ БЛОКА ЗАГОЛОВКА ============== -->
+    <!-- ====================================================== -->
+    <main>
+      <section class="content-section">
+        <div class="container text-left">
+          <!-- === Section Économie === -->
+          <h2>Économie et Ressources</h2>
+          <h3>
+            Vous trouverez ici tous les articles et concepts clés sur l'économie et les ressources dans le cadre du
+            projet Civethica.
+          </h3>
+          <div class="resource-list">
+            <div class="article-preview">
+              <h4>Article: "Économie Circulaire : Guide Pratique"</h4>
+              <p>
+                Un aperçu des principes de conception circulaire et des modèles économiques qui éliminent les déchets et
+                créent des systèmes régénératifs, dépassant l'économie linéaire 'prendre-fabriquer-jeter'.
+              </p>
+              <a href="/fr/articles/economy/circular-economy-guide.fr.html">Lire la suite...</a>
+            </div>
+
+            <div class="article-preview">
+              <h4>Article : « Du PIB à l'Indice de Santé du Système »</h4>
+              <p>
+                Une analyse détaillée des lacunes du PIB et une proposition d'un nouveau modèle pour évaluer le
+                bien-être d'une nation.
+              </p>
+              <a href="/fr/articles/economy/from-gdp-to-shs.fr.html">Lire la suite...</a>
+            </div>
+            <div class="article-preview">
+              <h4>Concept : « La notation Civethica pour les entreprises »</h4>
+              <p>
+                Les bases d'un système de notation qui évalue les entreprises sur la base de leur véritable contribution
+                systémique.
+              </p>
+              <a href="/fr/articles/economy/rating-civethica.fr.html">Lire la suite...</a>
+            </div>
+
+            <!-- === Section Politique === -->
+          </div>
+
+          <!-- ... et ainsi de suite pour les autres catégories ... -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <p>© 2025 Fondation Civethica. Une initiative civique non formelle.</p>
+
+        <!-- NOUVEAU BLOC POUR LES CONTACTS -->
+        <div class="footer-contact">
+          <p>
+            <a href="mailto:info@civethica.org">info@civethica.org</a>
+          </p>
+          <p>
+            <a href="/fr/privacy-policy.fr.html" target="_blank" rel="noopener noreferrer"
+              >Politique de Confidentialité</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
