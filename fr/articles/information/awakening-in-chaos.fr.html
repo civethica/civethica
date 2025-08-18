@@ -2,103 +2,60 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <!-- ===================================================================== -->
-    <!-- ======================= 1. BLOC COMMUN (pour toutes les pages) ======================= -->
-    <!-- ===================================================================== -->
-
-    <!-- Encodage de base et viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Scripts de consentement et d'analyse (l'ordre est important) -->
-    <!-- Google Consent Mode (v2) -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("consent", "default", {
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
-        analytics_storage: "denied",
-      });
-    </script>
-    <!-- Fin du Google Consent Mode -->
-
-    <!-- Script de bannière CookieYes -->
-    <script
-      id="cookieyes"
-      type="text/javascript"
-      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
-    ></script>
-
-    <!-- Script Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-N8B9TG8J6X");
-    </script>
-
-    <!-- Styles, polices et favicon -->
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/images/logo.png" type="image/png" />
-
-    <!-- ======================================================================= -->
-    <!-- ============= 2. BLOC UNIQUE (à adapter pour chaque page) ============= -->
-    <!-- ======================================================================= -->
-
-    <!-- Balises méta SEO principales -->
-    <title>Civethica : L'éveil à l'ère du chaos | La Fondation Civethica</title>
-    <meta
-      name="description"
-      content="Une analyse approfondie de la crise civilisationnelle — de l'expérience « Univers 25 » à la critique de la société de consommation — et la proposition de la philosophie de Civethica comme chemin vers l'éveil de la conscience."
-    />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="/images/logo.png" type="image/png" />
+<!-- Consent and Analytics Scripts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+  });
+</script>
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("js", new Date());
+  gtag("config", "G-N8B9TG8J6X");
+</script>
+    <title>Civethica : L&#39;éveil à l&#39;ère du chaos | La Fondation Civethica</title>
+    <meta name="description" content="Une analyse approfondie de la crise civilisationnelle et la proposition de la philosophie de Civethica comme chemin vers l&#39;éveil de la conscience." />
     <meta name="author" content="La Fondation Civethica" />
-
-    <meta
-      name="keywords"
-      content="Civethica, Univers 25, société de consommation, rôles sociaux, crise de sens, éveil de la conscience, chaos informationnel, éthique du capitalisme, philosophie, sociologie"
-    />
+    <meta name="keywords" content="" />
     <link rel="canonical" href="https://www.civethica.org/fr/articles/information/awakening-in-chaos.fr.html" />
 
-    <!-- Balises Open Graph (pour Facebook, etc.) -->
-    <meta property="og:title" content="Civethica : L'éveil à l'ère du chaos" />
-    <meta
-      property="og:description"
-      content="Du paradis des souris de l'« Univers 25 » à nos jours : comment la perte de sens mène à l'effondrement et comment la philosophie de la conscience vivante peut être une issue."
-    />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Civethica : L&#39;éveil à l&#39;ère du chaos" />
+    <meta property="og:description" content="" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://www.civethica.org/fr/articles/information/awakening-in-chaos.fr.html" />
-    <meta property="og:image" content="https://www.civethica.org/images/awakening-in-chaos.png" />
+    <meta property="og:image" content="https://www.civethica.org.png" />
     <meta property="og:site_name" content="La Fondation Civethica" />
 
-    <!-- Balises Twitter Card -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Civethica : L'éveil à l'ère du chaos" />
-    <meta
-      name="twitter:description"
-      content="Du paradis des souris de l'« Univers 25 » à nos jours : comment la perte de sens mène à l'effondrement et comment la philosophie de la conscience vivante peut être une issue."
-    />
-    <meta name="twitter:image" content="https://www.civethica.org/images/awakening-in-chaos.png" />
+    <meta name="twitter:title" content="Civethica : L&#39;éveil à l&#39;ère du chaos" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://www.civethica.org.png" />
 
-    <!-- Données structurées (JSON-LD) pour un SEO amélioré -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Civethica : L'éveil à l'ère du chaos",
-        "description": "Une analyse approfondie de la crise civilisationnelle — de l'expérience « Univers 25 » à la critique de la société de consommation — et la proposition de la philosophie de Civethica comme chemin vers l'éveil de la conscience.",
-        "image": "https://www.civethica.org/images/awakening-in-chaos.png",
+        "headline": "Civethica : L&#39;éveil à l&#39;ère du chaos",
+        "alternativeHeadline": "",
+        "description": "Une analyse approfondie de la crise civilisationnelle et la proposition de la philosophie de Civethica comme chemin vers l&#39;éveil de la conscience.",
+        "image": "https://www.civethica.org.png",
         "author": {
           "@type": "Organization",
           "name": "La Fondation Civethica"
@@ -115,279 +72,186 @@
       }
     </script>
   </head>
-
   <body class="sub-page">
-    <!-- ====================================================== -->
-    <!-- ================ HEADER ============================== -->
-    <!-- ====================================================== -->
-    <header class="main-header">
-      <div class="container">
-        <!-- 1. Logo - lien vers la page d'accueil FRANÇAISE -->
+    
+
+<header class="main-header">
+    <div class="container">
+        <!-- 1. Логотип -->
+        
         <a href="/fr/index.fr.html" class="logo-link">
-          <img src="/images/logo.png" alt="Logo Civethica" class="logo-img" />
-          <span class="logo-text">La Fondation Civethica</span>
+            <img src="/images/logo.png" alt="Logo Civethica" class="logo-img" />
+            <span class="logo-text">La Fondation Civethica</span>
         </a>
 
-        <!-- 2. Navigation principale -->
+        <!-- 2. Основная навигация -->
         <nav class="main-nav">
-          <ul id="main-nav-list">
-            <li><a href="/fr/manifesto.fr.html">Le Manifeste</a></li>
-            <li class="dropdown">
-              <a href="/fr/index.fr.html#platforms-section">Plateformes</a>
-              <ul class="dropdown-menu">
-                <li><a href="/fr/platform-politics.fr.html">Politique & Gouvernance</a></li>
-                <li><a href="/fr/platform-economy.fr.html">Économie & Ressources</a></li>
-                <li><a href="/fr/platform-culture.fr.html">Culture & Éducation</a></li>
-                <li><a href="/fr/platform-health.fr.html">Santé & Bioéthique</a></li>
-                <li><a href="/fr/platform-information.fr.html">Information & Conscience</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="/fr/community.fr.html" target="_blank" rel="noopener noreferrer"
-                >Communauté</a
-              >
-            </li>
-            <li><a href="/fr/library.fr.html">Bibliothèque</a></li>
-          </ul>
+            <ul id="main-nav-list">
+                
+                <li><a href="/fr/manifesto.fr.html">Le Manifeste</a></li>
+                <li class="dropdown">
+                    <a href="/fr/index.fr.html#platforms-section">Plateformes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/fr/platform-politics.fr.html">Politique &amp; Gouvernance</a></li>
+                        <li><a href="/fr/platform-economy.fr.html">Économie &amp; Ressources</a></li>
+                        <li><a href="/fr/platform-culture.fr.html">Culture &amp; Éducation</a></li>
+                        <li><a href="/fr/platform-health.fr.html">Santé &amp; Bioéthique</a></li>
+                        <li><a href="/fr/platform-information.fr.html">Information &amp; Conscience</a></li>
+                    </ul>
+                </li>
+                <li><a href="/fr/community.fr.html" target="_blank" rel="noopener noreferrer">Communauté</a></li>
+                <li><a href="/fr/library.fr.html">Bibliothèque</a></li>
+            </ul>
         </nav>
 
+        <!-- 3. Кнопка "Гамбургер" -->
         <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
           <span class="sr-only">Menu</span>
           <span class="icon-open">☰</span>
           <span class="icon-close">×</span>
         </button>
 
-        <!-- 4. Boutons d'action -->
+        <!-- 4. Кнопки действий -->
         <div class="header-actions">
-          <a
-            href="https://www.patreon.com/c/Civethica/membership"
-            class="cta-button-small"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Soutenir</a
-          >
-          <div class="language-switcher">
-            <span class="current-lang">FR</span>
-            <ul class="lang-dropdown">
-              <li><a href="/en/articles/information/awakening-in-chaos.html">EN</a></li>
-              <li><a href="/de/articles/information/awakening-in-chaos.de.html">DE</a></li>
-              <li><a href="/fr/articles/information/awakening-in-chaos.fr.html">FR</a></li>
-              <li><a href="/es/articles/information/awakening-in-chaos.es.html">ES</a></li>
-              <li><a href="/zh/articles/information/awakening-in-chaos.zh.html">ZH</a></li>
-              <li><a href="/ru/articles/information/awakening-in-chaos.ru.html">RU</a></li>
-            </ul>
-          </div>
+            <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small desktop-only-button" target="_blank" rel="noopener noreferrer">Soutenir</a>
+            <a href="/fr/community.fr.html" class="cta-button-small mobile-only-button" target="_blank" rel="noopener noreferrer">Communauté</a>
+            <div class="language-switcher">
+                <span class="current-lang">FR</span>
+                <ul class="lang-dropdown">
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/en/articles/information/awakening-in-chaos.html">EN</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/de/articles/information/awakening-in-chaos.de.html">DE</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/fr/articles/information/awakening-in-chaos.fr.html">FR</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/es/articles/information/awakening-in-chaos.es.html">ES</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/zh/articles/information/awakening-in-chaos.zh.html">ZH</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/ru/articles/information/awakening-in-chaos.ru.html">RU</a></li>
+                        
+                   
+                </ul>
+            </div>
         </div>
-      </div>
-    </header>
-    <!-- ====================================================== -->
-    <!-- ================ FIN DU HEADER ======================= -->
-    <!-- ====================================================== -->
+    </div>
+</header>
 
     <main>
       <section class="content-section">
         <div class="container text-left">
-          <!-- Titre de l'article -->
-          <h2>Civethica : L'éveil à l'ère du chaos</h2>
+          <h2>Civethica : L&#39;éveil à l&#39;ère du chaos</h2>
+          <p class="article-meta">(La Fondation Civethica, 3 août 2025)</p>
+          <img src=".png" alt="" class="article-featured-image" />
+          
+          
 
-          <!-- Image principale de l'article -->
-          <img
-            src="/images/awakening-in-chaos.png"
-            alt="Image stylisée d'un labyrinthe avec une conscience en éveil au centre"
-            class="article-featured-image"
-          />
-
-          <!-- Chapitre I : Introduction -->
-          <h3>I. Introduction : Un monde au bord du gouffre. Tentative de reconsidération</h3>
-          <p>
-            Nous vivons à une époque de paradoxes. Jamais auparavant l'humanité n'a possédé un tel niveau de confort, de technologie et de savoir — et jamais elle ne s'est sentie aussi anxieuse, seule et perdue.
-          </p>
-          <p>
-            Les villes grandissent, mais les liens entre les gens s'affaiblissent. L'information est accessible instantanément, mais le sens nous échappe. Nous sommes entourés d'objets, mais nous ressentons un vide intérieur.
-          </p>
-          <p>
-            Le monde est submergé par le chaos informationnel. Les flots de nouvelles, d'opinions, de fausses informations et de manipulations transforment la conscience en un champ de bataille. Où est la vérité et où est le mensonge ? Où est la justice et où est son imitation ? Nous perdons la capacité de discerner — et dans cette confusion, nous choisissons de plus en plus souvent la commodité plutôt que la vérité.
-          </p>
-          <p>
-            Plongés dans nos angoisses personnelles, nos crédits, nos diagnostics et nos tâches sans fin, nous cessons de voir l'essentiel : où l'on nous mène. Le pouvoir — politique, corporatif, numérique — façonne discrètement une réalité où l'être humain devient non pas un sujet, mais un objet. Nous arrêtons de poser des questions parce que nous sommes trop fatigués. Nous arrêtons de résister parce que nous sommes trop occupés par nous-mêmes.
-          </p>
-          <p>
-            C'est dans ce contexte que j'ai commencé à me demander : peut-on tout changer ? Non pas réformer les détails, mais réécrire la base même de la pensée.
-          </p>
-          <p>
-            C'est ainsi qu'est né le projet Civethica — comme une tentative de formuler un nouveau système d'exploitation pour la conscience, fondé non pas sur le pouvoir, la consommation et la peur, mais sur l'intégrité, l'appartenance et le respect de la vie.
-          </p>
-          <p>
-            En quête de confirmation, je me suis tourné vers l'expérience « Univers 25 » — et j'y ai vu non pas une simple curiosité scientifique, mais un avertissement glaçant. Elle a montré comment l'abondance sans sens peut conduire à l'extinction, même en l'absence totale de menaces extérieures.
-          </p>
-          <p>
-            Cet article n'est pas une simple analyse. C'est une tentative personnelle de relier le diagnostic et le remède. Comprendre pourquoi nous nous sommes retrouvés au bord du précipice, et comment nous pouvons faire un pas vers l'éveil.
-          </p>
-
-          <hr />
-
-          <!-- Chapitre II : Univers 25 -->
-          <h3>II. « Univers 25 » : anatomie de l'extinction au paradis</h3>
-          <p>
-            Dans les années 1970, l'éthologue américain John B. Calhoun a créé des conditions idéales pour une population de souris : nourriture, eau, sécurité, confort. Tout ce qu'il fallait pour prospérer.
-          </p>
-          <p>
-            Et au début, les souris ont effectivement prospéré. Mais ensuite, à mesure que la population augmentait, l'effondrement social a commencé :
-          </p>
-          <ul class="manifesto-list">
-            <li>
-              <strong>Perte des rôles :</strong> Les mâles ont cessé de défendre leur territoire, se transformant soit en gangs agressifs, soit en « beaux » passifs et narcissiques, exclusivement préoccupés d'eux-mêmes. Les femelles ont cessé de s'occuper de leur progéniture.
-            </li>
-            <li>
-              <strong>Rupture des liens :</strong> La hiérarchie sociale s'est effondrée. Le comportement reproductif a disparu.
-            </li>
-            <li>
-              <strong>Mort du sens :</strong> Malgré l'abondance des ressources, les souris ont cessé de vivre — au sens plein du terme. Elles se contentaient de survivre, incapables de perpétuer leur espèce.
-            </li>
-          </ul>
-          <p>L'expérience est devenue une métaphore : <strong>l'abondance sans sens mène à l'extinction.</strong></p>
-          <p>Ce ne sont ni la faim, ni la guerre, ni les maladies — mais la perte des rôles sociaux, l'isolement et la perte d'un but qui ont anéanti le paradis des souris.</p>
-
-          <hr />
-
-          <!-- Chapitre III : Diagnostic -->
-          <h3>III. Entre diagnostic et éveil : comment le contenu et le capitalisme construisent notre réalité</h3>
-          <p>
-            Avant de parler d'une issue, il faut comprendre dans quel piège nous sommes tombés. Notre réalité contemporaine est façonnée par deux forces extrêmement puissantes : le contenu omniprésent et l'économie mondiale de l'efficacité.
-          </p>
-          <h4>1. Le contenu comme miroir de la dégradation</h4>
-          <p>
-            Nous vivons à l'ère du contenu, mais nous perdons le contenu. Le flot d'images, de mots et de tendances est infini. Mais nous ne sommes pas entourés de créativité, mais de stratégie. Pas de sincérité, mais de manipulation. Le contenu ne reflète plus la réalité — il la construit. Nos émotions sont la matière première. Nos peurs sont l'outil. Notre attention est la monnaie.
-          </p>
-          <p>
-            Dans cette cacophonie de sens, les questions fondamentales disparaissent : qu'est-ce que la vérité, le bien, la liberté ? Les guerres se transforment en spectacles, le mensonge en opinion, la vérité en algorithme. Le Bien et le Mal ne sont plus des opposés — ils sont devenus des marques qui se battent pour des « j'aime ». Nous cessons de sentir la différence. Et, peut-être le plus effrayant, nous cessons de la chercher.
-          </p>
-          <p>
-            Ce symptôme s'infiltre jusqu'au plus haut niveau. Souvenez-vous du président américain qui a transformé la politique internationale en un théâtre de transactions : le pragmatisme au lieu de l'éthique, le spectacle au lieu de la solidarité, les sondages au lieu de la pensée stratégique. Il ne cherchait pas à être un vecteur de valeurs — il est devenu un acteur jouant le rôle de la force, tandis que les intérêts se négociaient en coulisses. Ce n'est pas seulement une transformation politique — c'est le signe d'une époque où même le pouvoir obéit à la logique du contenu, où la réalité est ce qui semble convaincant, et non ce qui est vrai.
-          </p>
-          <h4>2. L'économie de l'efficacité : l'âme qui manque au capitalisme</h4>
-          <p>
-            Quand nous parlons du monde moderne, nous parlons du capitalisme. Pas en tant qu'idéologie, mais en tant qu'architecture. Aucun autre système n'a pu assurer un tel niveau d'efficacité et d'amélioration de la qualité de vie. Il a généré le PIB mondial, le développement de la médecine et de l'éducation, la révolution technologique et l'expansion des droits de l'homme. Il a prouvé sa capacité d'adaptation.
-          </p>
-          <p>
-            Mais cette efficacité a ses angles morts. Il y a des domaines où les mécanismes du marché sont destructeurs :
-          </p>
-          <ul class="manifesto-list">
-            <li>
-              <strong>L'environnement naturel :</strong> Le marché ne tient pas compte des coûts écologiques. Il ne voit pas la forêt comme un écosystème — il voit du bois. Sans régulation, cela conduit à un effondrement écologique.
-            </li>
-            <li>
-              <strong>L'environnement informationnel :</strong> Le marché encourage l'attention, pas la vérité. Les algorithmes amplifient le bruit et la polarisation. Il ne distingue pas le vrai du faux — il distingue les clics.
-            </li>
-          </ul>
-          <p>
-            La solution n'est pas de rejeter le marché, mais de le compléter. Nous avons besoin de mécanismes qui intègrent des valeurs dans l'économie. Ce n'est pas de l'anticapitalisme. C'est <strong>Civethica au sein du capitalisme.</strong> Le capitalisme est une plateforme puissante. Mais pour qu'elle serve la vie, elle a besoin d'une conscience vivante. Une conscience qui ne voit pas seulement le profit, mais aussi les conséquences. Une conscience qui sait non seulement créer, mais aussi préserver.
-          </p>
-
-          <hr />
-
-          <!-- Chapitre IV : Civethica en action -->
-          <h3>IV. Civethica en action : comment la philosophie de la conscience vivante peut transformer le monde</h3>
-          <p>
-            La philosophie n'est pas une abstraction. Civethica est un outil qui peut être intégré dans un modèle économique, un programme éducatif, une plateforme technologique et dans la structure même de l'information.
-          </p>
-          <ul class="manifesto-list">
-            <li>
-              <strong>Les affaires : du profit au sens.</strong> Civethica propose aux entreprises non pas de renoncer au profit, mais de lui donner un sens. Cela signifie prendre en compte les conséquences écologiques et sociales, respecter la vie à toutes les étapes de la production et valoriser la durabilité à long terme plutôt que le gain à court terme. De vraies entreprises certifiées B Corp (comme Patagonia) prouvent déjà qu'il est possible d'être à la fois rentable et éthique.
-            </li>
-            <li>
-              <strong>L'éducation : de la transmission des savoirs à l'éveil de la conscience.</strong> L'éducation selon Civethica n'est pas une préparation au marché, mais une préparation à la vie. C'est une pensée holistique qui relie les sciences et l'éthique, le développement de l'empathie comme compétence clé et l'éducation à la responsabilité de ses actes.
-            </li>
-            <li>
-              <strong>La technologie : de l'accélération à la réflexion.</strong> La technologie est une force. Civethica propose un réglage éthique de cette force : la transparence des algorithmes, un design numérique axé sur le bien-être humain (et non sur la dépendance), et l'utilisation des technologies pour résoudre de vrais problèmes — de l'allègement de la souffrance à la restauration de la nature.
-            </li>
-            <li>
-              <strong>L'information : de la manipulation à l'illumination.</strong> Civethica propose une éthique de l'information où la vérité est plus importante que la portée. C'est la protection de la conscience contre les fausses nouvelles toxiques, ce sont des plateformes médiatiques qui placent la qualité avant les clics, et c'est une culture du « savoir lent » — le renoncement au bruit informationnel au profit d'une perception consciente.
-            </li>
-          </ul>
-
-          <hr />
-
-          <!-- Chapitre V : Comment ça marche -->
-          <h3>V. Comment ça marche : le retour à l'intégrité</h3>
-          <p>
-            Au cœur de la crise civilisationnelle se trouve une désorientation ontologique — la perte d'une boussole intérieure. La pensée devient réactive, superficielle, fragmentée.
-          </p>
-          <p>
-            Civethica est un outil de navigation dans un monde où les boussoles sont cassées. Elle propose un chemin de retour à l'intégrité à travers un système de valeurs à plusieurs niveaux, du cosmos à l'homme :
-          </p>
-          <ul class="manifesto-list">
-            <li><strong>Cosmos :</strong> Nous faisons partie de l'univers.</li>
-            <li><strong>Planète :</strong> La Terre est notre seule Maison, elle exige d'être protégée.</li>
-            <li><strong>Biosphère :</strong> Nous faisons partie d'un réseau de vie fragile et interconnecté.</li>
-            <li>
-              <strong>Humain :</strong> Nous sommes un élément conscient, capable d'être le gardien ou le destructeur du système.
-            </li>
-          </ul>
-          <p>
-            Ce n'est pas une hiérarchie, mais un réseau. Son mécanisme de fonctionnement est <strong>l'éthique comme pont entre la connaissance et l'action</strong>. C'est un chemin de l'égoïsme au co-développement, de la consommation à la co-création, du chaos à l'intégrité.
-          </p>
-
-          <hr />
-
-          <!-- Chapitre VI : Pratiques de l'éveil -->
-          <h3>VI. Pratiques de l'éveil : comment faire vivre Civethica en soi</h3>
-          <p>La philosophie ne fonctionne pas si elle reste dans un texte. Elle exige un travail intérieur.</p>
-          <ol class="manifesto-list">
-            <li>
-              <strong>La pratique du silence.</strong> Commencez petit : 10 minutes par jour sans téléphone, musique ou podcasts. Regardez simplement par la fenêtre ou promenez-vous dans un parc. Laissez le flot des pensées s'arrêter. Le silence n'est pas l'absence de son. C'est la présence de soi.
-            </li>
-            <li>
-              <strong>La pratique du discernement.</strong> C'est l'éthique de la perception. Apprenez à séparer le vivant du mort, le vrai du faux. Posez-vous la question : « Cette information, ce produit, cette action — conduit-elle à la création ou à la destruction ? À l'unité ou à la division ? »
-            </li>
-            <li>
-              <strong>La pratique de l'appartenance.</strong> C'est une forme d'amour qui agit. Ressentez votre lien avec les autres, avec la nature, avec l'avenir. Cela peut s'exprimer dans les petites choses : prendre soin de quelqu'un, planter un arbre, participer à la vie de son quartier. Vivre non pas « contre », mais « ensemble ».
-            </li>
-            <li>
-              <strong>La pratique de l'intention.</strong> Chaque action — avec conscience. Chaque mot — avec attention. Chaque décision — avec éthique. L'intention est l'architecture du destin. Commencez par des choix simples : ce que vous mangez, comment vous vous déplacez, comment vous communiquez. Chacun de vos gestes est l'expression de votre conscience.
-            </li>
-          </ol>
-
-          <div class="conclusion">
-            <h3>Conclusion</h3>
-            <p>
-              Civethica n'est pas une utopie. C'est une pratique du sens qui peut être intégrée dans n'importe quel système, s'il y a la volonté et la conscience. Elle n'exige pas la destruction — elle propose l'animation. Elle ne lutte pas contre le progrès — elle propose sa réflexion. Les affaires, l'éducation, la technologie, l'information — ce ne sont pas des ennemis. Ce sont des champs pour l'éveil. Et on peut commencer dès maintenant.
-            </p>
-          </div>
-
-          <!-- Bloc d'appel à la discussion -->
           <div class="discussion-cta-section">
             <h3>Des idées ou des objections ?</h3>
-            <p>Discutez de ce concept et d'autres dans notre communauté internationale. Nous serons ravis de lire vos réflexions (EN).</p>
-            <a
-              href="/en/community.html"
-              class="cta-button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Aller à la discussion
+            <p>Discutez de ce concept et d&#39;autres dans notre communauté.</p>
+            <a href="/en/community.html" class="cta-button" target="_blank" rel="noopener noreferrer">
+              Rejoindre la discussion
             </a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="main-footer">
-      <div class="container">
+    
+
+<footer class="main-footer">
+    <div class="container">
         <p>© 2025 La Fondation Civethica. Une initiative citoyenne non formelle.</p>
         <div class="footer-contact">
-          <p>
-            <a href="mailto:info@civethica.org">info@civethica.org</a>
-          </p>
-          <p>
-            <a href="/fr/privacy-policy.fr.html" target="_blank" rel="noopener noreferrer"
-              >Politique de confidentialité</a
-            >
-          </p>
+            <p><a href="mailto:info@civethica.org">info@civethica.org</a></p>
+            <p><a href="/fr/privacy-policy.fr.html" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></p>
         </div>
-      </div>
-    </footer>
-
+    </div>
+</footer>
     <script src="/js/script.js"></script>
   </body>
 </html>

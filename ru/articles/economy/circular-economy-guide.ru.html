@@ -2,101 +2,60 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <!-- ===================================================================== -->
-    <!-- ======================= 1. ОБЩИЙ БЛОК (для всех страниц) ======================= -->
-    <!-- ===================================================================== -->
-
-    <!-- Основная кодировка и viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Скрипты согласия и аналитики (порядок важен) -->
-    <!-- Google Consent Mode (v2) -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("consent", "default", {
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
-        analytics_storage: "denied",
-      });
-    </script>
-    <!-- End Google Consent Mode -->
-
-    <!-- CookieYes Banner Script -->
-    <script
-      id="cookieyes"
-      type="text/javascript"
-      src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"
-    ></script>
-
-    <!-- Google Analytics 4 Script -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-N8B9TG8J6X");
-    </script>
-
-    <!-- Стили, шрифты и иконка сайта -->
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/images/logo.png" type="image/png" />
-
-    <!-- ======================================================================= -->
-    <!-- ============= 2. УНИКАЛЬНЫЙ БЛОК (для этой статьи) ============= -->
-    <!-- ======================================================================= -->
-
-    <!-- Основные SEO и мета-теги -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="/images/logo.png" type="image/png" />
+<!-- Consent and Analytics Scripts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+  });
+</script>
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/8cee910c8d76e385b5b9ab79/script.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8B9TG8J6X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("js", new Date());
+  gtag("config", "G-N8B9TG8J6X");
+</script>
     <title>Циркулярная экономика: Практическое руководство | Фонд Civethica</title>
-    <meta
-      name="description"
-      content="Обзор принципов циркулярного дизайна и бизнес-моделей, которые устраняют отходы и создают регенеративные системы, чтобы преодолеть линейную экономику «взять-произвести-выбросить»."
-    />
+    <meta name="description" content="Обзор принципов циркулярного дизайна и бизнес-моделей, которые устраняют отходы и создают регенеративные системы, чтобы преодолеть линейную экономику «взять-произвести-выбросить»." />
     <meta name="author" content="Фонд Civethica" />
-    <meta
-      name="keywords"
-      content="циркулярная экономика, регенеративная экономика, системное мышление, устойчивый дизайн, ноль отходов, бизнес-модели, устойчивость, Cradle to Cradle, Civethica"
-    />
+    <meta name="keywords" content="" />
     <link rel="canonical" href="https://www.civethica.org/ru/articles/economy/circular-economy-guide.ru.html" />
 
-    <!-- Open Graph теги -->
-    <meta property="og:title" content="Циркулярная экономика: Практическое руководство | Фонд Civethica" />
-    <meta
-      property="og:description"
-      content="Откройте для себя принципы циркулярной, регенеративной экономики, которая устраняет отходы на уровне дизайна и создает более здоровую планету."
-    />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Циркулярная экономика: Практическое руководство" />
+    <meta property="og:description" content="" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://www.civethica.org/ru/articles/economy/circular-economy-guide.ru.html" />
-    <meta property="og:image" content="https://www.civethica.org/images/og-image-rating-ru.png" />
+    <meta property="og:image" content="https://www.civethica.org.png" />
     <meta property="og:site_name" content="Фонд Civethica" />
 
-    <!-- Twitter Card теги -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Циркулярная экономика: Практическое руководство | Фонд Civethica" />
-    <meta
-      name="twitter:description"
-      content="Откройте для себя принципы циркулярной, регенеративной экономики, которая устраняет отходы на уровне дизайна и создает более здоровую планету."
-    />
-    <meta name="twitter:image" content="https://www.civethica.org/images/og-image-rating-ru.png" />
+    <meta name="twitter:title" content="Циркулярная экономика: Практическое руководство" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://www.civethica.org.png" />
 
-    <!-- Структурированные данные (JSON-LD) для улучшенного SEO -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Циркулярная экономика: Практическое руководство",
+        "alternativeHeadline": "",
         "description": "Обзор принципов циркулярного дизайна и бизнес-моделей, которые устраняют отходы и создают регенеративные системы, чтобы преодолеть линейную экономику «взять-произвести-выбросить».",
-        "image": "https://www.civethica.org/images/og-image-rating-ru.png",
+        "image": "https://www.civethica.org.png",
         "author": {
           "@type": "Organization",
           "name": "Фонд Civethica"
@@ -109,141 +68,171 @@
             "url": "https://www.civethica.org/images/logo.png"
           }
         },
-        "datePublished": "2025-08-15"
+        "datePublished": "2025-07-29"
       }
     </script>
   </head>
-
   <body class="sub-page">
-    <!-- ====================================================== -->
-    <!-- ================ HEADER ============================== -->
-    <!-- ====================================================== -->
-    <header class="main-header">
-      <div class="container">
+    
+
+<header class="main-header">
+    <div class="container">
+        <!-- 1. Логотип -->
+        
         <a href="/ru/index.ru.html" class="logo-link">
-          <img src="/images/logo.png" alt="Логотип Civethica" class="logo-img" />
-          <span class="logo-text">Фонд Civethica</span>
+            <img src="/images/logo.png" alt="Логотип Civethica" class="logo-img" />
+            <span class="logo-text">Фонд Civethica</span>
         </a>
+
+        <!-- 2. Основная навигация -->
         <nav class="main-nav">
-          <ul id="main-nav-list">
-            <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
-            <li class="dropdown">
-              <a href="/ru/index.ru.html#platforms-section">Платформы</a>
-              <ul class="dropdown-menu">
-                <li><a href="/ru/platform-politics.ru.html">Политика и Управление</a></li>
-                <li><a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a></li>
-                <li><a href="/ru/platform-culture.ru.html">Культура и Образование</a></li>
-                <li><a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a></li>
-                <li><a href="/ru/platform-information.ru.html">Информация и Сознание</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="/ru/community.ru.html" target="_blank" rel="noopener noreferrer">Сообщество</a>
-            </li>
-            <li><a href="/ru/library.ru.html">Библиотека</a></li>
-          </ul>
+            <ul id="main-nav-list">
+                
+                <li><a href="/ru/manifesto.ru.html">Манифест</a></li>
+                <li class="dropdown">
+                    <a href="/ru/index.ru.html#platforms-section">Платформы</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/ru/platform-politics.ru.html">Политика и Управление</a></li>
+                        <li><a href="/ru/platform-economy.ru.html">Экономика и Ресурсы</a></li>
+                        <li><a href="/ru/platform-culture.ru.html">Культура и Образование</a></li>
+                        <li><a href="/ru/platform-health.ru.html">Здоровье и Биоэтика</a></li>
+                        <li><a href="/ru/platform-information.ru.html">Информация и Сознание</a></li>
+                    </ul>
+                </li>
+                <li><a href="/ru/community.ru.html" target="_blank" rel="noopener noreferrer">Сообщество</a></li>
+                <li><a href="/ru/library.ru.html">Библиотека</a></li>
+            </ul>
         </nav>
+
+        <!-- 3. Кнопка "Гамбургер" -->
         <button type="button" class="mobile-nav-toggle" aria-controls="main-nav-list" aria-expanded="false">
           <span class="sr-only">Меню</span>
           <span class="icon-open">☰</span>
           <span class="icon-close">×</span>
         </button>
+
+        <!-- 4. Кнопки действий -->
         <div class="header-actions">
-          <a
-            href="https://www.patreon.com/c/Civethica/membership"
-            class="cta-button-small desktop-only-button"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Поддержать</a
-          >
-          <a
-            href="/ru/community.ru.html"
-            class="cta-button-small mobile-only-button"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Сообщество</a
-          >
-          <div class="language-switcher">
-            <span class="current-lang">RU</span>
-            <ul class="lang-dropdown">
-              <li><a href="/en/articles/economy/circular-economy-guide.html">EN</a></li>
-              <li><a href="/de/articles/economy/circular-economy-guide.de.html">DE</a></li>
-              <li><a href="/fr/articles/economy/circular-economy-guide.fr.html">FR</a></li>
-              <li><a href="/es/articles/economy/circular-economy-guide.es.html">ES</a></li>
-              <li><a href="/zh/articles/economy/circular-economy-guide.zh.html">ZH</a></li>
-              <li><a href="/ru/articles/economy/circular-economy-guide.ru.html">RU</a></li>
-            </ul>
-          </div>
+            <a href="https://www.patreon.com/c/Civethica/membership" class="cta-button-small desktop-only-button" target="_blank" rel="noopener noreferrer">Поддержать</a>
+            <a href="/ru/community.ru.html" class="cta-button-small mobile-only-button" target="_blank" rel="noopener noreferrer">Сообщество</a>
+            <div class="language-switcher">
+                <span class="current-lang">RU</span>
+                <ul class="lang-dropdown">
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/en/articles/economy/circular-economy-guide.html">EN</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/de/articles/economy/circular-economy-guide.de.html">DE</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/fr/articles/economy/circular-economy-guide.fr.html">FR</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/es/articles/economy/circular-economy-guide.es.html">ES</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/zh/articles/economy/circular-economy-guide.zh.html">ZH</a></li>
+                        
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+                        
+                        <li><a href="/ru/articles/economy/circular-economy-guide.ru.html">RU</a></li>
+                        
+                   
+                </ul>
+            </div>
         </div>
-      </div>
-    </header>
-    <!-- ====================================================== -->
-    <!-- ================ КОНЕЦ HEADER ======================== -->
-    <!-- ====================================================== -->
+    </div>
+</header>
 
     <main>
       <section class="content-section">
         <div class="container text-left">
           <h2>Циркулярная экономика: Практическое руководство</h2>
-          <img
-            src="/images/og-image-rating-ru.png"
-            alt="Визуальное представление циркулярной экономики, показывающее поток материалов в биологических и технических циклах в противовес линейной модели."
-            class="article-featured-image"
-          />
-          <h3>Выход за рамки модели «взять-произвести-выбросить» к системе, которая восстанавливается по своему замыслу.</h3>
-          <p>
-            На протяжении веков наша экономика функционировала по линейной модели: мы извлекаем ресурсы из земли, производим из них продукцию и, в конечном итоге, выбрасываем ее как мусор. Эта модель не просто неустойчива; это ошибка проектирования. Она рассматривает планету как бесконечный рудник и бесконечную свалку. Циркулярная экономика предлагает радикальную и необходимую альтернативу: систему, в которой отходы избегаются, ресурсы остаются в обороте, а природа восстанавливается.
-          </p>
-
-          <hr />
-
-          <h3>Три ключевых принципа циркулярной экономики</h3>
-          <p>
-            Концепция, популяризированная Фондом Эллен Макартур, основана на трех простых, но мощных принципах:
-          </p>
-          <ol class="manifesto-list">
-            <li>
-              <strong>Устранение отходов и загрязнения на уровне дизайна.</strong>
-              <p>Это самый решающий сдвиг. Вместо того чтобы думать, как обращаться с отходами после их образования, мы проектируем системы, в которых отходы не возникают вовсе. Это означает переосмысление продуктов, материалов и бизнес-моделей. Например, компания может разработать полностью компостируемую упаковку, которая возвращает питательные вещества в почву, или создать модульную и легко ремонтируемую электронику, чтобы избежать электронных отходов.</p>
-            </li>
-            <li>
-              <strong>Поддержание продуктов и материалов в обороте на их максимальной ценности.</strong>
-              <p>Это означает сохранение ресурсов в использовании как можно дольше. Цель — перейти от владения к доступу. Вместо покупки продукта вы могли бы его арендовать («Продукт как услуга»). Это мотивирует производителя создавать долговечные, ремонтопригодные и модернизируемые продукты. Иерархия циркуляции имеет решающее значение:</p>
-              <ul class="manifesto-sublist">
-                  <li><strong>Поддержание/Повторное использование:</strong> Сохранение продукта в его первоначальной форме (например, перепродажа одежды, восстановление электроники).</li>
-                  <li><strong>Ремонт/Восстановление:</strong> Ремонт или пересборка продукта для продления его срока службы.</li>
-                  <li><strong>Переработка:</strong> Разборка материалов для производства новых продуктов. Это последний вариант, так как он часто снижает качество материала.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Восстановление природы.</strong>
-              <p>Настоящая циркулярная экономика не просто наносит меньше вреда; она активно делает добро. Она переходит от добывающей к регенеративной модели. В сельском хозяйстве это означает применение практик, таких как регенеративное сельское хозяйство, которые восстанавливают здоровье почвы, связывают углерод и увеличивают биоразнообразие. В промышленности это означает использование возобновляемых источников энергии и безопасное возвращение биологических материалов в экосистему.</p>
-            </li>
-          </ol>
-
-          <h3>Биологические и технические циклы</h3>
-          <p>
-            Циркулярная экономика различает два типа материалов:
-          </p>
-          <ul class="manifesto-list">
-            <li>
-              <strong>Биологические нутриенты:</strong> Это материалы, которые могут безопасно вернуться в биосферу, такие как компост, пищевые отходы или натуральные волокна. Цель состоит в том, чтобы создать цикл, в котором эти материалы обогащают почву и поддерживают новую жизнь.
-            </li>
-            <li>
-              <strong>Технические нутриенты:</strong> Это материалы, созданные человеком, такие как пластмассы, металлы и синтетические химикаты. Они не могут быть возвращены в природу. Цель состоит в том, чтобы поддерживать их в техническом цикле путем ремонта, повторного использования, восстановления и переработки, чтобы они никогда не становились отходами.
-            </li>
-          </ul>
-
-          <div class="conclusion">
-            <h3>Заключение: Экономическая модель для живой планеты</h3>
-            <p>
-              Циркулярная экономика — это больше, чем просто переработка. Это фундаментальный сдвиг в нашей экономической операционной системе. Она согласовывает человеческую деятельность с принципами живых систем и создает экономику, которая не только устойчива, но и жизнеспособна, инновационна и процветающа. Это центральный компонент регенеративной экономической платформы, к которой стремится Civethica, и он ведет нас от парадигмы эксплуатации к парадигме ответственности.
-            </p>
-          </div>
+          <p class="article-meta">(Фонд Civethica, 29 июля 2025)</p>
+          <img src=".png" alt="" class="article-featured-image" />
+          
+          
 
           <div class="discussion-cta-section">
             <h3>Есть идеи или возражения?</h3>
-            <p>Обсудите эту и другие концепции в нашем русскоязычном сообществе. Мы будем рады вашим мыслям.</p>
+            <p>Обсудите эту и другие концепции в нашем сообществе.</p>
             <a href="/ru/community.ru.html" class="cta-button" target="_blank" rel="noopener noreferrer">
               Перейти к обсуждению
             </a>
@@ -252,23 +241,17 @@
       </section>
     </main>
 
-    <!-- ====================================================== -->
-    <!-- ================ FOOTER ============================== -->
-    <!-- ====================================================== -->
-    <footer class="main-footer">
-      <div class="container">
-        <p>© 2025 Фонд «Civethica». Неформальная гражданская инициатива.</p>
-        <div class="footer-contact">
-          <p>
-            <a href="mailto:info@civethica.org">info@civethica.org</a>
-          </p>
-          <p>
-            <a href="/ru/privacy-policy.ru.html" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
-          </p>
-        </div>
-      </div>
-    </footer>
+    
 
+<footer class="main-footer">
+    <div class="container">
+        <p>© 2025 Фонд Civethica. Неформальная гражданская инициатива.</p>
+        <div class="footer-contact">
+            <p><a href="mailto:info@civethica.org">info@civethica.org</a></p>
+            <p><a href="/ru/privacy-policy.ru.html" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a></p>
+        </div>
+    </div>
+</footer>
     <script src="/js/script.js"></script>
   </body>
 </html>
